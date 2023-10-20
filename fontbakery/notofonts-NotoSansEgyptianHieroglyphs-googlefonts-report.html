@@ -1,0 +1,1051 @@
+<!DOCTYPE html>
+                <html lang="en">
+                    <head>
+                        <meta charset="utf-8">
+                        <title>FontBakery Check Report</title>
+                        <style>
+                            
+html {
+    font-family: -apple-system, sans-serif;
+}
+
+body {
+    margin: 0;
+}
+
+header {
+    border-bottom: 1px solid #dadada;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+}
+
+main {
+    max-width: 720px;
+    margin: auto;
+    padding-bottom: 3rem;
+}
+
+header svg {
+    height: 2rem
+}
+
+header img {
+    height: 2rem
+}
+
+header .titleBar {
+    margin-left: 2rem;
+    font-size: 1rem;
+}
+
+
+h2 {
+    margin-top: 2em;
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+h3 {
+    margin-bottom: 1px;
+    margin-top: 2rem;
+    border-top: 1px solid #cecece;
+    padding-top: 2rem;
+}
+
+.check__idlabel {
+    color: #999;
+}
+
+table {
+    border-collapse: collapse;
+}
+
+th,
+td {
+    border: 1px solid #ddd;
+    padding: 0.5em
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr {
+    text-align: left;
+}
+
+ul {
+    margin-top: 0;
+}
+
+.details_item {
+    list-style: none;
+    display: flex;
+    align-items: baseline;
+}
+
+.details_indicator {
+    flex: 0 0 5em;
+    font-weight: bold;
+    padding-right: 0.5em;
+    text-align: right;
+}
+
+.details_text {
+    flex: 1 0;
+}
+
+.section__emoji {
+    overflow-wrap: break-word;
+}
+
+                        </style>
+                    </head>
+                    <body>
+                        <header>
+                            <img src='data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiIHN0YW5kYWxvbmU9Im5vIj8+CjwhLS0gQ3JlYXRlZCB3aXRoIElua3NjYXBlIChodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy8pIC0tPgoKPHN2ZwogICB3aWR0aD0iNTAwIgogICBoZWlnaHQ9IjUwMCIKICAgaWQ9InN2ZzMxNzkiCiAgIHZlcnNpb249IjEuMSIKICAgaW5rc2NhcGU6dmVyc2lvbj0iMS4zLWRldiAoMDk1ZTFmNDdjNiwgMjAyMi0xMS0wNykiCiAgIHNvZGlwb2RpOmRvY25hbWU9ImZvbnRiYWtlcnktbG9nby5zdmciCiAgIHhtbG5zOmlua3NjYXBlPSJodHRwOi8vd3d3Lmlua3NjYXBlLm9yZy9uYW1lc3BhY2VzL2lua3NjYXBlIgogICB4bWxuczpzb2RpcG9kaT0iaHR0cDovL3NvZGlwb2RpLnNvdXJjZWZvcmdlLm5ldC9EVEQvc29kaXBvZGktMC5kdGQiCiAgIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6c3ZnPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIKICAgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIgogICB4bWxuczpjYz0iaHR0cDovL2NyZWF0aXZlY29tbW9ucy5vcmcvbnMjIgogICB4bWxuczpkYz0iaHR0cDovL3B1cmwub3JnL2RjL2VsZW1lbnRzLzEuMS8iPgogIDx0aXRsZQogICAgIGlkPSJ0aXRsZTMyMzYiPkZvbnQgQmFrZXJ5IExvZ288L3RpdGxlPgogIDxkZWZzCiAgICAgaWQ9ImRlZnMzMTgxIiAvPgogIDxzb2RpcG9kaTpuYW1lZHZpZXcKICAgICBpZD0iYmFzZSIKICAgICBwYWdlY29sb3I9IiNmZmZmZmYiCiAgICAgYm9yZGVyY29sb3I9IiNkZWRlZGUiCiAgICAgYm9yZGVyb3BhY2l0eT0iMSIKICAgICBpbmtzY2FwZTpwYWdlb3BhY2l0eT0iMC4wIgogICAgIGlua3NjYXBlOnBhZ2VzaGFkb3c9IjIiCiAgICAgaW5rc2NhcGU6em9vbT0iMC44OTg3MTM2NSIKICAgICBpbmtzY2FwZTpjeD0iMjE1Ljg2NDA5IgogICAgIGlua3NjYXBlOmN5PSIyMDIuNTExNjciCiAgICAgaW5rc2NhcGU6ZG9jdW1lbnQtdW5pdHM9InB4IgogICAgIGlua3NjYXBlOmN1cnJlbnQtbGF5ZXI9Imc0MzY0IgogICAgIHNob3dncmlkPSJmYWxzZSIKICAgICBmaXQtbWFyZ2luLXRvcD0iMCIKICAgICBmaXQtbWFyZ2luLWxlZnQ9IjAiCiAgICAgZml0LW1hcmdpbi1yaWdodD0iMCIKICAgICBmaXQtbWFyZ2luLWJvdHRvbT0iMCIKICAgICBpbmtzY2FwZTpzaG93cGFnZXNoYWRvdz0iZmFsc2UiCiAgICAgaW5rc2NhcGU6d2luZG93LXdpZHRoPSIxOTIwIgogICAgIGlua3NjYXBlOndpbmRvdy1oZWlnaHQ9IjEwMTYiCiAgICAgaW5rc2NhcGU6d2luZG93LXg9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LXk9IjAiCiAgICAgaW5rc2NhcGU6d2luZG93LW1heGltaXplZD0iMSIKICAgICBpbmtzY2FwZTpwYWdlY2hlY2tlcmJvYXJkPSIwIgogICAgIGlua3NjYXBlOmRlc2tjb2xvcj0iI2QxZDFkMSIgLz4KICA8bWV0YWRhdGEKICAgICBpZD0ibWV0YWRhdGEzMTg0Ij4KICAgIDxyZGY6UkRGPgogICAgICA8Y2M6V29yawogICAgICAgICByZGY6YWJvdXQ9IiI+CiAgICAgICAgPGRjOmZvcm1hdD5pbWFnZS9zdmcreG1sPC9kYzpmb3JtYXQ+CiAgICAgICAgPGRjOnR5cGUKICAgICAgICAgICByZGY6cmVzb3VyY2U9Imh0dHA6Ly9wdXJsLm9yZy9kYy9kY21pdHlwZS9TdGlsbEltYWdlIiAvPgogICAgICAgIDxkYzp0aXRsZT5Gb250IEJha2VyeSBMb2dvPC9kYzp0aXRsZT4KICAgICAgICA8ZGM6Y3JlYXRvcj4KICAgICAgICAgIDxjYzpBZ2VudD4KICAgICAgICAgICAgPGRjOnRpdGxlPlJvYmVydCBNYXJ0aW5lejwvZGM6dGl0bGU+CiAgICAgICAgICA8L2NjOkFnZW50PgogICAgICAgIDwvZGM6Y3JlYXRvcj4KICAgICAgICA8ZGM6c3ViamVjdD4KICAgICAgICAgIDxyZGY6QmFnPgogICAgICAgICAgICA8cmRmOmxpPmZvbnQgYnVpbGQgc2VydmljZTwvcmRmOmxpPgogICAgICAgICAgPC9yZGY6QmFnPgogICAgICAgIDwvZGM6c3ViamVjdD4KICAgICAgICA8ZGM6c291cmNlPmh0dHBzOi8vZ2l0aHViLmNvbS94ZW4vZm9udGJha2VyeTwvZGM6c291cmNlPgogICAgICA8L2NjOldvcms+CiAgICA8L3JkZjpSREY+CiAgPC9tZXRhZGF0YT4KICA8ZwogICAgIGlua3NjYXBlOmxhYmVsPSJMYXllciAxIgogICAgIGlua3NjYXBlOmdyb3VwbW9kZT0ibGF5ZXIiCiAgICAgaWQ9ImxheWVyMSIKICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSg2MzUuMjc5NDgsLTUyLjM2MjE4MykiPgogICAgPGcKICAgICAgIGlkPSJnNDM2NCI+CiAgICAgIDxnCiAgICAgICAgIGlkPSJnMSIKICAgICAgICAgdHJhbnNmb3JtPSJtYXRyaXgoMS4wMjUyMDk1LDAsMCwxLjAyNTIwOTUsOS45NjgxMjc5LC04LjE0MDY5MzEpIgogICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuOTc1NDExIj4KICAgICAgICA8ZwogICAgICAgICAgIGlkPSJnNDA4MiIKICAgICAgICAgICB0cmFuc2Zvcm09Im1hdHJpeCgxLjY1NzA5OTksMCwwLDEuNjU3MDk5OSwyNTAuMjc2OTcsLTEwNi4wMDA0MikiCiAgICAgICAgICAgc3R5bGU9InN0cm9rZS13aWR0aDowLjU4ODYyNSI+CiAgICAgICAgICA8cGF0aAogICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojYjNlZWZmO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpldmVub2RkO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiCiAgICAgICAgICAgICBkPSJtIDI1MS41OTM3NSw0Ny4yMTg3NSBjIC04MS4yNzQyMiwwIC0xNDcuMTU2MjUsNjUuODgyMDMgLTE0Ny4xNTYyNSwxNDcuMTU2MjUgMCw4MS4yNzQyMiA2NS44ODIwMywxNDcuMTU2MjUgMTQ3LjE1NjI1LDE0Ny4xNTYyNSA4MS4yNzQyMiwwIDE0Ny4xNTYyNSwtNjUuODgyMDMgMTQ3LjE1NjI1LC0xNDcuMTU2MjUgMCwtODEuMjc0MjIgLTY1Ljg4MjAzLC0xNDcuMTU2MjUgLTE0Ny4xNTYyNSwtMTQ3LjE1NjI1IHoiCiAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICBpZD0icGF0aDMyNzgiIC8+CiAgICAgICAgPC9nPgogICAgICAgIDxnCiAgICAgICAgICAgaWQ9Imc0MDY3IgogICAgICAgICAgIHRyYW5zZm9ybT0ibWF0cml4KDEuNjU3MDk5OSwwLDAsMS42NTcwOTk5LDI1MC4yNzY5NywtMTA2LjAwMDQyKSIKICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICBzb2RpcG9kaTpub2RldHlwZXM9ImNjY2NjY2NjY2MiCiAgICAgICAgICAgICBpbmtzY2FwZTpjb25uZWN0b3ItY3VydmF0dXJlPSIwIgogICAgICAgICAgICAgaWQ9InBhdGgzMjkwIgogICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgZD0ibSAyMDYuODkzNDksMTM3LjA1NDQxIGMgLTcyLjczODU3LC0zMy43NTk5OCAtNzQuNDk0MDgsNzEuMDEwNyAtMTAuMjk5NzQsNTcuODIwNTkgbCA1Ljc2NzEzLDg4LjMzMzE4IGMgMzMuODI3NDIsLTIuNDUyMjYgNjQuMjEzMDQsLTMuMzQ0NTIgODYuMjEzOTIsLTAuODI3NjMgbCA0LjU1MDE1LC03My41OTkzIGMgMC41ODI2MiwtOS4wMzU3IC0xMi4wMDAwMSw0LjAxMTE3IC00Ny4wOTM3NSwtMTUuMTI1IDI3LjExNzk4LDQuOTUxMjYgNDMuODMxNjMsMy45NDEyNiA1My42MDMzMiwtMS4yODU1MSAzMi4yODYxMiwxMC4wOTQ4MSA1OC4wNjEzMywtMy45NDY4IDUxLjE0NjY4LC0zNC4xMjA3OSAtNi4wOTQzOCwtMjMuMjY3NzMgLTI4Ljg1NDEsLTI5LjUzNTA4IC02MS4wNjI1LC0zNS4wOTM3NSAtNDcuNDQxMDksLTUuNDM5NjYgLTQ3LjUyMDE5LDM3LjQxMzIgLTgyLjgyNTIxLDEzLjg5ODIxIHoiCiAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiNmZmZmZmY7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgIDxnCiAgICAgICAgICAgICBpZD0iZzQwNjAiCiAgICAgICAgICAgICBzdHlsZT0ic3Ryb2tlLXdpZHRoOjAuNTg4NjI1Ij4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzA1IgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMjA5LjA2MjUsMjA4Ljk2ODc1IC0xMy41LDAuMzc1IDIuMDkzNzUsNzUuODQzNzUgNTIuNjU2MjUsLTEuNDY4NzUgLTAuMzQzNzUsLTEyLjM3NSAtMzkuMTU2MjUsMS4wOTM3NSAtMC41LC0xOC4yMTg3NSAzNS45Njg3NSwtMSAtMC4zNDM3NSwtMTIuMzc1IC0zNS45Njg3NSwxIHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcwOSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDMwMC4zNDM3NSwyMDkuNDA2MjUgLTEuMzc1LDMyLjg0Mzc1IC0zNS45Mzc1LC0xLjUgLTAuNTMxMjUsMTIuMzc1IDM1LjkzNzUsMS41IC0wLjc1LDE4LjE4NzUgLTM5LjE1NjI1LC0xLjY1NjI1IC0wLjUsMTIuMzc1IDUyLjYyNSwyLjIxODc1IDMuMTg3NSwtNzUuNzgxMjUgeiIKICAgICAgICAgICAgICAgc3R5bGU9ImNvbG9yOiMwMDAwMDA7Zm9udC1zdHlsZTpub3JtYWw7Zm9udC12YXJpYW50Om5vcm1hbDtmb250LXdlaWdodDpib2xkO2ZvbnQtc3RyZXRjaDpub3JtYWw7Zm9udC1zaXplOjEwOS4zMTRweDtsaW5lLWhlaWdodDoxMDAlO2ZvbnQtZmFtaWx5OkNhbnRhcmVsbDstaW5rc2NhcGUtZm9udC1zcGVjaWZpY2F0aW9uOidDYW50YXJlbGwgQm9sZCc7dGV4dC1pbmRlbnQ6MDt0ZXh0LWFsaWduOnN0YXJ0O3RleHQtZGVjb3JhdGlvbjpub25lO3RleHQtZGVjb3JhdGlvbi1saW5lOm5vbmU7bGV0dGVyLXNwYWNpbmc6MHB4O3dvcmQtc3BhY2luZzowcHg7dGV4dC10cmFuc2Zvcm06bm9uZTt3cml0aW5nLW1vZGU6bHItdGI7ZGlyZWN0aW9uOmx0cjtiYXNlbGluZS1zaGlmdDpiYXNlbGluZTt0ZXh0LWFuY2hvcjpzdGFydDtkaXNwbGF5OmlubGluZTtvdmVyZmxvdzp2aXNpYmxlO3Zpc2liaWxpdHk6dmlzaWJsZTtmaWxsOiMzMzMzMzM7ZmlsbC1vcGFjaXR5OjE7ZmlsbC1ydWxlOm5vbnplcm87c3Ryb2tlOm5vbmU7c3Ryb2tlLXdpZHRoOjAuNTg4NjI1cHg7bWFya2VyOm5vbmU7ZW5hYmxlLWJhY2tncm91bmQ6YWNjdW11bGF0ZSIgLz4KICAgICAgICAgICAgPHBhdGgKICAgICAgICAgICAgICAgaWQ9InRleHQ0NzEzIgogICAgICAgICAgICAgICB0cmFuc2Zvcm09InRyYW5zbGF0ZSgtNjM1LjI3OTQ4LDUyLjM2MjE4MykiCiAgICAgICAgICAgICAgIGQ9Im0gMzA4LjU2MjUsMTE5LjQ2ODc1IC0xLjQ2ODc1LDEyLjE4NzUgMi4xMjUsMC4zMTI1IGMgNy4yMDE2MSwxLjA2OTA3IDEzLjMwMjAyLDIuODcyOTIgMTguMjgxMjUsNS40MDYyNSAzLjkzMjY4LDIuMDAwOTkgNy4yMzczMSw0LjQ4OTMxIDkuOTM3NSw3LjUgMi42ODQ2MywyLjk2Mjk5IDQuNTk1OTgsNi4wODg5IDUuNzE4NzUsOS4zNzUgMS4wOTEwNywzLjI3MDEgMS41NTgxMiw2LjYxMTA3IDEuMzc1LDEwLjAzMTI1IC0wLjIxNDgyLDMuNDA0MTYgLTEuMTA3MTUsNi42NDI5MSAtMi42NTYyNSw5LjY4NzUgLTEuNTk3NDksMy4xMzk4MyAtMy43Nzg2NSw1LjgwNzI4IC02LjUzMTI1LDggLTIuNzY4MTUsMi4xNDQ5NSAtNS44NjgyOSwzLjY5Mzc2IC05LjMxMjUsNC42NTYyNSAtMy40NTk3NCwwLjkxNDcxIC03LjMwMTk3LDEuMDg2MDkgLTExLjUzMTI1LDAuNTMxMjUgLTQuMjEzMDgsLTAuNTg2NDkgLTguNDM3NjQsLTEuOTYyNjkgLTEyLjY4NzUsLTQuMTI1IC01LjIwMTIxLC0yLjY0NjMzIC05Ljk1MzM0LC02LjIwMTYyIC0xNC4yMTg3NSwtMTAuNjg3NSBsIC0xLjQzNzUsLTEuNTMxMjUgLTguNzUsNy41MzEyNSAxLjM3NSwxLjY1NjI1IGMgNS4zODE1NCw2LjQ1MTEzIDExLjkxOTI0LDExLjY0MjQxIDE5LjU2MjUsMTUuNTMxMjUgNS45MzA3NiwzLjAxNzUyIDExLjc1OTEyLDQuODM4OTEgMTcuNTMxMjUsNS41IDUuNzQwNDksMC42NDQ5OSAxMC45ODE0OCwwLjE5ODU2IDE1LjcxODc1LC0xLjM0Mzc1IDQuNzUzNDQsLTEuNTczOTggOS4wNjM2NSwtMy45OTc0NiAxMi45MDYyNSwtNy4zMTI1IDMuODEwOSwtMy4zMzExMiA2LjkyMjI3LC03LjQyOTI4IDkuMzc1LC0xMi4yNSAyLjQ4NSwtNC44ODQwNyAzLjkyNjgyLC05Ljg2MzU3IDQuMzEyNSwtMTQuOTM3NSAwLjM4NTY3LC01LjA3MzgyIC0wLjIzNjU1LC05Ljk2NTE3IC0xLjkwNjI1LC0xNC42ODc1IC0xLjY2OTcxLC00LjcyMjE5IC00LjUwMzM5LC05LjIwODA5IC04LjUsLTEzLjQzNzUgLTMuOTk2NjEsLTQuMjI5MjQgLTguOTc1MDYsLTcuODQxMjcgLTE0LjkzNzUsLTEwLjg3NSAtNy4xMDQxNCwtMy42MTQ0NSAtMTQuNTA2NzIsLTUuNzkzMjIgLTIyLjE1NjI1LC02LjUzMTI1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcxNyIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDE4Mi4zNzUsMTI0LjY1NjI1IGMgLTEuODk3MjYsMC4wNDE0IC0zLjcyMTc5LDAuMjExMDcgLTUuNTMxMjUsMC40Njg3NSAtNC44MTk4NCwwLjY1MjEzIC05LjA3MDMyLDEuOTI4NDIgLTEyLjcxODc1LDMuODQzNzUgLTMuNjA3ODYsMS44ODU3OSAtNi44MzA4Miw0LjI1MjgxIC05LjY1NjI1LDcuMTI1IC0yLjc5MDMyLDIuODc3NzkgLTUuMDIxMjQsNi4xMDM2MiAtNi42ODc1LDkuNjI1IC0xLjY2NjMsMy41MjE0OCAtMi43ODU5Nyw3LjI0NTkyIC0zLjQwNjI1LDExLjIxODc1IC0wLjU5Mjg3LDMuNzk3MTEgLTAuNzAwMjksNy42MDAwNCAtMC4yODEyNSwxMS4zNzUgMC40MjQ1LDMuNzM5ODUgMS40NjY2Nyw3LjQ0NDY2IDMuMTI1LDExLjEyNSAxLjY5MzQ1LDMuNjg1ODYgMy45NDAzMyw3LjAzNTUgNi43NSwxMC4wMzEyNSAyLjgxNTEsMi45NjA2IDYuNDg5NjYsNS41NTk2NCAxMSw3LjgxMjUgNC41NTA5MSwyLjIyMzE5IDkuNzAyNzcsMy43ODcyNCAxNS40Njg3NSw0LjY4NzUgMTMuNTM1ODEsMi4xMTMzOSAyNC41NzUzNSwtMC4yNTMwNyAzMy4wOTM3NSwtNy4wNjI1IGwgNC44MTI1LC0zMC44NDM3NSAtMzYuNSwtNS42ODc1IC0xLjgxMjUsMTEuNzE4NzUgMjMuNDY4NzUsMy42NTYyNSAtMi4yNSwxNC4zNzUgYyAtNC41NjkxOCwyLjI3NTg3IC0xMC4wOTM0NywyLjkxNjI5IC0xNi41NjI1LDEuOTA2MjUgLTUuOTA2NjEsLTAuOTIyMjEgLTExLjA3Mzc3LC0yLjg4MzgxIC0xNS40Njg3NSwtNS44NzUgLTQuMzU0NDIsLTMuMDIwODQgLTcuNTI3MjgsLTYuNzU0NDUgLTkuNTYyNSwtMTEuMjUgLTIuMDM1MjgsLTQuNDk1NTEgLTIuNjcwOTksLTkuMzA4MyAtMS44NzUsLTE0LjQwNjI1IDAuNjAzOCwtMy44NjczNSAxLjk3MTQyLC03LjI5OTE3IDQuMDkzNzUsLTEwLjI4MTI1IDIuMTYyOSwtMy4wMTE2NiA0Ljc3NTkzLC01LjM0NDM5IDcuODEyNSwtNy4wMzEyNSAzLjA3MTY1LC0xLjY4MTI2IDYuNDMxOSwtMi44MjA2NyAxMC4wOTM3NSwtMy40Mzc1IDMuNjYxNzUsLTAuNjE2NzIgNy4zMzU2OCwtMC42NDQzMiAxMS4wNjI1LC0wLjA2MjUgMy43OTcwMSwwLjU5MjkgNy41MjIyLDEuNjc0MzYgMTEuMTI1LDMuMjgxMjUgMy42MDgxNCwxLjU3MTg0IDYuNTQ1MDYsMy4xODgzNiA4Ljg0Mzc1LDQuODQzNzUgbCAxLjc1LDEuMzEyNSA3LjE1NjI1LC05LjU5Mzc1IC0xLjY1NjI1LC0xLjM0Mzc1IGMgLTcuMjU0MTYsLTUuNjcwNDUgLTE1Ljg2MjgzLC05LjI1ODk1IC0yNS44MTI1LC0xMC44MTI1IC0zLjQwNTk4LC0wLjUzMTc0IC02LjcxMjksLTAuNzg3NzcgLTkuODc1LC0wLjcxODc1IHoiCiAgICAgICAgICAgICAgIHN0eWxlPSJjb2xvcjojMDAwMDAwO2ZvbnQtc3R5bGU6bm9ybWFsO2ZvbnQtdmFyaWFudDpub3JtYWw7Zm9udC13ZWlnaHQ6Ym9sZDtmb250LXN0cmV0Y2g6bm9ybWFsO2ZvbnQtc2l6ZToxMDkuMzE0cHg7bGluZS1oZWlnaHQ6MTAwJTtmb250LWZhbWlseTpDYW50YXJlbGw7LWlua3NjYXBlLWZvbnQtc3BlY2lmaWNhdGlvbjonQ2FudGFyZWxsIEJvbGQnO3RleHQtaW5kZW50OjA7dGV4dC1hbGlnbjpzdGFydDt0ZXh0LWRlY29yYXRpb246bm9uZTt0ZXh0LWRlY29yYXRpb24tbGluZTpub25lO2xldHRlci1zcGFjaW5nOjBweDt3b3JkLXNwYWNpbmc6MHB4O3RleHQtdHJhbnNmb3JtOm5vbmU7d3JpdGluZy1tb2RlOmxyLXRiO2RpcmVjdGlvbjpsdHI7YmFzZWxpbmUtc2hpZnQ6YmFzZWxpbmU7dGV4dC1hbmNob3I6c3RhcnQ7ZGlzcGxheTppbmxpbmU7b3ZlcmZsb3c6dmlzaWJsZTt2aXNpYmlsaXR5OnZpc2libGU7ZmlsbDojMzMzMzMzO2ZpbGwtb3BhY2l0eToxO2ZpbGwtcnVsZTpub256ZXJvO3N0cm9rZTpub25lO3N0cm9rZS13aWR0aDowLjU4ODYyNXB4O21hcmtlcjpub25lO2VuYWJsZS1iYWNrZ3JvdW5kOmFjY3VtdWxhdGUiIC8+CiAgICAgICAgICAgIDxwYXRoCiAgICAgICAgICAgICAgIGlkPSJ0ZXh0NDcyMSIKICAgICAgICAgICAgICAgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoLTYzNS4yNzk0OCw1Mi4zNjIxODMpIgogICAgICAgICAgICAgICBkPSJtIDI3OS42MjUsMTE2LjI1IGMgLTEuODE0NzUsLTAuMDA1IC0zLjY5MzY5LDAuMjExMDYgLTUuNjU2MjUsMC42ODc1IC0yLjAxMDU5LDAuNDYxNzMgLTMuNzY4MzEsMS4wMTU0MSAtNS4yODEyNSwxLjY1NjI1IC0xLjUyOTUyLDAuNjA5NDcgLTMuMTQ1OTUsMS4zODEzMiAtNC44NDM3NSwyLjI4MTI1IGwgLTQyLjkwNjI1LDIyLjc1IDYuMjgxMjUsMTEuODc1IDQyLjgxMjUsLTIyLjY4NzUgYyAwLjc4NjA0LC0wLjQxNjYzIDEuNTI1NDEsLTAuNzYwNzkgMi4xODc1LC0xLjAzMTI1IDAuNjQ1NSwtMC4zMDE4NiAxLjU0Nzk0LC0wLjYwNzc3IDIuNzE4NzUsLTAuOTA2MjUgMS4xMjI3NywtMC4zMTMyMSAyLjE4NDg4LC0wLjQ5MjA1IDMuMTg3NSwtMC41IDAuOTg2MDIsLTAuMDM5NCAyLjE1NTE1LDAuMTE3OTggMy40Njg3NSwwLjQ2ODc1IDEuMjk3LDAuMzE5MzcgMi41MDY4NiwwLjg3MjUzIDMuNjg3NSwxLjY1NjI1IDEuMTMyNTksMC43Njg5OSAyLjM3ODg0LDEuODkzOTIgMy42ODc1LDMuMzc1IDEuMjYwNiwxLjQ2NjM0IDIuNDMxMzEsMy4yMzc0OCAzLjUzMTI1LDUuMzEyNSAxLjE0OTk3LDIuMTY5MzYgMi4wMTU0MSw0LjM2MzA1IDIuNTkzNzUsNi41OTM3NSBsIDAuNTYyNSwyLjI1IDExLjUzMTI1LC0zLjU2MjUgLTAuNDY4NzUsLTIuMDYyNSBjIC0wLjg2MzkzLC0zLjUyOTE5IC0yLjE4NTQ4LC02Ljk3OTY2IC0zLjk2ODc1LC0xMC4zNDM3NSAtMS43MzMyNiwtMy4yNjk3MyAtMy41OTY2MiwtNi4wNjUyNiAtNS41NjI1LC04LjQwNjI1IC0xLjk4MjUyLC0yLjM3MjM4IC0zLjg4ODI2LC00LjIyMjQ2IC01Ljc1LC01LjUzMTI1IC0xLjg3ODM3LC0xLjM0MDE3IC0zLjg2ODczLC0yLjMxODg2IC01Ljk2ODc1LC0yLjkzNzUgLTIuMDk5OTcsLTAuNjE4NTggLTQuMDYwMzgsLTAuOTE2MjEgLTUuODQzNzUsLTAuOTM3NSB6IgogICAgICAgICAgICAgICBzdHlsZT0iY29sb3I6IzAwMDAwMDtmb250LXN0eWxlOm5vcm1hbDtmb250LXZhcmlhbnQ6bm9ybWFsO2ZvbnQtd2VpZ2h0OmJvbGQ7Zm9udC1zdHJldGNoOm5vcm1hbDtmb250LXNpemU6MTA5LjMxNHB4O2xpbmUtaGVpZ2h0OjEwMCU7Zm9udC1mYW1pbHk6Q2FudGFyZWxsOy1pbmtzY2FwZS1mb250LXNwZWNpZmljYXRpb246J0NhbnRhcmVsbCBCb2xkJzt0ZXh0LWluZGVudDowO3RleHQtYWxpZ246c3RhcnQ7dGV4dC1kZWNvcmF0aW9uOm5vbmU7dGV4dC1kZWNvcmF0aW9uLWxpbmU6bm9uZTtsZXR0ZXItc3BhY2luZzowcHg7d29yZC1zcGFjaW5nOjBweDt0ZXh0LXRyYW5zZm9ybTpub25lO3dyaXRpbmctbW9kZTpsci10YjtkaXJlY3Rpb246bHRyO2Jhc2VsaW5lLXNoaWZ0OmJhc2VsaW5lO3RleHQtYW5jaG9yOnN0YXJ0O2Rpc3BsYXk6aW5saW5lO292ZXJmbG93OnZpc2libGU7dmlzaWJpbGl0eTp2aXNpYmxlO2ZpbGw6IzMzMzMzMztmaWxsLW9wYWNpdHk6MTtmaWxsLXJ1bGU6bm9uemVybztzdHJva2U6bm9uZTtzdHJva2Utd2lkdGg6MC41ODg2MjVweDttYXJrZXI6bm9uZTtlbmFibGUtYmFja2dyb3VuZDphY2N1bXVsYXRlIiAvPgogICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgICAgPC9nPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg==
+'/>
+                            <div class="titleBar">
+                                Fontbakery Technical Report
+                            </div>
+                        </header>
+
+                        <main>
+                            <p>If you think a check is flawed or have an idea for a check, please file an issue at <a href='https://github.com/fonttools/fontbakery/issues'>https://github.com/fonttools/fontbakery/issues</a> and remember to include a pointer to the repo and branch you're checking.</p>
+<h2>Summary</h2>
+            <table>
+            <tr>
+                <th>💥 ERROR</th>
+                <th>🔥 FAIL</th>
+                <th>⚠️ WARN</th>
+                <th>⏩ SKIP</th>
+                <th>ℹ️ INFO</th>
+                <th>✅ PASS</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>3</td>
+                <td>10</td>
+                <td>121</td>
+                <td>7</td>
+                <td>110</td>
+            </tr>
+            <tr>
+                <td>1%</td>
+                <td>2%</td>
+                <td>5%</td>
+                <td>64%</td>
+                <td>4%</td>
+                <td>58%</td>
+            </tr>
+            </table>
+            
+<p><strong>Note:</strong> The following loglevels were omitted in this report: SKIP, INFO, PASS, DEBUG</p>
+
+    <p>Meaning of check results:</p>
+
+    <ul>
+    <li>💥 An <em>ERROR</em> is something wrong with FontBakery itself, possibly a bug.
+    <li>🔥 A <em>FAIL</em> is a problem with the font that must be fixed.
+    <li>⚠️ A <em>WARN</em> is something that you should consider addressing.
+    <li>ℹ️ An <em>INFO</em> result simply prints something useful. Typically stats.
+    <li>✅ A <em>PASS</em> means the font looks good for the given checking routine.
+    <li>⏩ And a <em>SKIP</em> happens when the check does not apply to the given font.
+    </ul>
+
+    <p>If you get ERRORs, please help us improve the tool by reporting them at our
+        <a href="https://github.com/fonttools/fontbakery/issues">issue tracker.</a></p>
+
+    <p>(but other kinds of bug reports and/or feature requests
+       are also always welcome, of course!)</p>
+
+    <p>FontBakery version: 0.10.1</p>
+    
+<h2>Section: Google Fonts</h2>
+<span class='section__emoji'>💥🔥🔥⚠️⚠️⚠️⚠️⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩⏩ℹ️ℹ️ℹ️ℹ️ℹ️</span>
+<h3>Check for codepoints not covered by METADATA subsets.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/metadata/unreachable_subsetting</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
+<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, cherokee, tifinagh</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tai-le, malayalam, math, syriac, tifinagh, canadian-aboriginal, old-permic</li>
+<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+0312 COMBINING TURNED COMMA ABOVE: not included in any glyphset definition</li>
+<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
+<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: javanese, limbu, khmer, grantha, psalter-pahlavi, hatran, newa, khojki, devanagari, kharoshthi, tirhuta, tifinagh, sundanese, manichaean, mandaic, thai, brahmi, hanifi-rohingya, khudawadi, cham, gunjala-gondi, sharada, siddham, kannada, kayah-li, meetei-mayek, rejang, syloti-nagri, thaana, hanunoo, dogra, sogdian, batak, modi, tagbanwa, buginese, duployan, tamil, nko, oriya, balinese, mongolian, saurashtra, bengali, sinhala, tai-tham, warang-citi, gujarati, chakma, pahawh-hmong, tai-le, malayalam, lepcha, buhid, tagalog, tai-viet, myanmar, tibetan, yi, mahajani, syriac, takri, avestan, phags-pa, telugu, kaithi, gurmukhi, new-tai-lue</li>
+<li>U+200D ZERO WIDTH JOINER: try adding one of: javanese, limbu, grantha, psalter-pahlavi, newa, khojki, devanagari, kharoshthi, tirhuta, tifinagh, sundanese, manichaean, mandaic, thai, brahmi, hanifi-rohingya, khudawadi, cham, gunjala-gondi, sharada, siddham, kannada, kayah-li, meetei-mayek, rejang, syloti-nagri, thaana, hanunoo, dogra, tagbanwa, batak, modi, buginese, duployan, tamil, nko, oriya, balinese, mongolian, saurashtra, bengali, old-hungarian, sinhala, tai-tham, warang-citi, gujarati, chakma, pahawh-hmong, tai-le, malayalam, lepcha, buhid, tagalog, tai-viet, myanmar, tibetan, yi, mahajani, syriac, takri, avestan, phags-pa, telugu, kaithi, gurmukhi, new-tai-lue</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: khmer, tirhuta, tifinagh, manichaean, mandaic, brahmi, cham, masaram-gondi, bassa-vah, dogra, hanunoo, modi, buginese, hebrew, oriya, gujarati, pahawh-hmong, wancho, lepcha, marchen, tagalog, myanmar, rejang, bhaiksuki, miao, newa, sharada, lao, kannada, kayah-li, osage, old-permic, nko, symbols, soyombo, ahom, phags-pa, telugu, kaithi, limbu, khojki, devanagari, kharoshthi, math, sundanese, meetei-mayek, thaana, sogdian, duployan, tamil, balinese, mongolian, bengali, music, tai-le, malayalam, mahajani, sinhala, new-tai-lue, javanese, elbasan, grantha, psalter-pahlavi, thai, zanabazar-square, hanifi-rohingya, caucasian-albanian, khudawadi, gunjala-gondi, siddham, adlam, syloti-nagri, tagbanwa, batak, coptic, chakma, buhid, tai-viet, mende-kikakui, tibetan, yi, syriac, takri, gurmukhi</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>egyptian-hieroglyphs</code>, <code>latin</code>, <code>latin-ext</code> [code: unreachable-subsetting]</p>
+</span></li></ul></div></details>
+<h3>Version number has increased since previous release on Google Fonts?</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/version_bump</div>
+
+<details><summary>🔥 NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Version number 2.001007080078125 is equal to version on Google Fonts.</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Version number 2.001007080078125 is equal to version on Google Fonts GitHub repo.</p>
+</span></li></ul></div></details>
+<h3>Glyphs are similiar to Google Fonts version?</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/production_glyphs_similarity</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>Following glyphs differ greatly from Google Fonts version:
+* u13017 and u13068</p>
+</span></li></ul></div></details>
+<h3>Familyname must be unique according to namecheck.fontdata.com</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/fontdata_namecheck</div>
+
+<details><summary>💥 NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>💥 ERROR</span><span class='details_text'><p>Failed to access: http://namecheck.fontdata.com.
+This check relies on the external service http://namecheck.fontdata.com via the internet. While the service cannot be reached or does not respond this check is broken.</p>
+<pre><code>	You can exclude this check with the command line option:
+	-x com.google.fonts/check/fontdata_namecheck
+
+	Or you can wait until the service is available again.
+	If the problem persists please report this issue at: https://github.com/fonttools/fontbakery/issues
+
+	Original error message:
+	&lt;class 'requests.exceptions.ReadTimeout'&gt; [code: namecheck-service]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Combined length of family and style must not exceed 27 characters.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/name/family_and_style_max_length</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
+FONT_FAMILY_NAME = 'Noto Sans Egyptian Hieroglyphs' / SUBFAMILY_NAME = 'Regular'</p>
+<p>Please take a look at the conversation at https://github.com/fonttools/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]</p>
+</span></li></ul></div></details>
+<h3>Ensure fonts have ScriptLangTags declared on the 'meta' table.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/meta/script_lang_tags</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This font file does not have a 'meta' table. [code: lacks-meta-table]</p>
+</span></li></ul></div></details>
+<h3>Noto fonts must have an ARTICLE.en_us.html file</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/description/noto_has_article</div>
+
+<details><summary>🔥 NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>This is a Noto font but it lacks an ARTICLE.en_us.html file [code: missing-article]</p>
+</span></li></ul></div></details>
+<h2>Section: Universal</h2>
+<span class='section__emoji'>🔥⚠️⚠️⏩⏩⏩⏩⏩⏩ℹ️ℹ️</span>
+<h3>Check that legacy accents aren't used in composite glyphs. (derived from com.google.fonts/check/legacy_accents)</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/legacy_accents</div>
+
+<details><summary>🔥 NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Aacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Abreve&quot; has a legacy accent component (breve). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Acircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Adieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Agrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Aogonek&quot; has a legacy accent component (ogonek). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Aring&quot; has a legacy accent component (ring). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Atilde&quot; has a legacy accent component (tilde). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Cacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ccaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ccedilla&quot; has a legacy accent component (cedilla). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Cdotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Dcaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Eacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ecaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ecircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Edieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Edotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Egrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Eogonek&quot; has a legacy accent component (ogonek). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Gbreve&quot; has a legacy accent component (breve). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Gdotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Iacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Icircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Idieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Idotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Igrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Iogonek&quot; has a legacy accent component (ogonek). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Lacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Nacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ncaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ntilde&quot; has a legacy accent component (tilde). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Oacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ocircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Odieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ograve&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ohungarumlaut&quot; has a legacy accent component (hungarumlaut). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Otilde&quot; has a legacy accent component (tilde). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Racute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Rcaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Sacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Scaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Scedilla&quot; has a legacy accent component (cedilla). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Tcaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Uacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ubreve&quot; has a legacy accent component (breve). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ucircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Udieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ugrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Uhungarumlaut&quot; has a legacy accent component (hungarumlaut). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Uring&quot; has a legacy accent component (ring). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Wacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Wcircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Wdieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Wgrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Yacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ycircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ydieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Ygrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Zacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Zcaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;Zdotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;aacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;abreve&quot; has a legacy accent component (breve). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;acircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;acutecomb&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;adieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;agrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;aogonek&quot; has a legacy accent component (ogonek). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;aring&quot; has a legacy accent component (ring). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;atilde&quot; has a legacy accent component (tilde). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni0306&quot; has a legacy accent component (breve). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;cacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni030C&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ccaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ccedilla&quot; has a legacy accent component (cedilla). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;cdotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni0327&quot; has a legacy accent component (cedilla). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni0302&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni0308&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni0307&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;eacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ecaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ecircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;edieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;edotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;egrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;gbreve&quot; has a legacy accent component (breve). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;gdotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;gravecomb&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni030B&quot; has a legacy accent component (hungarumlaut). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;iacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;icircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;idieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;igrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;iogonek&quot; has a legacy accent component (ogonek). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;lacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;nacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ncaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ntilde&quot; has a legacy accent component (tilde). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;oacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ocircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;odieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni0328&quot; has a legacy accent component (ogonek). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ograve&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ohungarumlaut&quot; has a legacy accent component (hungarumlaut). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;otilde&quot; has a legacy accent component (tilde). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;racute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;rcaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uni030A&quot; has a legacy accent component (ring). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;sacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;scaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;scedilla&quot; has a legacy accent component (cedilla). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;tildecomb&quot; has a legacy accent component (tilde). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ubreve&quot; has a legacy accent component (breve). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ucircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;udieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ugrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uhungarumlaut&quot; has a legacy accent component (hungarumlaut). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uogonek&quot; has a legacy accent component (ogonek). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;uring&quot; has a legacy accent component (ring). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;wacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;wcircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;wdieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;wgrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;yacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ycircumflex&quot; has a legacy accent component (circumflex). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ydieresis&quot; has a legacy accent component (dieresis). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;ygrave&quot; has a legacy accent component (grave). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;zacute&quot; has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;zcaron&quot; has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Glyph &quot;zdotaccent&quot; has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]</p>
+</span></li><li class='details_item'><span class='details_indicator'>🔥 FAIL</span><span class='details_text'><p>Legacy accent &quot;overscore&quot; are too narrow. [code: legacy-accents-width]</p>
+</span></li></ul></div></details>
+<h3>Check if each glyph has the recommended amount of contours.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/contour_count</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>This check inspects the glyph outlines and detects the total number of contours in each of them. The expected values are infered from the typical ammounts of contours observed in a large collection of reference font families. The divergences listed below may simply indicate a significantly different design on some of your glyphs. On the other hand, some of these may flag actual bugs in the font such as glyphs mapped to an incorrect codepoint. Please consider reviewing the design and codepoint assignment of these to make sure they are correct.</p>
+<p>The following glyphs do not have the recommended number of contours:</p>
+<pre><code>- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+
+- Glyph name: aogonek	Contours detected: 3	Expected: 2
+
+- Glyph name: uogonek	Contours detected: 2	Expected: 1
+</code></pre>
+<p>[code: contour-count]</p>
+</span></li></ul></div></details>
+<h3>Check math signs have the same width.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/math_signs_width</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The most common width is 572 among a set of 6 math glyphs.
+The following math glyphs have a different width, though:</p>
+<p>Width = 322:
+minus
+[code: width-outliers]</p>
+</span></li></ul></div></details>
+<h2>Section: fontbakery.profiles.gdef</h2>
+<span class='section__emoji'>⚠️</span>
+<h3>Check mark characters are in GDEF mark glyph class.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/gdef_mark_chars</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following mark characters could be in the GDEF mark glyph class:
+acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), uni0304 (U+0304), uni0306 (U+0306), uni0307 (U+0307), uni0308 (U+0308), uni030A (U+030A), uni030B (U+030B), uni030C (U+030C), uni0312 (U+0312), uni0326 (U+0326), uni0327 (U+0327) and uni0328 (U+0328) [code: mark-chars]</p>
+</span></li></ul></div></details>
+<h2>Section: Outline Correctness Checks</h2>
+<span class='section__emoji'>⚠️⚠️</span>
+<h3>Do outlines contain any jaggy segments?</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/outline_jaggy_segments</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have jaggy segments:</p>
+<pre><code>* u13004 (U+13004): L&lt;&lt;228.0,789.0&gt;--&lt;339.0,614.0&gt;&gt;/L&lt;&lt;339.0,614.0&gt;--&lt;256.0,813.0&gt;&gt; = 9.746066721350674
+
+* u1300F (U+1300F): B&lt;&lt;637.5,644.0&gt;-&lt;661.0,606.0&gt;-&lt;681.0,563.0&gt;&gt;/B&lt;&lt;681.0,563.0&gt;-&lt;677.0,571.0&gt;-&lt;674.5,581.0&gt;&gt; = 1.6211459136531066
+
+* u1302A (U+1302A): B&lt;&lt;538.5,21.0&gt;-&lt;571.0,22.0&gt;-&lt;601.0,24.0&gt;&gt;/L&lt;&lt;601.0,24.0&gt;--&lt;538.0,24.0&gt;&gt; = 3.8140748342903783
+
+* u1302A (U+1302A): L&lt;&lt;395.0,24.0&gt;--&lt;364.0,24.0&gt;&gt;/B&lt;&lt;364.0,24.0&gt;-&lt;388.0,22.0&gt;-&lt;415.0,21.0&gt;&gt; = 4.763641690726143
+
+* u1302B (U+1302B): B&lt;&lt;592.5,21.0&gt;-&lt;625.0,22.0&gt;-&lt;655.0,24.0&gt;&gt;/L&lt;&lt;655.0,24.0&gt;--&lt;592.0,24.0&gt;&gt; = 3.8140748342903783
+
+* u1302B (U+1302B): L&lt;&lt;449.0,24.0&gt;--&lt;418.0,24.0&gt;&gt;/B&lt;&lt;418.0,24.0&gt;-&lt;442.0,22.0&gt;-&lt;469.0,21.0&gt;&gt; = 4.763641690726143
+
+* u1302C (U+1302C): B&lt;&lt;619.5,274.0&gt;-&lt;619.0,290.0&gt;-&lt;613.0,309.0&gt;&gt;/B&lt;&lt;613.0,309.0&gt;-&lt;615.0,281.0&gt;-&lt;608.5,261.5&gt;&gt; = 13.439951593747935
+
+* u1302C (U+1302C): B&lt;&lt;632.5,364.0&gt;-&lt;642.0,341.0&gt;-&lt;645.0,317.0&gt;&gt;/B&lt;&lt;645.0,317.0&gt;-&lt;648.0,341.0&gt;-&lt;657.5,364.0&gt;&gt; = 14.25003269780357
+
+* u1302C (U+1302C): L&lt;&lt;1023.0,148.0&gt;--&lt;1016.0,340.0&gt;&gt;/B&lt;&lt;1016.0,340.0&gt;-&lt;1016.0,338.0&gt;-&lt;1014.0,338.0&gt;&gt; = 2.0879838327232854
+
+* u13030 (U+13030): L&lt;&lt;358.0,442.0&gt;--&lt;357.0,441.0&gt;&gt;/B&lt;&lt;357.0,441.0&gt;-&lt;372.0,453.0&gt;-&lt;391.0,453.0&gt;&gt; = 6.340191745909908
+
+* u13031 (U+13031): L&lt;&lt;358.0,442.0&gt;--&lt;357.0,441.0&gt;&gt;/B&lt;&lt;357.0,441.0&gt;-&lt;372.0,453.0&gt;-&lt;391.0,453.0&gt;&gt; = 6.340191745909908
+
+* u13048 (U+13048): L&lt;&lt;318.0,0.0&gt;--&lt;318.0,292.0&gt;&gt;/L&lt;&lt;318.0,292.0&gt;--&lt;247.0,0.0&gt;&gt; = 13.666300072913529
+
+* u1305A (U+1305A): B&lt;&lt;368.5,958.5&gt;-&lt;376.0,967.0&gt;-&lt;388.0,970.0&gt;&gt;/B&lt;&lt;388.0,970.0&gt;-&lt;381.0,969.0&gt;-&lt;373.0,973.0&gt;&gt; = 5.906141113770435
+
+* u1305F (U+1305F): L&lt;&lt;219.0,940.0&gt;--&lt;159.0,907.0&gt;&gt;/B&lt;&lt;159.0,907.0&gt;-&lt;185.0,915.0&gt;-&lt;200.0,917.5&gt;&gt; = 11.70806477392071
+
+* u13060 (U+13060): L&lt;&lt;251.0,795.0&gt;--&lt;173.0,795.0&gt;&gt;/B&lt;&lt;173.0,795.0&gt;-&lt;188.0,792.0&gt;-&lt;213.5,788.5&gt;&gt; = 11.309932474020195
+
+* u13061 (U+13061): L&lt;&lt;300.0,795.0&gt;--&lt;222.0,795.0&gt;&gt;/B&lt;&lt;222.0,795.0&gt;-&lt;237.0,792.0&gt;-&lt;262.5,788.5&gt;&gt; = 11.309932474020195
+
+* u13062 (U+13062): B&lt;&lt;507.5,936.0&gt;-&lt;502.0,954.0&gt;-&lt;500.0,967.0&gt;&gt;/B&lt;&lt;500.0,967.0&gt;-&lt;498.0,941.0&gt;-&lt;490.0,912.0&gt;&gt; = 13.144867617550734
+
+* u13065 (U+13065): B&lt;&lt;310.0,896.0&gt;-&lt;314.0,882.0&gt;-&lt;327.0,870.0&gt;&gt;/B&lt;&lt;327.0,870.0&gt;-&lt;306.0,891.0&gt;-&lt;306.0,922.0&gt;&gt; = 2.2906100426384346
+
+* u13065 (U+13065): B&lt;&lt;449.0,922.0&gt;-&lt;449.0,898.0&gt;-&lt;435.0,879.0&gt;&gt;/B&lt;&lt;435.0,879.0&gt;-&lt;442.0,887.0&gt;-&lt;445.0,896.0&gt;&gt; = 4.801573349873815
+
+* u1306D (U+1306D): B&lt;&lt;611.0,890.0&gt;-&lt;618.0,886.0&gt;-&lt;615.0,876.0&gt;&gt;/L&lt;&lt;615.0,876.0&gt;--&lt;669.0,977.0&gt;&gt; = 11.432098130067416
+
+* u1306D (U+1306D): L&lt;&lt;549.0,580.0&gt;--&lt;650.0,906.0&gt;&gt;/L&lt;&lt;650.0,906.0&gt;--&lt;579.0,783.0&gt;&gt; = 12.781264614159975
+
+* u1306E (U+1306E): B&lt;&lt;442.0,778.0&gt;-&lt;430.0,768.0&gt;-&lt;413.0,766.0&gt;&gt;/L&lt;&lt;413.0,766.0&gt;--&lt;456.0,762.0&gt;&gt; = 12.024382477701632
+
+* u1306E (U+1306E): L&lt;&lt;345.0,771.0&gt;--&lt;388.0,768.0&gt;&gt;/B&lt;&lt;388.0,768.0&gt;-&lt;372.0,772.0&gt;-&lt;361.5,784.0&gt;&gt; = 10.045330369496687
+
+* u1306E (U+1306E): L&lt;&lt;359.0,952.0&gt;--&lt;351.0,841.0&gt;&gt;/B&lt;&lt;351.0,841.0&gt;-&lt;356.0,858.0&gt;-&lt;370.0,868.5&gt;&gt; = 12.267242522251085
+
+* u1306E (U+1306E): L&lt;&lt;456.0,762.0&gt;--&lt;459.0,803.0&gt;&gt;/B&lt;&lt;459.0,803.0&gt;-&lt;454.0,788.0&gt;-&lt;442.0,778.0&gt;&gt; = 14.25003269780357
+
+* u1306F (U+1306F): B&lt;&lt;320.0,756.5&gt;-&lt;316.0,757.0&gt;-&lt;312.0,758.0&gt;&gt;/B&lt;&lt;312.0,758.0&gt;-&lt;318.0,755.0&gt;-&lt;322.0,751.0&gt;&gt; = 12.528807709151492
+
+* u1306F (U+1306F): B&lt;&lt;355.5,740.5&gt;-&lt;353.0,740.0&gt;-&lt;352.0,740.0&gt;&gt;/B&lt;&lt;352.0,740.0&gt;-&lt;378.0,734.0&gt;-&lt;398.0,716.0&gt;&gt; = 12.994616791916512
+
+* u1306F (U+1306F): L&lt;&lt;280.0,942.0&gt;--&lt;271.0,832.0&gt;&gt;/B&lt;&lt;271.0,832.0&gt;-&lt;276.0,849.0&gt;-&lt;290.0,859.5&gt;&gt; = 11.712122475153018
+
+* u13074 (U+13074): B&lt;&lt;249.0,958.5&gt;-&lt;256.0,967.0&gt;-&lt;269.0,970.0&gt;&gt;/B&lt;&lt;269.0,970.0&gt;-&lt;262.0,969.0&gt;-&lt;254.0,973.0&gt;&gt; = 4.864514437760454
+
+* u13088 (U+13088): B&lt;&lt;446.5,342.5&gt;-&lt;436.0,304.0&gt;-&lt;419.0,272.0&gt;&gt;/B&lt;&lt;419.0,272.0&gt;-&lt;453.0,316.0&gt;-&lt;474.0,364.0&gt;&gt; = 9.714766078209031
+
+* u1308A (U+1308A): L&lt;&lt;187.0,397.0&gt;--&lt;187.0,398.0&gt;&gt;/B&lt;&lt;187.0,398.0&gt;-&lt;185.0,388.0&gt;-&lt;178.5,357.0&gt;&gt; = 11.309932474020195
+
+* u130A6 (U+130A6): B&lt;&lt;399.0,47.0&gt;-&lt;407.0,35.0&gt;-&lt;410.0,36.0&gt;&gt;/L&lt;&lt;410.0,36.0&gt;--&lt;326.0,11.0&gt;&gt; = 1.8609410660127526
+
+* u130A7 (U+130A7): B&lt;&lt;572.0,453.5&gt;-&lt;548.0,448.0&gt;-&lt;526.0,443.0&gt;&gt;/L&lt;&lt;526.0,443.0&gt;--&lt;725.0,443.0&gt;&gt; = 12.80426606528674
+
+* u130A8 (U+130A8): B&lt;&lt;879.0,453.5&gt;-&lt;855.0,448.0&gt;-&lt;833.0,443.0&gt;&gt;/L&lt;&lt;833.0,443.0&gt;--&lt;1032.0,443.0&gt;&gt; = 12.80426606528674
+
+* u130C3 (U+130C3): B&lt;&lt;475.0,483.5&gt;-&lt;450.0,511.0&gt;-&lt;444.0,556.0&gt;&gt;/L&lt;&lt;444.0,556.0&gt;--&lt;444.0,69.0&gt;&gt; = 7.594643368591447
+
+* u130C3 (U+130C3): B&lt;&lt;869.0,483.5&gt;-&lt;844.0,511.0&gt;-&lt;838.0,556.0&gt;&gt;/L&lt;&lt;838.0,556.0&gt;--&lt;838.0,69.0&gt;&gt; = 7.594643368591447
+
+* u130C3 (U+130C3): L&lt;&lt;444.0,1015.0&gt;--&lt;444.0,605.0&gt;&gt;/B&lt;&lt;444.0,605.0&gt;-&lt;448.0,636.0&gt;-&lt;460.5,677.0&gt;&gt; = 7.352379359892374
+
+* u130C3 (U+130C3): L&lt;&lt;838.0,1015.0&gt;--&lt;838.0,605.0&gt;&gt;/B&lt;&lt;838.0,605.0&gt;-&lt;842.0,636.0&gt;-&lt;854.5,677.0&gt;&gt; = 7.352379359892374
+
+* u130C4 (U+130C4): B&lt;&lt;1049.5,677.0&gt;-&lt;1062.0,636.0&gt;-&lt;1065.0,605.0&gt;&gt;/L&lt;&lt;1065.0,605.0&gt;--&lt;1065.0,1015.0&gt;&gt; = 5.527540151656126
+
+* u130C4 (U+130C4): B&lt;&lt;655.5,677.0&gt;-&lt;668.0,636.0&gt;-&lt;671.0,605.0&gt;&gt;/L&lt;&lt;671.0,605.0&gt;--&lt;671.0,1015.0&gt;&gt; = 5.527540151656126
+
+* u130C4 (U+130C4): L&lt;&lt;1065.0,69.0&gt;--&lt;1065.0,556.0&gt;&gt;/B&lt;&lt;1065.0,556.0&gt;-&lt;1060.0,511.0&gt;-&lt;1034.5,483.5&gt;&gt; = 6.340191745909908
+
+* u130C4 (U+130C4): L&lt;&lt;671.0,69.0&gt;--&lt;671.0,556.0&gt;&gt;/B&lt;&lt;671.0,556.0&gt;-&lt;666.0,511.0&gt;-&lt;640.5,483.5&gt;&gt; = 6.340191745909908
+
+* u130D4 (U+130D4): L&lt;&lt;519.0,298.0&gt;--&lt;669.0,302.0&gt;&gt;/L&lt;&lt;669.0,302.0&gt;--&lt;668.0,302.0&gt;&gt; = 1.5275254422129318
+
+* u130D4 (U+130D4): L&lt;&lt;669.0,302.0&gt;--&lt;668.0,302.0&gt;&gt;/L&lt;&lt;668.0,302.0&gt;--&lt;817.0,325.0&gt;&gt; = 8.775055744479651
+
+* u130D7 (U+130D7): B&lt;&lt;1074.5,284.5&gt;-&lt;1084.0,254.0&gt;-&lt;1094.0,232.0&gt;&gt;/B&lt;&lt;1094.0,232.0&gt;-&lt;1088.0,261.0&gt;-&lt;1084.5,292.5&gt;&gt; = 12.754585604977335
+
+* u130D7 (U+130D7): B&lt;&lt;1121.5,510.5&gt;-&lt;1127.0,534.0&gt;-&lt;1129.0,550.0&gt;&gt;/B&lt;&lt;1129.0,550.0&gt;-&lt;1126.0,540.0&gt;-&lt;1119.5,525.0&gt;&gt; = 9.574227885091789
+
+* u130D9 (U+130D9): B&lt;&lt;269.0,728.0&gt;-&lt;275.0,770.0&gt;-&lt;261.0,810.0&gt;&gt;/B&lt;&lt;261.0,810.0&gt;-&lt;263.0,794.0&gt;-&lt;261.5,776.5&gt;&gt; = 12.165029870286897
+
+* u130DA (U+130DA): B&lt;&lt;446.0,898.0&gt;-&lt;470.0,932.0&gt;-&lt;476.0,975.0&gt;&gt;/B&lt;&lt;476.0,975.0&gt;-&lt;471.0,960.0&gt;-&lt;461.0,945.5&gt;&gt; = 10.491477012331599
+
+* u130DB (U+130DB): B&lt;&lt;583.5,323.0&gt;-&lt;549.0,318.0&gt;-&lt;523.0,313.0&gt;&gt;/L&lt;&lt;523.0,313.0&gt;--&lt;607.0,313.0&gt;&gt; = 10.885527054658743
+
+* u130DC (U+130DC): L&lt;&lt;570.0,233.0&gt;--&lt;398.0,198.0&gt;&gt;/L&lt;&lt;398.0,198.0&gt;--&lt;504.0,207.0&gt;&gt; = 6.648888259978554
+
+* u130EF (U+130EF): B&lt;&lt;1343.5,381.0&gt;-&lt;1338.0,403.0&gt;-&lt;1327.0,425.0&gt;&gt;/B&lt;&lt;1327.0,425.0&gt;-&lt;1331.0,409.0&gt;-&lt;1333.5,392.5&gt;&gt; = 12.528807709151492
+
+* u130F0 (U+130F0): B&lt;&lt;1525.5,593.0&gt;-&lt;1499.0,652.0&gt;-&lt;1467.0,685.0&gt;&gt;/B&lt;&lt;1467.0,685.0&gt;-&lt;1482.0,661.0&gt;-&lt;1494.5,638.0&gt;&gt; = 12.113212795334356
+
+* u130F1 (U+130F1): L&lt;&lt;340.0,558.0&gt;--&lt;339.0,559.0&gt;&gt;/B&lt;&lt;339.0,559.0&gt;-&lt;345.0,549.0&gt;-&lt;350.5,538.5&gt;&gt; = 14.036243467926484
+
+* u130F2 (U+130F2): B&lt;&lt;369.5,910.0&gt;-&lt;333.0,859.0&gt;-&lt;310.0,800.0&gt;&gt;/B&lt;&lt;310.0,800.0&gt;-&lt;342.0,854.0&gt;-&lt;378.5,897.5&gt;&gt; = 9.353313908019095
+
+* u130F3 (U+130F3): B&lt;&lt;430.5,922.5&gt;-&lt;401.0,881.0&gt;-&lt;382.0,833.0&gt;&gt;/B&lt;&lt;382.0,833.0&gt;-&lt;408.0,877.0&gt;-&lt;437.5,912.0&gt;&gt; = 8.983916423521316
+
+* u130F6 (U+130F6): B&lt;&lt;422.0,924.0&gt;-&lt;403.0,888.0&gt;-&lt;376.0,856.0&gt;&gt;/B&lt;&lt;376.0,856.0&gt;-&lt;411.0,883.0&gt;-&lt;443.0,914.5&gt;&gt; = 12.196379734973
+
+* u130F6 (U+130F6): L&lt;&lt;198.0,203.0&gt;--&lt;231.0,280.0&gt;&gt;/L&lt;&lt;231.0,280.0&gt;--&lt;183.0,211.0&gt;&gt; = 11.625898643308558
+
+* u130FC (U+130FC): B&lt;&lt;619.5,342.5&gt;-&lt;631.0,290.0&gt;-&lt;643.0,255.0&gt;&gt;/B&lt;&lt;643.0,255.0&gt;-&lt;642.0,267.0&gt;-&lt;639.5,281.0&gt;&gt; = 14.16100272532503
+
+* u13104 (U+13104): L&lt;&lt;546.0,57.0&gt;--&lt;339.0,11.0&gt;&gt;/L&lt;&lt;339.0,11.0&gt;--&lt;511.0,23.0&gt;&gt; = 8.537894610721718
+
+* u13106 (U+13106): L&lt;&lt;887.0,135.0&gt;--&lt;612.0,84.0&gt;&gt;/L&lt;&lt;612.0,84.0&gt;--&lt;894.0,106.0&gt;&gt; = 6.045549529392515
+
+* u13110 (U+13110): B&lt;&lt;460.5,345.5&gt;-&lt;431.0,381.0&gt;-&lt;394.0,424.0&gt;&gt;/B&lt;&lt;394.0,424.0&gt;-&lt;396.0,420.0&gt;-&lt;396.0,417.0&gt;&gt; = 14.145795494102968
+
+* u13125 (U+13125): L&lt;&lt;147.0,933.0&gt;--&lt;183.0,378.0&gt;&gt;/L&lt;&lt;183.0,378.0&gt;--&lt;218.0,933.0&gt;&gt; = 7.319752660587253
+
+* u13128 (U+13128): L&lt;&lt;414.0,333.0&gt;--&lt;415.0,334.0&gt;&gt;/B&lt;&lt;415.0,334.0&gt;-&lt;406.0,320.0&gt;-&lt;395.0,294.0&gt;&gt; = 12.2647737278924
+
+* u13128 (U+13128): L&lt;&lt;607.0,333.0&gt;--&lt;608.0,334.0&gt;&gt;/B&lt;&lt;608.0,334.0&gt;-&lt;599.0,320.0&gt;-&lt;588.0,294.0&gt;&gt; = 12.2647737278924
+
+* u1313F (U+1313F): B&lt;&lt;230.0,28.0&gt;-&lt;229.0,40.0&gt;-&lt;237.0,42.0&gt;&gt;/L&lt;&lt;237.0,42.0&gt;--&lt;130.0,35.0&gt;&gt; = 10.29325517223935
+
+* u13140 (U+13140): B&lt;&lt;230.0,28.0&gt;-&lt;229.0,40.0&gt;-&lt;237.0,42.0&gt;&gt;/L&lt;&lt;237.0,42.0&gt;--&lt;130.0,35.0&gt;&gt; = 10.29325517223935
+
+* u13140 (U+13140): B&lt;&lt;489.0,28.0&gt;-&lt;489.0,41.0&gt;-&lt;496.0,42.0&gt;&gt;/L&lt;&lt;496.0,42.0&gt;--&lt;394.0,35.0&gt;&gt; = 4.204194650471878
+
+* u13141 (U+13141): B&lt;&lt;253.0,28.0&gt;-&lt;253.0,41.0&gt;-&lt;260.0,42.0&gt;&gt;/L&lt;&lt;260.0,42.0&gt;--&lt;153.0,35.0&gt;&gt; = 4.387114058468793
+
+* u13142 (U+13142): B&lt;&lt;1104.0,50.5&gt;-&lt;1133.0,34.0&gt;-&lt;1151.0,23.0&gt;&gt;/B&lt;&lt;1151.0,23.0&gt;-&lt;1147.0,27.0&gt;-&lt;1146.5,37.0&gt;&gt; = 13.570434385161448
+
+* u13142 (U+13142): B&lt;&lt;697.0,36.5&gt;-&lt;704.0,33.0&gt;-&lt;705.0,31.0&gt;&gt;/B&lt;&lt;705.0,31.0&gt;-&lt;702.0,39.0&gt;-&lt;696.5,45.5&gt;&gt; = 6.009005957494474
+
+* u13142 (U+13142): L&lt;&lt;1232.0,159.0&gt;--&lt;1101.0,226.0&gt;&gt;/B&lt;&lt;1101.0,226.0&gt;-&lt;1128.0,207.0&gt;-&lt;1158.0,184.5&gt;&gt; = 8.046702442878855
+
+* u13143 (U+13143): B&lt;&lt;183.5,837.0&gt;-&lt;188.0,827.0&gt;-&lt;190.0,818.0&gt;&gt;/B&lt;&lt;190.0,818.0&gt;-&lt;190.0,820.0&gt;-&lt;189.5,824.0&gt;&gt; = 12.528807709151492
+
+* u13144 (U+13144): B&lt;&lt;183.5,837.0&gt;-&lt;188.0,827.0&gt;-&lt;190.0,818.0&gt;&gt;/B&lt;&lt;190.0,818.0&gt;-&lt;190.0,820.0&gt;-&lt;189.5,824.0&gt;&gt; = 12.528807709151492
+
+* u13145 (U+13145): B&lt;&lt;280.0,875.0&gt;-&lt;284.0,868.0&gt;-&lt;285.0,861.0&gt;&gt;/B&lt;&lt;285.0,861.0&gt;-&lt;285.0,863.0&gt;-&lt;284.5,866.0&gt;&gt; = 8.13010235415596
+
+* u13146 (U+13146): B&lt;&lt;221.5,894.5&gt;-&lt;225.0,888.0&gt;-&lt;226.0,882.0&gt;&gt;/B&lt;&lt;226.0,882.0&gt;-&lt;226.0,884.0&gt;-&lt;225.5,886.0&gt;&gt; = 9.462322208025613
+
+* u13146 (U+13146): B&lt;&lt;263.0,891.0&gt;-&lt;263.0,886.0&gt;-&lt;261.0,884.0&gt;&gt;/B&lt;&lt;261.0,884.0&gt;-&lt;269.0,889.0&gt;-&lt;275.5,897.0&gt;&gt; = 12.994616791916483
+
+* u13147 (U+13147): B&lt;&lt;399.0,853.5&gt;-&lt;403.0,845.0&gt;-&lt;404.0,837.0&gt;&gt;/L&lt;&lt;404.0,837.0&gt;--&lt;404.0,847.0&gt;&gt; = 7.125016348901757
+
+* u13148 (U+13148): B&lt;&lt;156.5,420.5&gt;-&lt;100.0,477.0&gt;-&lt;68.0,580.0&gt;&gt;/B&lt;&lt;68.0,580.0&gt;-&lt;72.0,506.0&gt;-&lt;99.0,451.0&gt;&gt; = 14.16489623398697
+
+* u13148 (U+13148): B&lt;&lt;321.5,894.5&gt;-&lt;325.0,888.0&gt;-&lt;326.0,882.0&gt;&gt;/L&lt;&lt;326.0,882.0&gt;--&lt;326.0,889.0&gt;&gt; = 9.462322208025613
+
+* u13149 (U+13149): B&lt;&lt;141.0,903.0&gt;-&lt;149.0,892.0&gt;-&lt;152.0,880.0&gt;&gt;/L&lt;&lt;152.0,880.0&gt;--&lt;152.0,887.0&gt;&gt; = 14.036243467926457
+
+* u13149 (U+13149): B&lt;&lt;190.0,889.0&gt;-&lt;190.0,884.0&gt;-&lt;188.0,882.0&gt;&gt;/B&lt;&lt;188.0,882.0&gt;-&lt;195.0,887.0&gt;-&lt;201.5,895.0&gt;&gt; = 9.462322208025574
+
+* u1314B (U+1314B): B&lt;&lt;231.0,746.5&gt;-&lt;236.0,738.0&gt;-&lt;237.0,730.0&gt;&gt;/B&lt;&lt;237.0,730.0&gt;-&lt;237.0,738.0&gt;-&lt;239.0,749.5&gt;&gt; = 7.125016348901757
+
+* u1314B (U+1314B): B&lt;&lt;310.5,885.0&gt;-&lt;287.0,922.0&gt;-&lt;264.0,945.0&gt;&gt;/L&lt;&lt;264.0,945.0&gt;--&lt;343.0,812.0&gt;&gt; = 14.290325081817693
+
+* u1314B (U+1314B): B&lt;&lt;572.0,816.5&gt;-&lt;575.0,811.0&gt;-&lt;576.0,806.0&gt;&gt;/L&lt;&lt;576.0,806.0&gt;--&lt;576.0,812.0&gt;&gt; = 11.309932474020195
+
+* u1314B (U+1314B): B&lt;&lt;607.0,813.0&gt;-&lt;607.0,810.0&gt;-&lt;605.0,808.0&gt;&gt;/B&lt;&lt;605.0,808.0&gt;-&lt;611.0,812.0&gt;-&lt;617.0,820.5&gt;&gt; = 11.309932474020195
+
+* u1314D (U+1314D): B&lt;&lt;654.5,350.5&gt;-&lt;668.0,340.0&gt;-&lt;677.0,328.0&gt;&gt;/B&lt;&lt;677.0,328.0&gt;-&lt;672.0,340.0&gt;-&lt;664.0,351.5&gt;&gt; = 14.25003269780357
+
+* u1314F (U+1314F): B&lt;&lt;141.0,688.5&gt;-&lt;160.0,701.0&gt;-&lt;191.0,706.0&gt;&gt;/L&lt;&lt;191.0,706.0&gt;--&lt;146.0,710.0&gt;&gt; = 14.24195490573626
+
+* u13158 (U+13158): B&lt;&lt;257.5,987.0&gt;-&lt;265.0,971.0&gt;-&lt;270.0,937.0&gt;&gt;/B&lt;&lt;270.0,937.0&gt;-&lt;270.0,951.0&gt;-&lt;272.0,967.5&gt;&gt; = 8.365886124032546
+
+* u1315A (U+1315A): B&lt;&lt;214.5,753.5&gt;-&lt;212.0,739.0&gt;-&lt;208.0,722.0&gt;&gt;/L&lt;&lt;208.0,722.0&gt;--&lt;208.0,723.0&gt;&gt; = 13.240519915187184
+
+* u1315A (U+1315A): L&lt;&lt;208.0,722.0&gt;--&lt;208.0,723.0&gt;&gt;/B&lt;&lt;208.0,723.0&gt;-&lt;204.0,701.0&gt;-&lt;199.0,676.0&gt;&gt; = 10.304846468766044
+
+* u1315C (U+1315C): B&lt;&lt;133.5,768.5&gt;-&lt;105.0,731.0&gt;-&lt;89.0,701.0&gt;&gt;/B&lt;&lt;89.0,701.0&gt;-&lt;128.0,762.0&gt;-&lt;184.0,806.5&gt;&gt; = 4.520094536746334
+
+* u1315D (U+1315D): B&lt;&lt;111.5,829.5&gt;-&lt;91.0,802.0&gt;-&lt;79.0,779.0&gt;&gt;/B&lt;&lt;79.0,779.0&gt;-&lt;108.0,824.0&gt;-&lt;148.5,856.5&gt;&gt; = 5.246719695901301
+
+* u1315D (U+1315D): B&lt;&lt;77.0,815.5&gt;-&lt;61.0,780.0&gt;-&lt;60.0,760.0&gt;&gt;/B&lt;&lt;60.0,760.0&gt;-&lt;66.0,783.0&gt;-&lt;86.5,816.5&gt;&gt; = 11.758468762519849
+
+* u1315E (U+1315E): B&lt;&lt;87.5,786.0&gt;-&lt;67.0,746.0&gt;-&lt;66.0,710.0&gt;&gt;/B&lt;&lt;66.0,710.0&gt;-&lt;83.0,774.0&gt;-&lt;128.5,825.0&gt;&gt; = 13.284541730444204
+
+* u1315F (U+1315F): B&lt;&lt;139.0,478.0&gt;-&lt;169.0,444.0&gt;-&lt;195.0,423.0&gt;&gt;/B&lt;&lt;195.0,423.0&gt;-&lt;167.0,449.0&gt;-&lt;141.5,485.5&gt;&gt; = 3.9513600105462134
+
+* u1315F (U+1315F): B&lt;&lt;160.5,482.5&gt;-&lt;191.0,443.0&gt;-&lt;221.0,420.0&gt;&gt;/B&lt;&lt;221.0,420.0&gt;-&lt;203.0,437.0&gt;-&lt;178.5,466.5&gt;&gt; = 5.887243397021908
+
+* u1315F (U+1315F): B&lt;&lt;415.5,622.5&gt;-&lt;382.0,655.0&gt;-&lt;366.0,680.0&gt;&gt;/B&lt;&lt;366.0,680.0&gt;-&lt;371.0,666.0&gt;-&lt;375.0,647.0&gt;&gt; = 12.96541901313951
+
+* u13160 (U+13160): B&lt;&lt;118.0,494.5&gt;-&lt;100.0,470.0&gt;-&lt;88.0,447.0&gt;&gt;/B&lt;&lt;88.0,447.0&gt;-&lt;116.0,489.0&gt;-&lt;151.5,516.5&gt;&gt; = 6.137255949261901
+
+* u13160 (U+13160): B&lt;&lt;155.5,503.5&gt;-&lt;120.0,478.0&gt;-&lt;94.0,436.0&gt;&gt;/B&lt;&lt;94.0,436.0&gt;-&lt;112.0,458.0&gt;-&lt;134.5,478.0&gt;&gt; = 7.529926777687556
+
+* u13162 (U+13162): B&lt;&lt;1024.5,19.0&gt;-&lt;1016.0,12.0&gt;-&lt;1011.0,0.0&gt;&gt;/B&lt;&lt;1011.0,0.0&gt;-&lt;1014.0,4.0&gt;-&lt;1022.5,9.5&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;1244.0,9.5&gt;-&lt;1252.0,4.0&gt;-&lt;1255.0,0.0&gt;&gt;/B&lt;&lt;1255.0,0.0&gt;-&lt;1250.0,12.0&gt;-&lt;1241.5,19.0&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;1314.5,19.0&gt;-&lt;1306.0,12.0&gt;-&lt;1301.0,0.0&gt;&gt;/B&lt;&lt;1301.0,0.0&gt;-&lt;1304.0,4.0&gt;-&lt;1312.5,9.5&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;1534.0,9.5&gt;-&lt;1542.0,4.0&gt;-&lt;1545.0,0.0&gt;&gt;/B&lt;&lt;1545.0,0.0&gt;-&lt;1540.0,12.0&gt;-&lt;1531.5,19.0&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;282.5,19.0&gt;-&lt;274.0,12.0&gt;-&lt;269.0,0.0&gt;&gt;/B&lt;&lt;269.0,0.0&gt;-&lt;272.0,4.0&gt;-&lt;280.0,9.5&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;502.0,9.5&gt;-&lt;510.0,4.0&gt;-&lt;513.0,0.0&gt;&gt;/B&lt;&lt;513.0,0.0&gt;-&lt;508.0,12.0&gt;-&lt;499.5,19.0&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;572.5,19.0&gt;-&lt;564.0,12.0&gt;-&lt;559.0,0.0&gt;&gt;/B&lt;&lt;559.0,0.0&gt;-&lt;562.0,4.0&gt;-&lt;570.0,9.5&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;653.5,19.0&gt;-&lt;645.0,12.0&gt;-&lt;640.0,0.0&gt;&gt;/B&lt;&lt;640.0,0.0&gt;-&lt;643.0,4.0&gt;-&lt;651.5,9.5&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;873.0,9.5&gt;-&lt;881.0,4.0&gt;-&lt;884.0,0.0&gt;&gt;/B&lt;&lt;884.0,0.0&gt;-&lt;879.0,12.0&gt;-&lt;870.5,19.0&gt;&gt; = 14.25003269780357
+
+* u13162 (U+13162): B&lt;&lt;943.5,19.0&gt;-&lt;935.0,12.0&gt;-&lt;930.0,0.0&gt;&gt;/B&lt;&lt;930.0,0.0&gt;-&lt;933.0,4.0&gt;-&lt;941.5,9.5&gt;&gt; = 14.25003269780357
+
+* u13163 (U+13163): B&lt;&lt;199.5,815.5&gt;-&lt;206.0,826.0&gt;-&lt;222.0,836.0&gt;&gt;/L&lt;&lt;222.0,836.0&gt;--&lt;221.0,835.0&gt;&gt; = 12.994616791916512
+
+* u13163 (U+13163): B&lt;&lt;460.5,769.0&gt;-&lt;414.0,795.0&gt;-&lt;351.0,796.0&gt;&gt;/L&lt;&lt;351.0,796.0&gt;--&lt;352.0,796.0&gt;&gt; = 0.9093804491989697
+
+* u13163 (U+13163): L&lt;&lt;222.0,836.0&gt;--&lt;221.0,835.0&gt;&gt;/B&lt;&lt;221.0,835.0&gt;-&lt;225.0,838.0&gt;-&lt;239.0,847.5&gt;&gt; = 8.13010235415596
+
+* u13163 (U+13163): L&lt;&lt;234.0,968.0&gt;--&lt;73.0,925.0&gt;&gt;/L&lt;&lt;73.0,925.0&gt;--&lt;234.0,957.0&gt;&gt; = 3.712085985563048
+
+* u13163 (U+13163): L&lt;&lt;237.0,948.0&gt;--&lt;75.0,915.0&gt;&gt;/L&lt;&lt;75.0,915.0&gt;--&lt;243.0,937.0&gt;&gt; = 4.053265058318664
+
+* u13163 (U+13163): L&lt;&lt;351.0,796.0&gt;--&lt;352.0,796.0&gt;&gt;/L&lt;&lt;352.0,796.0&gt;--&lt;283.0,798.0&gt;&gt; = 1.6602823689826889
+
+* u13164 (U+13164): B&lt;&lt;636.0,892.5&gt;-&lt;609.0,895.0&gt;-&lt;586.0,899.0&gt;&gt;/B&lt;&lt;586.0,899.0&gt;-&lt;594.0,897.0&gt;-&lt;612.5,893.0&gt;&gt; = 4.170436524842054
+
+* u13164 (U+13164): L&lt;&lt;288.0,944.0&gt;--&lt;167.0,874.0&gt;&gt;/L&lt;&lt;167.0,874.0&gt;--&lt;298.0,923.0&gt;&gt; = 9.541814649219015
+
+* u13165 (U+13165): B&lt;&lt;199.5,815.5&gt;-&lt;206.0,826.0&gt;-&lt;222.0,836.0&gt;&gt;/L&lt;&lt;222.0,836.0&gt;--&lt;221.0,835.0&gt;&gt; = 12.994616791916512
+
+* u13165 (U+13165): B&lt;&lt;460.5,769.0&gt;-&lt;414.0,795.0&gt;-&lt;351.0,796.0&gt;&gt;/L&lt;&lt;351.0,796.0&gt;--&lt;352.0,796.0&gt;&gt; = 0.9093804491989697
+
+* u13165 (U+13165): L&lt;&lt;222.0,836.0&gt;--&lt;221.0,835.0&gt;&gt;/B&lt;&lt;221.0,835.0&gt;-&lt;225.0,838.0&gt;-&lt;239.0,847.5&gt;&gt; = 8.13010235415596
+
+* u13165 (U+13165): L&lt;&lt;234.0,968.0&gt;--&lt;73.0,925.0&gt;&gt;/L&lt;&lt;73.0,925.0&gt;--&lt;234.0,957.0&gt;&gt; = 3.712085985563048
+
+* u13165 (U+13165): L&lt;&lt;237.0,948.0&gt;--&lt;75.0,915.0&gt;&gt;/L&lt;&lt;75.0,915.0&gt;--&lt;243.0,937.0&gt;&gt; = 4.053265058318664
+
+* u13165 (U+13165): L&lt;&lt;351.0,796.0&gt;--&lt;352.0,796.0&gt;&gt;/L&lt;&lt;352.0,796.0&gt;--&lt;283.0,798.0&gt;&gt; = 1.6602823689826889
+
+* u13166 (U+13166): L&lt;&lt;121.0,951.0&gt;--&lt;77.0,924.0&gt;&gt;/L&lt;&lt;77.0,924.0&gt;--&lt;122.0,940.0&gt;&gt; = 11.961666074778089
+
+* u13168 (U+13168): B&lt;&lt;1024.0,405.5&gt;-&lt;1070.0,406.0&gt;-&lt;1105.0,406.0&gt;&gt;/B&lt;&lt;1105.0,406.0&gt;-&lt;1087.0,407.0&gt;-&lt;1051.0,410.0&gt;&gt; = 3.1798301198641643
+
+* u13169 (U+13169): B&lt;&lt;886.0,353.0&gt;-&lt;908.0,353.0&gt;-&lt;912.0,353.0&gt;&gt;/B&lt;&lt;912.0,353.0&gt;-&lt;896.0,354.0&gt;-&lt;867.0,356.5&gt;&gt; = 3.576334374997269
+
+* u1316A (U+1316A): L&lt;&lt;144.0,831.0&gt;--&lt;98.0,831.0&gt;&gt;/L&lt;&lt;98.0,831.0&gt;--&lt;142.0,820.0&gt;&gt; = 14.036243467926484
+
+* u1316B (U+1316B): L&lt;&lt;127.0,704.0&gt;--&lt;89.0,704.0&gt;&gt;/L&lt;&lt;89.0,704.0&gt;--&lt;125.0,695.0&gt;&gt; = 14.036243467926484
+
+* u13177 (U+13177): L&lt;&lt;179.0,932.0&gt;--&lt;130.0,944.0&gt;&gt;/L&lt;&lt;130.0,944.0&gt;--&lt;179.0,918.0&gt;&gt; = 14.190183916098917
+
+* u13177 (U+13177): L&lt;&lt;180.0,904.0&gt;--&lt;130.0,879.0&gt;&gt;/L&lt;&lt;130.0,879.0&gt;--&lt;184.0,892.0&gt;&gt; = 13.02919480794374
+
+* u1317A (U+1317A): B&lt;&lt;1367.5,356.5&gt;-&lt;1343.0,361.0&gt;-&lt;1314.0,367.0&gt;&gt;/L&lt;&lt;1314.0,367.0&gt;--&lt;1382.0,335.0&gt;&gt; = 13.511754470035868
+
+* u1317B (U+1317B): B&lt;&lt;109.0,140.5&gt;-&lt;109.0,135.0&gt;-&lt;110.0,130.0&gt;&gt;/B&lt;&lt;110.0,130.0&gt;-&lt;111.0,153.0&gt;-&lt;117.5,183.5&gt;&gt; = 13.799485396019362
+
+* u1317B (U+1317B): B&lt;&lt;93.5,148.0&gt;-&lt;95.0,138.0&gt;-&lt;97.0,130.0&gt;&gt;/B&lt;&lt;97.0,130.0&gt;-&lt;96.0,135.0&gt;-&lt;96.0,140.5&gt;&gt; = 2.726310993906212
+
+* u1317C (U+1317C): B&lt;&lt;172.0,140.0&gt;-&lt;188.0,114.0&gt;-&lt;201.0,95.0&gt;&gt;/B&lt;&lt;201.0,95.0&gt;-&lt;191.0,118.0&gt;-&lt;180.0,148.0&gt;&gt; = 10.881779047892769
+
+* u1317C (U+1317C): B&lt;&lt;194.0,151.0&gt;-&lt;205.0,118.0&gt;-&lt;215.0,95.0&gt;&gt;/B&lt;&lt;215.0,95.0&gt;-&lt;211.0,118.0&gt;-&lt;205.5,150.0&gt;&gt; = 13.6327587328677
+
+* u1317D (U+1317D): L&lt;&lt;540.0,107.0&gt;--&lt;406.0,277.0&gt;&gt;/B&lt;&lt;406.0,277.0&gt;-&lt;426.0,232.0&gt;-&lt;441.0,190.5&gt;&gt; = 14.283936989890815
+
+* u1317E (U+1317E): L&lt;&lt;510.0,-112.0&gt;--&lt;620.0,-169.0&gt;&gt;/L&lt;&lt;620.0,-169.0&gt;--&lt;525.0,-101.0&gt;&gt; = 8.202318947150347
+
+* u1317F (U+1317F): B&lt;&lt;125.0,697.0&gt;-&lt;86.0,677.0&gt;-&lt;73.0,628.0&gt;&gt;/B&lt;&lt;73.0,628.0&gt;-&lt;85.0,650.0&gt;-&lt;116.0,667.0&gt;&gt; = 13.751845218040552
+
+* u13180 (U+13180): B&lt;&lt;989.5,747.5&gt;-&lt;956.0,753.0&gt;-&lt;932.0,759.0&gt;&gt;/B&lt;&lt;932.0,759.0&gt;-&lt;987.0,732.0&gt;-&lt;1044.0,708.0&gt;&gt; = 12.110597767654385
+
+* u13188 (U+13188): B&lt;&lt;1129.0,727.0&gt;-&lt;1129.0,724.0&gt;-&lt;1128.0,722.0&gt;&gt;/L&lt;&lt;1128.0,722.0&gt;--&lt;1146.0,746.0&gt;&gt; = 10.304846468766044
+
+* u13189 (U+13189): B&lt;&lt;151.0,142.0&gt;-&lt;212.0,151.0&gt;-&lt;246.0,162.0&gt;&gt;/B&lt;&lt;246.0,162.0&gt;-&lt;233.0,161.0&gt;-&lt;217.0,159.5&gt;&gt; = 13.529214407011676
+
+* u13189 (U+13189): B&lt;&lt;212.0,258.5&gt;-&lt;228.0,258.0&gt;-&lt;241.0,258.0&gt;&gt;/B&lt;&lt;241.0,258.0&gt;-&lt;225.0,262.0&gt;-&lt;200.5,265.0&gt;&gt; = 14.036243467926484
+
+* u1318A (U+1318A): L&lt;&lt;744.0,47.0&gt;--&lt;765.0,54.0&gt;&gt;/L&lt;&lt;765.0,54.0&gt;--&lt;744.0,52.0&gt;&gt; = 12.994616791916455
+
+* u1318B (U+1318B): L&lt;&lt;667.0,367.0&gt;--&lt;686.0,374.0&gt;&gt;/L&lt;&lt;686.0,374.0&gt;--&lt;667.0,372.0&gt;&gt; = 14.21585347367354
+
+* u1318C (U+1318C): L&lt;&lt;788.0,47.0&gt;--&lt;809.0,54.0&gt;&gt;/L&lt;&lt;809.0,54.0&gt;--&lt;788.0,52.0&gt;&gt; = 12.994616791916455
+
+* u1319E (U+1319E): B&lt;&lt;180.5,508.0&gt;-&lt;148.0,498.0&gt;-&lt;122.0,484.0&gt;&gt;/B&lt;&lt;122.0,484.0&gt;-&lt;148.0,494.0&gt;-&lt;182.0,503.5&gt;&gt; = 7.2632447405845
+
+* u131A2 (U+131A2): B&lt;&lt;111.5,245.0&gt;-&lt;91.0,236.0&gt;-&lt;64.0,216.0&gt;&gt;/B&lt;&lt;64.0,216.0&gt;-&lt;86.0,230.0&gt;-&lt;116.0,235.5&gt;&gt; = 4.0576630761366435
+
+* u131A2 (U+131A2): B&lt;&lt;116.0,328.0&gt;-&lt;86.0,333.0&gt;-&lt;64.0,348.0&gt;&gt;/B&lt;&lt;64.0,348.0&gt;-&lt;91.0,327.0&gt;-&lt;111.5,318.5&gt;&gt; = 3.588106673889246
+
+* u131A2 (U+131A2): B&lt;&lt;127.0,124.5&gt;-&lt;115.0,104.0&gt;-&lt;108.0,88.0&gt;&gt;/B&lt;&lt;108.0,88.0&gt;-&lt;121.0,106.0&gt;-&lt;142.5,128.0&gt;&gt; = 12.208275223621452
+
+* u131A2 (U+131A2): B&lt;&lt;142.5,436.0&gt;-&lt;121.0,458.0&gt;-&lt;108.0,475.0&gt;&gt;/B&lt;&lt;108.0,475.0&gt;-&lt;115.0,460.0&gt;-&lt;127.0,439.5&gt;&gt; = 12.388463153308495
+
+* u131A3 (U+131A3): B&lt;&lt;674.5,324.0&gt;-&lt;676.0,318.0&gt;-&lt;677.0,312.0&gt;&gt;/L&lt;&lt;677.0,312.0&gt;--&lt;677.0,313.0&gt;&gt; = 9.462322208025613
+
+* u131A7 (U+131A7): B&lt;&lt;1037.5,281.5&gt;-&lt;1000.0,284.0&gt;-&lt;954.0,288.0&gt;&gt;/L&lt;&lt;954.0,288.0&gt;--&lt;993.0,277.0&gt;&gt; = 10.78143293534273
+
+* u131AB (U+131AB): B&lt;&lt;341.0,960.0&gt;-&lt;359.0,975.0&gt;-&lt;375.0,982.0&gt;&gt;/L&lt;&lt;375.0,982.0&gt;--&lt;372.0,981.0&gt;&gt; = 5.1944289077348
+
+* u131AE (U+131AE): B&lt;&lt;110.0,108.0&gt;-&lt;87.0,136.0&gt;-&lt;75.0,161.0&gt;&gt;/B&lt;&lt;75.0,161.0&gt;-&lt;87.0,122.0&gt;-&lt;114.5,84.5&gt;&gt; = 8.538276855252917
+
+* u131AE (U+131AE): B&lt;&lt;556.5,3.5&gt;-&lt;532.0,-10.0&gt;-&lt;514.0,-24.0&gt;&gt;/B&lt;&lt;514.0,-24.0&gt;-&lt;552.0,-6.0&gt;-&lt;603.5,11.0&gt;&gt; = 12.528807709151492
+
+* u131B0 (U+131B0): B&lt;&lt;266.0,644.0&gt;-&lt;266.0,649.0&gt;-&lt;265.0,653.0&gt;&gt;/L&lt;&lt;265.0,653.0&gt;--&lt;265.0,652.0&gt;&gt; = 14.036243467926484
+
+* u131B0 (U+131B0): L&lt;&lt;265.0,653.0&gt;--&lt;265.0,652.0&gt;&gt;/B&lt;&lt;265.0,652.0&gt;-&lt;258.0,685.0&gt;-&lt;249.5,723.0&gt;&gt; = 11.976132444203333
+
+* u131B2 (U+131B2): B&lt;&lt;639.0,474.0&gt;-&lt;613.0,459.0&gt;-&lt;592.0,443.0&gt;&gt;/B&lt;&lt;592.0,443.0&gt;-&lt;636.0,464.0&gt;-&lt;696.5,483.5&gt;&gt; = 11.790077850449174
+
+* u131C7 (U+131C7): L&lt;&lt;208.0,550.0&gt;--&lt;313.0,137.0&gt;&gt;/L&lt;&lt;313.0,137.0&gt;--&lt;313.0,171.0&gt;&gt; = 14.264512298079907
+
+* u131C9 (U+131C9): L&lt;&lt;208.0,550.0&gt;--&lt;313.0,137.0&gt;&gt;/L&lt;&lt;313.0,137.0&gt;--&lt;313.0,171.0&gt;&gt; = 14.264512298079907
+
+* u131E5 (U+131E5): B&lt;&lt;867.5,368.0&gt;-&lt;852.0,380.0&gt;-&lt;836.0,393.0&gt;&gt;/B&lt;&lt;836.0,393.0&gt;-&lt;848.0,378.0&gt;-&lt;863.0,355.0&gt;&gt; = 12.246332859680393
+
+* u13222 (U+13222): B&lt;&lt;508.5,935.0&gt;-&lt;512.0,929.0&gt;-&lt;513.0,923.0&gt;&gt;/L&lt;&lt;513.0,923.0&gt;--&lt;512.0,930.0&gt;&gt; = 1.3322198538694188
+
+* u13222 (U+13222): B&lt;&lt;549.0,932.0&gt;-&lt;549.0,927.0&gt;-&lt;547.0,925.0&gt;&gt;/B&lt;&lt;547.0,925.0&gt;-&lt;555.0,930.0&gt;-&lt;561.5,938.0&gt;&gt; = 12.994616791916483
+
+* u13227 (U+13227): B&lt;&lt;908.5,441.0&gt;-&lt;854.0,411.0&gt;-&lt;783.0,394.0&gt;&gt;/L&lt;&lt;783.0,394.0&gt;--&lt;1036.0,394.0&gt;&gt; = 13.465208094811695
+
+* u13227 (U+13227): L&lt;&lt;277.0,394.0&gt;--&lt;450.0,394.0&gt;&gt;/B&lt;&lt;450.0,394.0&gt;-&lt;378.0,411.0&gt;-&lt;322.0,441.0&gt;&gt; = 13.284866484902187
+
+* u13228 (U+13228): B&lt;&lt;908.5,441.0&gt;-&lt;854.0,411.0&gt;-&lt;783.0,394.0&gt;&gt;/L&lt;&lt;783.0,394.0&gt;--&lt;1036.0,394.0&gt;&gt; = 13.465208094811695
+
+* u13228 (U+13228): L&lt;&lt;277.0,394.0&gt;--&lt;450.0,394.0&gt;&gt;/B&lt;&lt;450.0,394.0&gt;-&lt;378.0,411.0&gt;-&lt;322.0,441.0&gt;&gt; = 13.284866484902187
+
+* u1322C (U+1322C): L&lt;&lt;240.0,557.0&gt;--&lt;181.0,545.0&gt;&gt;/L&lt;&lt;181.0,545.0&gt;--&lt;216.0,546.0&gt;&gt; = 9.859985975969055
+
+* u1322F (U+1322F): B&lt;&lt;395.5,860.0&gt;-&lt;381.0,829.0&gt;-&lt;380.0,812.0&gt;&gt;/B&lt;&lt;380.0,812.0&gt;-&lt;386.0,832.0&gt;-&lt;404.0,861.0&gt;&gt; = 13.332783570563812
+
+* u1322F (U+1322F): B&lt;&lt;425.0,873.0&gt;-&lt;407.0,849.0&gt;-&lt;397.0,829.0&gt;&gt;/B&lt;&lt;397.0,829.0&gt;-&lt;422.0,868.0&gt;-&lt;457.5,896.5&gt;&gt; = 6.0958615445957545
+
+* u13233 (U+13233): L&lt;&lt;558.0,405.0&gt;--&lt;514.0,394.0&gt;&gt;/L&lt;&lt;514.0,394.0&gt;--&lt;1174.0,394.0&gt;&gt; = 14.036243467926484
+
+* u13234 (U+13234): L&lt;&lt;558.0,405.0&gt;--&lt;514.0,394.0&gt;&gt;/L&lt;&lt;514.0,394.0&gt;--&lt;1174.0,394.0&gt;&gt; = 14.036243467926484
+
+* u13236 (U+13236): B&lt;&lt;394.0,601.5&gt;-&lt;397.0,583.0&gt;-&lt;399.0,566.0&gt;&gt;/L&lt;&lt;399.0,566.0&gt;--&lt;399.0,567.0&gt;&gt; = 6.709836807756896
+
+* u13236 (U+13236): B&lt;&lt;404.5,742.0&gt;-&lt;402.0,727.0&gt;-&lt;399.0,711.0&gt;&gt;/L&lt;&lt;399.0,711.0&gt;--&lt;399.0,712.0&gt;&gt; = 10.61965527615514
+
+* u13236 (U+13236): L&lt;&lt;399.0,566.0&gt;--&lt;399.0,567.0&gt;&gt;/B&lt;&lt;399.0,567.0&gt;-&lt;402.0,551.0&gt;-&lt;404.5,536.0&gt;&gt; = 10.61965527615514
+
+* u13236 (U+13236): L&lt;&lt;399.0,711.0&gt;--&lt;399.0,712.0&gt;&gt;/B&lt;&lt;399.0,712.0&gt;-&lt;397.0,695.0&gt;-&lt;394.0,677.0&gt;&gt; = 6.709836807756896
+
+* u13237 (U+13237): B&lt;&lt;579.5,946.5&gt;-&lt;583.0,940.0&gt;-&lt;584.0,934.0&gt;&gt;/B&lt;&lt;584.0,934.0&gt;-&lt;584.0,936.0&gt;-&lt;583.5,938.0&gt;&gt; = 9.462322208025613
+
+* u1323A (U+1323A): B&lt;&lt;722.0,805.5&gt;-&lt;725.0,801.0&gt;-&lt;726.0,796.0&gt;&gt;/B&lt;&lt;726.0,796.0&gt;-&lt;726.0,797.0&gt;-&lt;725.5,798.5&gt;&gt; = 11.309932474020195
+
+* u13241 (U+13241): B&lt;&lt;1100.5,408.5&gt;-&lt;1090.0,398.0&gt;-&lt;1067.0,394.0&gt;&gt;/L&lt;&lt;1067.0,394.0&gt;--&lt;1174.0,394.0&gt;&gt; = 9.865806943084365
+
+* u13241 (U+13241): B&lt;&lt;389.5,710.5&gt;-&lt;378.0,704.0&gt;-&lt;368.0,696.0&gt;&gt;/B&lt;&lt;368.0,696.0&gt;-&lt;383.0,703.0&gt;-&lt;408.0,712.0&gt;&gt; = 13.642914775990052
+
+* u13241 (U+13241): B&lt;&lt;447.0,397.0&gt;-&lt;417.0,397.0&gt;-&lt;396.0,394.0&gt;&gt;/L&lt;&lt;396.0,394.0&gt;--&lt;503.0,394.0&gt;&gt; = 8.13010235415596
+
+* u13241 (U+13241): B&lt;&lt;895.0,396.5&gt;-&lt;872.0,396.0&gt;-&lt;856.0,394.0&gt;&gt;/L&lt;&lt;856.0,394.0&gt;--&lt;993.0,394.0&gt;&gt; = 7.125016348901757
+
+* u13241 (U+13241): L&lt;&lt;277.0,394.0&gt;--&lt;314.0,394.0&gt;&gt;/B&lt;&lt;314.0,394.0&gt;-&lt;296.0,397.0&gt;-&lt;283.0,407.0&gt;&gt; = 9.462322208025613
+
+* u13241 (U+13241): L&lt;&lt;396.0,394.0&gt;--&lt;503.0,394.0&gt;&gt;/B&lt;&lt;503.0,394.0&gt;-&lt;491.0,396.0&gt;-&lt;476.0,396.5&gt;&gt; = 9.462322208025613
+
+* u13241 (U+13241): L&lt;&lt;568.0,394.0&gt;--&lt;817.0,394.0&gt;&gt;/L&lt;&lt;817.0,394.0&gt;--&lt;789.0,399.0&gt;&gt; = 10.124671655397806
+
+* u13241 (U+13241): L&lt;&lt;856.0,394.0&gt;--&lt;993.0,394.0&gt;&gt;/B&lt;&lt;993.0,394.0&gt;-&lt;977.0,396.0&gt;-&lt;960.0,396.5&gt;&gt; = 7.125016348901757
+
+* u13246 (U+13246): B&lt;&lt;1028.0,402.0&gt;-&lt;1022.0,396.0&gt;-&lt;1007.0,394.0&gt;&gt;/L&lt;&lt;1007.0,394.0&gt;--&lt;1051.0,394.0&gt;&gt; = 7.594643368591447
+
+* u13246 (U+13246): B&lt;&lt;1133.0,415.5&gt;-&lt;1114.0,397.0&gt;-&lt;1083.0,394.0&gt;&gt;/L&lt;&lt;1083.0,394.0&gt;--&lt;1174.0,394.0&gt;&gt; = 5.527540151656126
+
+* u13246 (U+13246): B&lt;&lt;513.0,757.0&gt;-&lt;488.0,746.0&gt;-&lt;468.0,735.0&gt;&gt;/B&lt;&lt;468.0,735.0&gt;-&lt;495.0,746.0&gt;-&lt;519.5,751.0&gt;&gt; = 6.644447920890547
+
+* u13246 (U+13246): B&lt;&lt;535.0,402.5&gt;-&lt;517.0,396.0&gt;-&lt;495.0,394.0&gt;&gt;/L&lt;&lt;495.0,394.0&gt;--&lt;750.0,394.0&gt;&gt; = 5.1944289077348
+
+* u13246 (U+13246): L&lt;&lt;1007.0,394.0&gt;--&lt;1051.0,394.0&gt;&gt;/B&lt;&lt;1051.0,394.0&gt;-&lt;1038.0,395.0&gt;-&lt;1028.0,402.0&gt;&gt; = 4.398705354995508
+
+* u13246 (U+13246): L&lt;&lt;49.0,394.0&gt;--&lt;193.0,394.0&gt;&gt;/B&lt;&lt;193.0,394.0&gt;-&lt;174.0,395.0&gt;-&lt;168.0,401.0&gt;&gt; = 3.012787504183286
+
+* u13246 (U+13246): L&lt;&lt;495.0,394.0&gt;--&lt;750.0,394.0&gt;&gt;/B&lt;&lt;750.0,394.0&gt;-&lt;740.0,396.0&gt;-&lt;732.0,401.5&gt;&gt; = 11.309932474020195
+
+* u13247 (U+13247): B&lt;&lt;840.0,443.5&gt;-&lt;835.0,432.0&gt;-&lt;835.0,433.0&gt;&gt;/L&lt;&lt;835.0,433.0&gt;--&lt;830.0,394.0&gt;&gt; = 7.3057595333108205
+
+* u13249 (U+13249): B&lt;&lt;480.5,899.0&gt;-&lt;472.0,891.0&gt;-&lt;470.0,876.0&gt;&gt;/B&lt;&lt;470.0,876.0&gt;-&lt;472.0,881.0&gt;-&lt;482.5,889.5&gt;&gt; = 14.206766117760358
+
+* u13249 (U+13249): B&lt;&lt;580.0,867.0&gt;-&lt;580.0,863.0&gt;-&lt;579.0,862.0&gt;&gt;/B&lt;&lt;579.0,862.0&gt;-&lt;585.0,866.0&gt;-&lt;590.0,872.5&gt;&gt; = 11.309932474020195
+
+* u1324A (U+1324A): B&lt;&lt;401.5,607.0&gt;-&lt;360.0,650.0&gt;-&lt;337.0,725.0&gt;&gt;/B&lt;&lt;337.0,725.0&gt;-&lt;341.0,656.0&gt;-&lt;369.5,611.0&gt;&gt; = 13.73124980377496
+
+* u1324A (U+1324A): B&lt;&lt;472.0,981.5&gt;-&lt;465.0,975.0&gt;-&lt;463.0,962.0&gt;&gt;/B&lt;&lt;463.0,962.0&gt;-&lt;465.0,967.0&gt;-&lt;472.0,973.5&gt;&gt; = 13.055247223796563
+
+* u1324A (U+1324A): B&lt;&lt;522.5,957.0&gt;-&lt;525.0,953.0&gt;-&lt;526.0,948.0&gt;&gt;/B&lt;&lt;526.0,948.0&gt;-&lt;526.0,950.0&gt;-&lt;525.5,951.0&gt;&gt; = 11.309932474020195
+
+* u1324A (U+1324A): B&lt;&lt;905.0,707.0&gt;-&lt;906.0,716.0&gt;-&lt;907.0,725.0&gt;&gt;/L&lt;&lt;907.0,725.0&gt;--&lt;896.0,695.0&gt;&gt; = 13.796111682338214
+
+* u13251 (U+13251): L&lt;&lt;297.0,309.0&gt;--&lt;470.0,322.0&gt;&gt;/L&lt;&lt;470.0,322.0&gt;--&lt;297.0,347.0&gt;&gt; = 12.52020055451659
+
+* u13251 (U+13251): L&lt;&lt;704.0,347.0&gt;--&lt;534.0,322.0&gt;&gt;/L&lt;&lt;534.0,322.0&gt;--&lt;704.0,309.0&gt;&gt; = 12.738817400913714
+
+* u13261 (U+13261): B&lt;&lt;321.5,694.5&gt;-&lt;326.0,685.0&gt;-&lt;328.0,676.0&gt;&gt;/B&lt;&lt;328.0,676.0&gt;-&lt;328.0,678.0&gt;-&lt;327.5,682.0&gt;&gt; = 12.528807709151492
+
+* u13262 (U+13262): L&lt;&lt;443.0,338.0&gt;--&lt;626.0,351.0&gt;&gt;/L&lt;&lt;626.0,351.0&gt;--&lt;443.0,376.0&gt;&gt; = 11.842503183847368
+
+* u13262 (U+13262): L&lt;&lt;870.0,376.0&gt;--&lt;690.0,351.0&gt;&gt;/L&lt;&lt;690.0,351.0&gt;--&lt;870.0,338.0&gt;&gt; = 12.03801893623486
+
+* u1329B (U+1329B): B&lt;&lt;1076.5,139.0&gt;-&lt;1015.0,119.0&gt;-&lt;941.0,105.0&gt;&gt;/L&lt;&lt;941.0,105.0&gt;--&lt;1150.0,105.0&gt;&gt; = 10.713123022791033
+
+* u1329B (U+1329B): L&lt;&lt;294.0,105.0&gt;--&lt;491.0,105.0&gt;&gt;/B&lt;&lt;491.0,105.0&gt;-&lt;386.0,125.0&gt;-&lt;303.5,157.5&gt;&gt; = 10.784297867562596
+
+* u1329C (U+1329C): B&lt;&lt;354.5,341.5&gt;-&lt;416.0,362.0&gt;-&lt;489.0,375.0&gt;&gt;/L&lt;&lt;489.0,375.0&gt;--&lt;280.0,375.0&gt;&gt; = 10.09750438407527
+
+* u1329C (U+1329C): L&lt;&lt;1136.0,375.0&gt;--&lt;940.0,375.0&gt;&gt;/B&lt;&lt;940.0,375.0&gt;-&lt;1046.0,356.0&gt;-&lt;1128.0,323.0&gt;&gt; = 10.162083194000747
+
+* u1329D (U+1329D): L&lt;&lt;208.0,98.0&gt;--&lt;352.0,98.0&gt;&gt;/B&lt;&lt;352.0,98.0&gt;-&lt;291.0,111.0&gt;-&lt;234.0,136.0&gt;&gt; = 12.030596096537845
+
+* u1329E (U+1329E): B&lt;&lt;949.5,157.0&gt;-&lt;904.0,137.0&gt;-&lt;857.0,125.0&gt;&gt;/L&lt;&lt;857.0,125.0&gt;--&lt;1015.0,125.0&gt;&gt; = 14.32271997820355
+
+* u1329E (U+1329E): L&lt;&lt;154.0,125.0&gt;--&lt;312.0,125.0&gt;&gt;/B&lt;&lt;312.0,125.0&gt;-&lt;261.0,138.0&gt;-&lt;211.0,157.5&gt;&gt; = 14.300277449185575
+
+* u1329F (U+1329F): B&lt;&lt;995.5,157.5&gt;-&lt;946.0,138.0&gt;-&lt;895.0,125.0&gt;&gt;/L&lt;&lt;895.0,125.0&gt;--&lt;1052.0,125.0&gt;&gt; = 14.300277449185575
+
+* u1329F (U+1329F): L&lt;&lt;191.0,125.0&gt;--&lt;349.0,125.0&gt;&gt;/B&lt;&lt;349.0,125.0&gt;-&lt;279.0,142.0&gt;-&lt;218.0,174.0&gt;&gt; = 13.650419134756984
+
+* u132A0 (U+132A0): B&lt;&lt;882.5,140.5&gt;-&lt;832.0,121.0&gt;-&lt;780.0,109.0&gt;&gt;/L&lt;&lt;780.0,109.0&gt;--&lt;950.0,109.0&gt;&gt; = 12.994616791916512
+
+* u132A0 (U+132A0): L&lt;&lt;164.0,109.0&gt;--&lt;333.0,109.0&gt;&gt;/B&lt;&lt;333.0,109.0&gt;-&lt;281.0,121.0&gt;-&lt;230.5,140.5&gt;&gt; = 12.994616791916512
+
+* u132BF (U+132BF): B&lt;&lt;261.5,838.5&gt;-&lt;265.0,832.0&gt;-&lt;266.0,826.0&gt;&gt;/B&lt;&lt;266.0,826.0&gt;-&lt;266.0,828.0&gt;-&lt;265.5,830.0&gt;&gt; = 9.462322208025613
+
+* u132BF (U+132BF): B&lt;&lt;303.0,835.0&gt;-&lt;303.0,830.0&gt;-&lt;301.0,828.0&gt;&gt;/B&lt;&lt;301.0,828.0&gt;-&lt;309.0,833.0&gt;-&lt;315.5,841.0&gt;&gt; = 12.994616791916483
+
+* u132C4 (U+132C4): B&lt;&lt;405.0,213.0&gt;-&lt;399.0,225.0&gt;-&lt;390.0,258.0&gt;&gt;/L&lt;&lt;390.0,258.0&gt;--&lt;398.0,124.0&gt;&gt; = 11.838530511286404
+
+* u132C4 (U+132C4): B&lt;&lt;455.5,297.0&gt;-&lt;443.0,318.0&gt;-&lt;433.0,333.0&gt;&gt;/B&lt;&lt;433.0,333.0&gt;-&lt;444.0,308.0&gt;-&lt;457.0,277.0&gt;&gt; = 9.940573033112985
+
+* u132C5 (U+132C5): B&lt;&lt;546.5,257.5&gt;-&lt;541.0,272.0&gt;-&lt;536.0,288.0&gt;&gt;/L&lt;&lt;536.0,288.0&gt;--&lt;547.0,148.0&gt;&gt; = 12.861443156346018
+
+* u132C5 (U+132C5): B&lt;&lt;612.5,291.5&gt;-&lt;598.0,309.0&gt;-&lt;583.0,333.0&gt;&gt;/B&lt;&lt;583.0,333.0&gt;-&lt;594.0,310.0&gt;-&lt;606.5,285.0&gt;&gt; = 6.445418036259604
+
+* u132C6 (U+132C6): B&lt;&lt;269.0,455.5&gt;-&lt;266.0,478.0&gt;-&lt;264.0,494.0&gt;&gt;/L&lt;&lt;264.0,494.0&gt;--&lt;264.0,-66.0&gt;&gt; = 7.125016348901757
+
+* u132CD (U+132CD): L&lt;&lt;466.0,855.0&gt;--&lt;530.0,205.0&gt;&gt;/L&lt;&lt;530.0,205.0&gt;--&lt;594.0,855.0&gt;&gt; = 11.246610604107827
+
+* u132D9 (U+132D9): B&lt;&lt;208.5,158.0&gt;-&lt;202.0,209.0&gt;-&lt;200.0,270.0&gt;&gt;/L&lt;&lt;200.0,270.0&gt;--&lt;192.0,211.0&gt;&gt; = 9.599703247416315
+
+* u132DC (U+132DC): B&lt;&lt;1012.5,394.5&gt;-&lt;1037.0,332.0&gt;-&lt;1053.0,267.0&gt;&gt;/B&lt;&lt;1053.0,267.0&gt;-&lt;1048.0,338.0&gt;-&lt;1024.0,397.5&gt;&gt; = 9.800387305794994
+
+* u132DC (U+132DC): B&lt;&lt;1024.0,397.5&gt;-&lt;1000.0,457.0&gt;-&lt;965.0,506.0&gt;&gt;/B&lt;&lt;965.0,506.0&gt;-&lt;988.0,457.0&gt;-&lt;1012.5,394.5&gt;&gt; = 10.392892161295432
+
+* u132E6 (U+132E6): B&lt;&lt;324.5,373.0&gt;-&lt;331.0,312.0&gt;-&lt;332.0,236.0&gt;&gt;/B&lt;&lt;332.0,236.0&gt;-&lt;333.0,312.0&gt;-&lt;339.0,373.0&gt;&gt; = 1.5076966661411237
+
+* u132E6 (U+132E6): B&lt;&lt;512.5,325.5&gt;-&lt;515.0,279.0&gt;-&lt;517.0,236.0&gt;&gt;/B&lt;&lt;517.0,236.0&gt;-&lt;519.0,278.0&gt;-&lt;521.0,325.0&gt;&gt; = 5.389311759973354
+
+* u132E6 (U+132E6): B&lt;&lt;696.0,364.5&gt;-&lt;702.0,300.0&gt;-&lt;703.0,221.0&gt;&gt;/B&lt;&lt;703.0,221.0&gt;-&lt;704.0,300.0&gt;-&lt;709.5,364.5&gt;&gt; = 1.4504485981183235
+
+* u132F9 (U+132F9): B&lt;&lt;301.0,195.0&gt;-&lt;292.0,300.0&gt;-&lt;279.0,404.0&gt;&gt;/L&lt;&lt;279.0,404.0&gt;--&lt;235.0,-11.0&gt;&gt; = 13.17713965396727
+
+* u13325 (U+13325): L&lt;&lt;318.0,579.0&gt;--&lt;313.0,746.0&gt;&gt;/L&lt;&lt;313.0,746.0&gt;--&lt;307.0,579.0&gt;&gt; = 3.772576142474701
+
+* u1337D (U+1337D): B&lt;&lt;672.0,254.5&gt;-&lt;645.0,270.0&gt;-&lt;621.0,282.0&gt;&gt;/B&lt;&lt;621.0,282.0&gt;-&lt;638.0,268.0&gt;-&lt;652.5,254.5&gt;&gt; = 12.90740867126579
+
+* u13394 (U+13394): B&lt;&lt;766.0,641.5&gt;-&lt;751.0,650.0&gt;-&lt;752.0,650.0&gt;&gt;/L&lt;&lt;752.0,650.0&gt;--&lt;728.0,655.0&gt;&gt; = 11.768288932020628
+
+* u13394 (U+13394): B&lt;&lt;841.5,627.0&gt;-&lt;820.0,634.0&gt;-&lt;800.0,639.0&gt;&gt;/B&lt;&lt;800.0,639.0&gt;-&lt;805.0,637.0&gt;-&lt;817.0,629.0&gt;&gt; = 7.765166018425308
+
+* u133AC (U+133AC): B&lt;&lt;186.5,373.0&gt;-&lt;190.0,331.0&gt;-&lt;196.0,255.0&gt;&gt;/B&lt;&lt;196.0,255.0&gt;-&lt;204.0,304.0&gt;-&lt;208.0,369.0&gt;&gt; = 13.78659023520154
+
+* u133AC (U+133AC): B&lt;&lt;329.5,383.5&gt;-&lt;333.0,323.0&gt;-&lt;338.0,273.0&gt;&gt;/B&lt;&lt;338.0,273.0&gt;-&lt;344.0,342.0&gt;-&lt;347.5,380.5&gt;&gt; = 10.680333865609908
+
+* u133C3 (U+133C3): B&lt;&lt;364.5,752.5&gt;-&lt;387.0,723.0&gt;-&lt;391.0,679.0&gt;&gt;/B&lt;&lt;391.0,679.0&gt;-&lt;395.0,723.0&gt;-&lt;417.5,752.5&gt;&gt; = 10.388857815469619
+
+* u133C3 (U+133C3): B&lt;&lt;401.5,572.5&gt;-&lt;394.0,619.0&gt;-&lt;391.0,646.0&gt;&gt;/B&lt;&lt;391.0,646.0&gt;-&lt;389.0,619.0&gt;-&lt;380.5,572.5&gt;&gt; = 10.576586544968738
+
+* u133C3 (U+133C3): B&lt;&lt;607.0,752.5&gt;-&lt;629.0,723.0&gt;-&lt;633.0,679.0&gt;&gt;/B&lt;&lt;633.0,679.0&gt;-&lt;637.0,723.0&gt;-&lt;660.0,752.5&gt;&gt; = 10.388857815469619
+
+* u133C3 (U+133C3): B&lt;&lt;644.0,572.5&gt;-&lt;636.0,619.0&gt;-&lt;633.0,646.0&gt;&gt;/B&lt;&lt;633.0,646.0&gt;-&lt;631.0,619.0&gt;-&lt;623.0,572.5&gt;&gt; = 10.576586544968738
+
+* u133C5 (U+133C5): B&lt;&lt;364.5,752.5&gt;-&lt;387.0,723.0&gt;-&lt;391.0,679.0&gt;&gt;/B&lt;&lt;391.0,679.0&gt;-&lt;395.0,723.0&gt;-&lt;417.5,752.5&gt;&gt; = 10.388857815469619
+
+* u133C5 (U+133C5): B&lt;&lt;401.5,572.5&gt;-&lt;394.0,619.0&gt;-&lt;391.0,646.0&gt;&gt;/B&lt;&lt;391.0,646.0&gt;-&lt;389.0,619.0&gt;-&lt;380.5,572.5&gt;&gt; = 10.576586544968738
+
+* u133C5 (U+133C5): B&lt;&lt;607.0,752.5&gt;-&lt;629.0,723.0&gt;-&lt;633.0,679.0&gt;&gt;/B&lt;&lt;633.0,679.0&gt;-&lt;637.0,723.0&gt;-&lt;660.0,752.5&gt;&gt; = 10.388857815469619
+
+* u133C5 (U+133C5): B&lt;&lt;644.0,572.5&gt;-&lt;636.0,619.0&gt;-&lt;633.0,646.0&gt;&gt;/B&lt;&lt;633.0,646.0&gt;-&lt;631.0,619.0&gt;-&lt;623.0,572.5&gt;&gt; = 10.576586544968738
+
+* u133C5 (U+133C5): B&lt;&lt;849.0,752.5&gt;-&lt;871.0,723.0&gt;-&lt;875.0,679.0&gt;&gt;/B&lt;&lt;875.0,679.0&gt;-&lt;879.0,723.0&gt;-&lt;902.0,752.5&gt;&gt; = 10.388857815469619
+
+* u133C5 (U+133C5): B&lt;&lt;886.0,572.5&gt;-&lt;878.0,619.0&gt;-&lt;875.0,646.0&gt;&gt;/B&lt;&lt;875.0,646.0&gt;-&lt;873.0,619.0&gt;-&lt;865.0,572.5&gt;&gt; = 10.576586544968738
+
+* u133CE (U+133CE): B&lt;&lt;418.0,585.5&gt;-&lt;418.0,593.0&gt;-&lt;418.0,599.0&gt;&gt;/B&lt;&lt;418.0,599.0&gt;-&lt;413.0,567.0&gt;-&lt;405.5,538.5&gt;&gt; = 8.880659150520234
+
+* u133CE (U+133CE): B&lt;&lt;419.5,566.0&gt;-&lt;419.0,578.0&gt;-&lt;419.0,570.0&gt;&gt;/B&lt;&lt;419.0,570.0&gt;-&lt;418.0,578.0&gt;-&lt;418.0,585.5&gt;&gt; = 7.125016348901757
+
+* u13418 (U+13418): L&lt;&lt;72.0,96.0&gt;--&lt;1256.0,28.0&gt;&gt;/L&lt;&lt;1256.0,28.0&gt;--&lt;100.0,240.0&gt;&gt; = 7.105029497311982
+
+* u13427 (U+13427): L&lt;&lt;496.0,389.0&gt;--&lt;528.0,-40.0&gt;&gt;/L&lt;&lt;528.0,-40.0&gt;--&lt;561.0,389.0&gt;&gt; = 8.66461630814273 [code: found-jaggy-segments]
+</code></pre>
+</span></li></ul></div></details>
+<h3>Do outlines contain any semi-vertical or semi-horizontal lines?</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/outline_semi_vertical</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The following glyphs have semi-vertical/semi-horizontal lines:</p>
+<pre><code>* U1336F (U+1336F): L&lt;&lt;327.0,409.0&gt;--&lt;325.0,756.0&gt;&gt;
+
+* U1336F (U+1336F): L&lt;&lt;344.0,756.0&gt;--&lt;347.0,409.0&gt;&gt;
+
+* u1301F (U+1301F): L&lt;&lt;678.0,588.0&gt;--&lt;552.0,589.0&gt;&gt;
+
+* u1303B (U+1303B): L&lt;&lt;169.0,105.0&gt;--&lt;170.0,337.0&gt;&gt;
+
+* u1303B (U+1303B): L&lt;&lt;191.0,329.0&gt;--&lt;189.0,99.0&gt;&gt;
+
+* u1303B (U+1303B): L&lt;&lt;735.0,408.0&gt;--&lt;734.0,551.0&gt;&gt;
+
+* u1303C (U+1303C): L&lt;&lt;179.0,105.0&gt;--&lt;180.0,337.0&gt;&gt;
+
+* u1303C (U+1303C): L&lt;&lt;200.0,329.0&gt;--&lt;198.0,99.0&gt;&gt;
+
+* u1303C (U+1303C): L&lt;&lt;341.0,558.0&gt;--&lt;471.0,559.0&gt;&gt;
+
+* u13056 (U+13056): L&lt;&lt;169.0,105.0&gt;--&lt;170.0,337.0&gt;&gt;
+
+* u13056 (U+13056): L&lt;&lt;191.0,329.0&gt;--&lt;189.0,99.0&gt;&gt;
+
+* u1309C (U+1309C): L&lt;&lt;438.0,104.0&gt;--&lt;563.0,103.0&gt;&gt;
+
+* u1309C (U+1309C): L&lt;&lt;959.0,103.0&gt;--&lt;1084.0,104.0&gt;&gt;
+
+* u130BB (U+130BB): L&lt;&lt;67.0,-136.0&gt;--&lt;201.0,-135.0&gt;&gt;
+
+* u130BB (U+130BB): L&lt;&lt;736.0,-136.0&gt;--&lt;870.0,-135.0&gt;&gt;
+
+* u130BC (U+130BC): L&lt;&lt;106.0,-136.0&gt;--&lt;240.0,-135.0&gt;&gt;
+
+* u130BC (U+130BC): L&lt;&lt;775.0,-136.0&gt;--&lt;909.0,-135.0&gt;&gt;
+
+* u130BF (U+130BF): L&lt;&lt;384.0,-273.0&gt;--&lt;577.0,-272.0&gt;&gt;
+
+* u130C1 (U+130C1): L&lt;&lt;252.0,-274.0&gt;--&lt;530.0,-273.0&gt;&gt;
+
+* u130D3 (U+130D3): L&lt;&lt;211.0,340.0&gt;--&lt;210.0,479.0&gt;&gt;
+
+* u130D5 (U+130D5): L&lt;&lt;822.0,18.0&gt;--&lt;1072.0,19.0&gt;&gt;
+
+* u130D6 (U+130D6): L&lt;&lt;325.0,245.0&gt;--&lt;326.0,92.0&gt;&gt;
+
+* u130F4 (U+130F4): L&lt;&lt;928.0,-86.0&gt;--&lt;927.0,57.0&gt;&gt;
+
+* u130F9 (U+130F9): L&lt;&lt;258.0,54.0&gt;--&lt;103.0,55.0&gt;&gt;
+
+* u13112 (U+13112): L&lt;&lt;854.0,612.0&gt;--&lt;856.0,322.0&gt;&gt;
+
+* u1311A (U+1311A): L&lt;&lt;452.0,148.0&gt;--&lt;453.0,11.0&gt;&gt;
+
+* u13125 (U+13125): L&lt;&lt;173.0,8.0&gt;--&lt;172.0,277.0&gt;&gt;
+
+* u13125 (U+13125): L&lt;&lt;193.0,278.0&gt;--&lt;192.0,8.0&gt;&gt;
+
+* u13144 (U+13144): L&lt;&lt;894.0,557.0&gt;--&lt;895.0,955.0&gt;&gt;
+
+* u13144 (U+13144): L&lt;&lt;915.0,928.0&gt;--&lt;914.0,611.0&gt;&gt;
+
+* u1315A (U+1315A): L&lt;&lt;311.0,19.0&gt;--&lt;471.0,20.0&gt;&gt;
+
+* u1315A (U+1315A): L&lt;&lt;514.0,19.0&gt;--&lt;656.0,20.0&gt;&gt;
+
+* u1315E (U+1315E): L&lt;&lt;592.0,78.0&gt;--&lt;591.0,252.0&gt;&gt;
+
+* u1315F (U+1315F): L&lt;&lt;833.0,257.0&gt;--&lt;834.0,68.0&gt;&gt;
+
+* u1316C (U+1316C): L&lt;&lt;184.0,843.0&gt;--&lt;49.0,844.0&gt;&gt;
+
+* u13174 (U+13174): L&lt;&lt;778.0,660.0&gt;--&lt;906.0,659.0&gt;&gt;
+
+* u13175 (U+13175): L&lt;&lt;778.0,660.0&gt;--&lt;906.0,659.0&gt;&gt;
+
+* u1317B (U+1317B): L&lt;&lt;780.0,230.0&gt;--&lt;781.0,486.0&gt;&gt;
+
+* u131AE (U+131AE): L&lt;&lt;981.0,12.0&gt;--&lt;713.0,10.0&gt;&gt;
+
+* u131B1 (U+131B1): L&lt;&lt;1315.0,190.0&gt;--&lt;952.0,187.0&gt;&gt;
+
+* u131B2 (U+131B2): L&lt;&lt;826.0,504.0&gt;--&lt;1112.0,506.0&gt;&gt;
+
+* u1324B (U+1324B): L&lt;&lt;716.0,557.0&gt;--&lt;715.0,977.0&gt;&gt;
+
+* u1324B (U+1324B): L&lt;&lt;734.0,958.0&gt;--&lt;736.0,557.0&gt;&gt;
+
+* u132A1 (U+132A1): L&lt;&lt;630.0,793.0&gt;--&lt;631.0,678.0&gt;&gt;
+
+* u132A3 (U+132A3): L&lt;&lt;632.0,94.0&gt;--&lt;906.0,93.0&gt;&gt;
+
+* u132A3 (U+132A3): L&lt;&lt;920.0,73.0&gt;--&lt;634.0,75.0&gt;&gt;
+
+* u132DF (U+132DF): L&lt;&lt;194.0,-203.0&gt;--&lt;425.0,-202.0&gt;&gt;
+
+* u13343 (U+13343): L&lt;&lt;1196.0,112.0&gt;--&lt;361.0,114.0&gt;&gt;
+
+* u13343 (U+13343): L&lt;&lt;351.0,319.0&gt;--&lt;1176.0,317.0&gt;&gt;
+
+* u13343 (U+13343): L&lt;&lt;360.0,133.0&gt;--&lt;1176.0,131.0&gt;&gt;
+
+* u13344 (U+13344): L&lt;&lt;1455.0,112.0&gt;--&lt;570.0,114.0&gt;&gt;
+
+* u13344 (U+13344): L&lt;&lt;570.0,134.0&gt;--&lt;1435.0,131.0&gt;&gt;
+
+* u13344 (U+13344): L&lt;&lt;629.0,319.0&gt;--&lt;1435.0,317.0&gt;&gt;
+
+* u13422 (U+13422): L&lt;&lt;102.0,347.0&gt;--&lt;103.0,-172.0&gt;&gt; [code: found-semi-vertical]
+</code></pre>
+</span></li></ul></div></details>
+<h2>Section: Shaping Checks</h2>
+<span class='section__emoji'>⚠️⏩⏩⏩⏩</span>
+<h3>Ensure soft_dotted characters lose their dot when combined with marks that replace the dot.</h3>
+<div class='check__idlabel'>Check ID: com.google.fonts/check/soft_dotted</div>
+
+<details><summary>⚠️ NotoSansEgyptianHieroglyphs-Regular.ttf</summary><div><ul><li class='details_item'><span class='details_indicator'>⚠️ WARN</span><span class='details_text'><p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĩ̦ ĭ̦ i̦̇ i̦̊ i̦̋ ǐ̦ i̦̒ ĩ̧ ĭ̧ i̧̇ i̧̊ i̧̋ ǐ̧ i̧̒ j̦̀ j̦́ ĵ̦ j̦̃ j̦̄ j̦̆</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Nateni (Latn, 100,000 speakers), Ejagham (Latn, 120,000 speakers), Aghem (Latn, 38,843 speakers), Ebira (Latn, 2,200,000 speakers), Lugbara (Latn, 2,200,000 speakers), Navajo (Latn, 166,319 speakers), Dan (Latn, 1,099,244 speakers), Avokaya (Latn, 100,000 speakers), Kom (Latn, 360,685 speakers), Igbo (Latn, 27,823,640 speakers), Koonzime (Latn, 40,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ma’di (Latn, 584,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Dutch (Latn, 31,709,104 speakers). [code: soft-dotted]</p>
+</span></li></ul></div></details>
+                        </main>
+                    </body>
+                </html>
