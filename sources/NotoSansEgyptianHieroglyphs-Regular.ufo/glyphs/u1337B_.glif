@@ -1,47 +1,7 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<glyph name="u1337B" format="2">
-  <advance width="527"/>
-  <unicode hex="1337B"/>
-  <outline>
-    <contour>
-      <point x="49" y="187" type="line"/>
-      <point x="288" y="187" type="line" smooth="yes"/>
-      <point x="449" y="187"/>
-      <point x="479" y="309"/>
-      <point x="479" y="396" type="curve" smooth="yes"/>
-      <point x="479" y="484"/>
-      <point x="449" y="606"/>
-      <point x="288" y="606" type="curve" smooth="yes"/>
-      <point x="49" y="606" type="line"/>
-      <point x="49" y="586" type="line"/>
-      <point x="288" y="586" type="line" smooth="yes"/>
-      <point x="432" y="586"/>
-      <point x="459" y="476"/>
-      <point x="459" y="396" type="curve" smooth="yes"/>
-      <point x="459" y="317"/>
-      <point x="432" y="207"/>
-      <point x="288" y="207" type="curve" smooth="yes"/>
-      <point x="49" y="207" type="line"/>
-    </contour>
-    <contour>
-      <point x="49" y="231" type="line"/>
-      <point x="281" y="231" type="line" smooth="yes"/>
-      <point x="405" y="231"/>
-      <point x="428" y="328"/>
-      <point x="428" y="396" type="curve" smooth="yes"/>
-      <point x="428" y="465"/>
-      <point x="405" y="562"/>
-      <point x="281" y="562" type="curve" smooth="yes"/>
-      <point x="49" y="562" type="line"/>
-      <point x="49" y="542" type="line"/>
-      <point x="281" y="542" type="line" smooth="yes"/>
-      <point x="389" y="542"/>
-      <point x="409" y="458"/>
-      <point x="409" y="396" type="curve" smooth="yes"/>
-      <point x="409" y="335"/>
-      <point x="389" y="250"/>
-      <point x="281" y="250" type="curve" smooth="yes"/>
-      <point x="49" y="250" type="line"/>
-    </contour>
-  </outline>
-</glyph>
+<?xml version="1.0" standalone="no"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd" >
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" viewBox="-10 0 537 1000">
+   <path fill="currentColor"
+d="M433 401v197c0 160 -84 289 -184 289h-181v25h181c112 0 209 -136 209 -314v-197c0 -178 -97 -313 -209 -313h-181v24h181c100 0 184 129 184 289zM249 132h-200v-64h200c129 0 228 150 228 333v197c0 183 -99 333 -228 333l-200 1v-63l200 -1c89 0 165 -122 165 -270
+v-197c0 -148 -76 -269 -165 -269z" />
+</svg>
