@@ -1,26 +1,23 @@
 ## FontBakery report
 
-fontbakery version: 0.10.1
+fontbakery version: 0.10.9
 
-<details><summary><b>[14] NotoSansEgyptianHieroglyphs-Regular.ttf</b></summary><div><details><summary>💔 <b>ERROR:</b> Familyname must be unique according to namecheck.fontdata.com (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/fontdata_namecheck">com.google.fonts/check/fontdata_namecheck</a>)</summary><div>
-
-
-* 💔 **ERROR** Failed to access: http://namecheck.fontdata.com.
-		This check relies on the external service http://namecheck.fontdata.com via the internet. While the service cannot be reached or does not respond this check is broken.
-
-		You can exclude this check with the command line option:
-		-x com.google.fonts/check/fontdata_namecheck
-
-		Or you can wait until the service is available again.
-		If the problem persists please report this issue at: https://github.com/fonttools/fontbakery/issues
-
-		Original error message:
-		<class 'requests.exceptions.ReadTimeout'> [code: namecheck-service]
-</div></details><details><summary>🔥 <b>FAIL:</b> Version number has increased since previous release on Google Fonts? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/version_bump">com.google.fonts/check/version_bump</a>)</summary><div>
+<details><summary><b>[1] Experimental checks</b></summary><div><details><summary>🔥 <b>FAIL:</b> Shapes languages in all GF glyphsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/glyphsets/shape_languages">com.google.fonts/check/glyphsets/shape_languages</a>)</summary><div>
 
 
-* 🔥 **FAIL** Version number 2.001007080078125 is equal to version on Google Fonts.
-* 🔥 **FAIL** Version number 2.001007080078125 is equal to version on Google Fonts GitHub repo.
+* 🔥 **FAIL** GF_Latin_Core glyphset:
+
+| Language | FAIL messages |
+| :--- | :--- |
+| nl_Latn (Dutch) | Shaper didn't attach acutecomb to uni0237 |
+|  ^  | Shaper didn't attach acutecomb to J |
+
+ [code: failed-language-shaping]
+</div></details><br></div></details><details><summary><b>[14] NotoSansEgyptianHieroglyphs-Regular.ttf</b></summary><div><details><summary>🔥 <b>FAIL:</b> Version number has increased since previous release on Google Fonts? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/version_bump">com.google.fonts/check/version_bump</a>)</summary><div>
+
+
+* 🔥 **FAIL** Version number 2.001 is equal to version on **Google Fonts**.
+* 🔥 **FAIL** Version number 2.001 is equal to version on google/fonts **GitHub repo**.
 </div></details><details><summary>🔥 <b>FAIL:</b> Noto fonts must have an ARTICLE.en_us.html file (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/description/noto_has_article">com.google.fonts/check/description/noto_has_article</a>)</summary><div>
 
 
@@ -161,7 +158,6 @@ fontbakery version: 0.10.1
 * 🔥 **FAIL** Glyph "zacute" has a legacy accent component (acute). It needs to be replaced by a combining mark. [code: legacy-accents-component]
 * 🔥 **FAIL** Glyph "zcaron" has a legacy accent component (caron). It needs to be replaced by a combining mark. [code: legacy-accents-component]
 * 🔥 **FAIL** Glyph "zdotaccent" has a legacy accent component (dotaccent). It needs to be replaced by a combining mark. [code: legacy-accents-component]
-* 🔥 **FAIL** Legacy accent "overscore" are too narrow. [code: legacy-accents-width]
 </div></details><details><summary>⚠ <b>WARN:</b> Check for codepoints not covered by METADATA subsets. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/metadata/unreachable_subsetting">com.google.fonts/check/metadata/unreachable_subsetting</a>)</summary><div>
 
 
@@ -171,15 +167,15 @@ fontbakery version: 0.10.1
     subset declarations to METADATA.pb, or by editing the glyphset
     definitions.
 
- * U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh
+ * U+02C7 CARON: try adding one of: canadian-aboriginal, tifinagh, yi
  * U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition
- * U+02D8 BREVE: try adding one of: yi, canadian-aboriginal
- * U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal
- * U+02DB OGONEK: try adding one of: yi, canadian-aboriginal
+ * U+02D8 BREVE: try adding one of: canadian-aboriginal, yi
+ * U+02D9 DOT ABOVE: try adding one of: canadian-aboriginal, yi
+ * U+02DB OGONEK: try adding one of: canadian-aboriginal, yi
  * U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition
- * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: coptic, math, cherokee, tifinagh
+ * U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: tifinagh, coptic, cherokee, math
  * U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic
- * U+0307 COMBINING DOT ABOVE: try adding one of: coptic, tai-le, malayalam, math, syriac, tifinagh, canadian-aboriginal, old-permic
+ * U+0307 COMBINING DOT ABOVE: try adding one of: old-permic, tifinagh, malayalam, canadian-aboriginal, math, syriac, tai-le, coptic
  * U+030A COMBINING RING ABOVE: try adding syriac
  * U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage
  * U+030C COMBINING CARON: try adding one of: tai-le, cherokee
@@ -187,23 +183,37 @@ fontbakery version: 0.10.1
  * U+0326 COMBINING COMMA BELOW: not included in any glyphset definition
  * U+0327 COMBINING CEDILLA: not included in any glyphset definition
  * U+0328 COMBINING OGONEK: not included in any glyphset definition
- * U+200C ZERO WIDTH NON-JOINER: try adding one of: javanese, limbu, khmer, grantha, psalter-pahlavi, hatran, newa, khojki, devanagari, kharoshthi, tirhuta, tifinagh, sundanese, manichaean, mandaic, thai, brahmi, hanifi-rohingya, khudawadi, cham, gunjala-gondi, sharada, siddham, kannada, kayah-li, meetei-mayek, rejang, syloti-nagri, thaana, hanunoo, dogra, sogdian, batak, modi, tagbanwa, buginese, duployan, tamil, nko, oriya, balinese, mongolian, saurashtra, bengali, sinhala, tai-tham, warang-citi, gujarati, chakma, pahawh-hmong, tai-le, malayalam, lepcha, buhid, tagalog, tai-viet, myanmar, tibetan, yi, mahajani, syriac, takri, avestan, phags-pa, telugu, kaithi, gurmukhi, new-tai-lue
- * U+200D ZERO WIDTH JOINER: try adding one of: javanese, limbu, grantha, psalter-pahlavi, newa, khojki, devanagari, kharoshthi, tirhuta, tifinagh, sundanese, manichaean, mandaic, thai, brahmi, hanifi-rohingya, khudawadi, cham, gunjala-gondi, sharada, siddham, kannada, kayah-li, meetei-mayek, rejang, syloti-nagri, thaana, hanunoo, dogra, tagbanwa, batak, modi, buginese, duployan, tamil, nko, oriya, balinese, mongolian, saurashtra, bengali, old-hungarian, sinhala, tai-tham, warang-citi, gujarati, chakma, pahawh-hmong, tai-le, malayalam, lepcha, buhid, tagalog, tai-viet, myanmar, tibetan, yi, mahajani, syriac, takri, avestan, phags-pa, telugu, kaithi, gurmukhi, new-tai-lue
- * U+25CC DOTTED CIRCLE: try adding one of: khmer, tirhuta, tifinagh, manichaean, mandaic, brahmi, cham, masaram-gondi, bassa-vah, dogra, hanunoo, modi, buginese, hebrew, oriya, gujarati, pahawh-hmong, wancho, lepcha, marchen, tagalog, myanmar, rejang, bhaiksuki, miao, newa, sharada, lao, kannada, kayah-li, osage, old-permic, nko, symbols, soyombo, ahom, phags-pa, telugu, kaithi, limbu, khojki, devanagari, kharoshthi, math, sundanese, meetei-mayek, thaana, sogdian, duployan, tamil, balinese, mongolian, bengali, music, tai-le, malayalam, mahajani, sinhala, new-tai-lue, javanese, elbasan, grantha, psalter-pahlavi, thai, zanabazar-square, hanifi-rohingya, caucasian-albanian, khudawadi, gunjala-gondi, siddham, adlam, syloti-nagri, tagbanwa, batak, coptic, chakma, buhid, tai-viet, mende-kikakui, tibetan, yi, syriac, takri, gurmukhi
+ * U+200C ZERO WIDTH NON-JOINER: try adding one of: dogra, lepcha, manichaean, meetei-mayek, kannada, rejang, buginese, phags-pa, cham, grantha, telugu, syriac, newa, devanagari, avestan, syloti-nagri, tai-le, thaana, tirhuta, duployan, siddham, brahmi, mongolian, khojki, sinhala, kayah-li, oriya, javanese, saurashtra, takri, kharoshthi, psalter-pahlavi, tagalog, warang-citi, sundanese, yi, thai, hatran, nko, gurmukhi, limbu, tifinagh, mahajani, myanmar, sogdian, gujarati, tamil, new-tai-lue, pahawh-hmong, khudawadi, modi, khmer, tagbanwa, tibetan, tai-viet, hanifi-rohingya, balinese, gunjala-gondi, malayalam, kaithi, buhid, sharada, hanunoo, chakma, tai-tham, batak, bengali, mandaic
+ * U+200D ZERO WIDTH JOINER: try adding one of: dogra, lepcha, manichaean, meetei-mayek, kannada, rejang, buginese, phags-pa, cham, grantha, telugu, syriac, newa, devanagari, avestan, syloti-nagri, tai-le, thaana, tirhuta, duployan, siddham, brahmi, emoji, mongolian, khojki, sinhala, kayah-li, oriya, javanese, saurashtra, takri, kharoshthi, old-hungarian, psalter-pahlavi, tagalog, warang-citi, sundanese, yi, thai, nko, gurmukhi, limbu, tifinagh, mahajani, myanmar, gujarati, tamil, new-tai-lue, pahawh-hmong, khudawadi, modi, tagbanwa, tibetan, tai-viet, hanifi-rohingya, balinese, gunjala-gondi, malayalam, kaithi, buhid, sharada, hanunoo, chakma, tai-tham, batak, bengali, mandaic
+ * U+25CC DOTTED CIRCLE: try adding one of: lepcha, cham, math, bhaiksuki, music, devanagari, lao, thaana, coptic, duployan, siddham, mongolian, oriya, psalter-pahlavi, tagalog, thai, gurmukhi, old-permic, tifinagh, caucasian-albanian, ahom, new-tai-lue, adlam, tibetan, osage, elbasan, gunjala-gondi, mende-kikakui, buginese, phags-pa, zanabazar-square, newa, tirhuta, tai-le, brahmi, javanese, marchen, sundanese, nko, sogdian, gujarati, wancho, tamil, khudawadi, tagbanwa, tai-viet, hanifi-rohingya, balinese, malayalam, kaithi, miao, sharada, hanunoo, modi, batak, dogra, manichaean, kannada, rejang, sinhala, hebrew, symbols, kharoshthi, yi, limbu, mahajani, myanmar, khmer, buhid, chakma, mandaic, meetei-mayek, bassa-vah, telugu, grantha, syriac, syloti-nagri, khojki, kayah-li, takri, pahawh-hmong, soyombo, masaram-gondi, bengali
+ * U+1342F EGYPTIAN HIEROGLYPH V011D: not included in any glyphset definition
 
 Or you can add the above codepoints to one of the subsets supported by the font: `egyptian-hieroglyphs`, `latin`, `latin-ext` [code: unreachable-subsetting]
+</div></details><details><summary>⚠ <b>WARN:</b> License URL matches License text on name table? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/license_url">com.google.fonts/check/name/license_url</a>)</summary><div>
+
+
+* ⚠ **WARN** OFL url is no longer "https://scripts.sil.org/OFL". Use 'https://openfontlicense.org' instead. [code: deprecated-ofl-url]
 </div></details><details><summary>⚠ <b>WARN:</b> Glyphs are similiar to Google Fonts version? (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/production_glyphs_similarity">com.google.fonts/check/production_glyphs_similarity</a>)</summary><div>
 
 
 * ⚠ **WARN** Following glyphs differ greatly from Google Fonts version:
-	* u13017 and u13068
-</div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 27 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
+	* u13017
+	* u13068
+	* u130D5
+	* u130FD
+	* u13163
+	* u13267
+	* u1329E
+	* u1329F
+	* u13379
+	* u1337A
+	* u1337B
+	* u133F3
+	* u13420 and u1342B
+</div></details><details><summary>⚠ <b>WARN:</b> Combined length of family and style must not exceed 31 characters. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/name/family_and_style_max_length">com.google.fonts/check/name/family_and_style_max_length</a>)</summary><div>
 
 
-* ⚠ **WARN** The combined length of family and style exceeds 27 chars in the following 'WINDOWS' entries:
- FONT_FAMILY_NAME = 'Noto Sans Egyptian Hieroglyphs' / SUBFAMILY_NAME = 'Regular'
-
-Please take a look at the conversation at https://github.com/fonttools/fontbakery/issues/2179 in order to understand the reasoning behind these name table records max-length criteria. [code: too-long]
+* ⚠ **WARN** Name ID 6 'NotoSansEgyptianHieroglyphs-Regular' exceeds 27 characters. This has been found to cause problems with PostScript printers, especially on Mac platforms [code: nameid6-too-long]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/googlefonts.html#com.google.fonts/check/meta/script_lang_tags">com.google.fonts/check/meta/script_lang_tags</a>)</summary><div>
 
 
@@ -356,11 +366,13 @@ minus
 
 	* u130F6 (U+130F6): L<<198.0,203.0>--<231.0,280.0>>/L<<231.0,280.0>--<183.0,211.0>> = 11.625898643308558
 
-	* u130FC (U+130FC): B<<619.5,342.5>-<631.0,290.0>-<643.0,255.0>>/B<<643.0,255.0>-<642.0,267.0>-<639.5,281.0>> = 14.16100272532503
-
 	* u13104 (U+13104): L<<546.0,57.0>--<339.0,11.0>>/L<<339.0,11.0>--<511.0,23.0>> = 8.537894610721718
 
 	* u13106 (U+13106): L<<887.0,135.0>--<612.0,84.0>>/L<<612.0,84.0>--<894.0,106.0>> = 6.045549529392515
+
+	* u13108 (U+13108): B<<366.0,922.0>-<377.0,948.0>-<387.0,967.0>>/B<<387.0,967.0>-<369.0,947.0>-<350.5,913.5>> = 14.228671894756625
+
+	* u13108 (U+13108): B<<98.5,909.0>-<86.0,937.0>-<71.0,955.0>>/B<<71.0,955.0>-<76.0,947.0>-<79.5,937.5>> = 7.8001878841816605
 
 	* u13110 (U+13110): B<<460.5,345.5>-<431.0,381.0>-<394.0,424.0>>/B<<394.0,424.0>-<396.0,420.0>-<396.0,417.0>> = 14.145795494102968
 
@@ -460,17 +472,15 @@ minus
 
 	* u13162 (U+13162): B<<943.5,19.0>-<935.0,12.0>-<930.0,0.0>>/B<<930.0,0.0>-<933.0,4.0>-<941.5,9.5>> = 14.25003269780357
 
-	* u13163 (U+13163): B<<199.5,815.5>-<206.0,826.0>-<222.0,836.0>>/L<<222.0,836.0>--<221.0,835.0>> = 12.994616791916512
+	* u13163 (U+13163): B<<182.0,723.5>-<184.0,735.0>-<195.0,751.0>>/L<<195.0,751.0>--<194.0,750.0>> = 10.491477012331599
 
-	* u13163 (U+13163): B<<460.5,769.0>-<414.0,795.0>-<351.0,796.0>>/L<<351.0,796.0>--<352.0,796.0>> = 0.9093804491989697
+	* u13163 (U+13163): B<<608.0,896.5>-<581.0,899.0>-<558.0,903.0>>/B<<558.0,903.0>-<566.0,901.0>-<584.5,897.0>> = 4.170436524842054
 
-	* u13163 (U+13163): L<<222.0,836.0>--<221.0,835.0>>/B<<221.0,835.0>-<225.0,838.0>-<239.0,847.5>> = 8.13010235415596
+	* u13163 (U+13163): L<<195.0,751.0>--<194.0,750.0>>/B<<194.0,750.0>-<196.0,753.0>-<209.0,769.0>> = 11.309932474020227
 
-	* u13163 (U+13163): L<<234.0,968.0>--<73.0,925.0>>/L<<73.0,925.0>--<234.0,957.0>> = 3.712085985563048
+	* u13163 (U+13163): L<<203.0,927.0>--<70.0,827.0>>/L<<70.0,827.0>--<207.0,917.0>> = 3.6364779789756203
 
-	* u13163 (U+13163): L<<237.0,948.0>--<75.0,915.0>>/L<<75.0,915.0>--<243.0,937.0>> = 4.053265058318664
-
-	* u13163 (U+13163): L<<351.0,796.0>--<352.0,796.0>>/L<<352.0,796.0>--<283.0,798.0>> = 1.6602823689826889
+	* u13163 (U+13163): L<<214.0,910.0>--<75.0,819.0>>/L<<75.0,819.0>--<223.0,902.0>> = 3.9276371523491687
 
 	* u13164 (U+13164): B<<636.0,892.5>-<609.0,895.0>-<586.0,899.0>>/B<<586.0,899.0>-<594.0,897.0>-<612.5,893.0>> = 4.170436524842054
 
@@ -662,13 +672,11 @@ minus
 
 	* u1329D (U+1329D): L<<208.0,98.0>--<352.0,98.0>>/B<<352.0,98.0>-<291.0,111.0>-<234.0,136.0>> = 12.030596096537845
 
-	* u1329E (U+1329E): B<<949.5,157.0>-<904.0,137.0>-<857.0,125.0>>/L<<857.0,125.0>--<1015.0,125.0>> = 14.32271997820355
-
-	* u1329E (U+1329E): L<<154.0,125.0>--<312.0,125.0>>/B<<312.0,125.0>-<261.0,138.0>-<211.0,157.5>> = 14.300277449185575
+	* u1329E (U+1329E): B<<952.5,156.5>-<907.0,137.0>-<857.0,125.0>>/L<<857.0,125.0>--<1015.0,125.0>> = 13.495733280795811
 
 	* u1329F (U+1329F): B<<995.5,157.5>-<946.0,138.0>-<895.0,125.0>>/L<<895.0,125.0>--<1052.0,125.0>> = 14.300277449185575
 
-	* u1329F (U+1329F): L<<191.0,125.0>--<349.0,125.0>>/B<<349.0,125.0>-<279.0,142.0>-<218.0,174.0>> = 13.650419134756984
+	* u1329F (U+1329F): L<<191.0,125.0>--<349.0,125.0>>/B<<349.0,125.0>-<329.0,130.0>-<296.0,141.0>> = 14.036243467926484
 
 	* u132A0 (U+132A0): B<<882.5,140.5>-<832.0,121.0>-<780.0,109.0>>/L<<780.0,109.0>--<950.0,109.0>> = 12.994616791916512
 
@@ -854,7 +862,23 @@ minus
 
 	* u13344 (U+13344): L<<629.0,319.0>--<1435.0,317.0>>
 
-	* u13422 (U+13422): L<<102.0,347.0>--<103.0,-172.0>> [code: found-semi-vertical]
+	* u13379 (U+13379): L<<279.0,-68.0>--<480.0,-69.0>>
+
+	* u13379 (U+13379): L<<480.0,-132.0>--<279.0,-131.0>>
+
+	* u1337A (U+1337A): L<<249.0,-131.0>--<49.0,-132.0>>
+
+	* u1337A (U+1337A): L<<49.0,-69.0>--<249.0,-68.0>>
+
+	* u1337B (U+1337B): L<<249.0,-131.0>--<49.0,-132.0>>
+
+	* u1337B (U+1337B): L<<49.0,-69.0>--<249.0,-68.0>>
+
+	* u13422 (U+13422): L<<102.0,347.0>--<103.0,-172.0>>
+
+	* u1342F (U+1342F): L<<279.0,-68.0>--<480.0,-69.0>>
+
+	* u1342F (U+1342F): L<<480.0,-132.0>--<279.0,-131.0>> [code: found-semi-vertical]
 </div></details><details><summary>⚠ <b>WARN:</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. (<a href="https://font-bakery.readthedocs.io/en/stable/fontbakery/profiles/<Section: Shaping Checks>.html#com.google.fonts/check/soft_dotted">com.google.fonts/check/soft_dotted</a>)</summary><div>
 
 
@@ -864,15 +888,15 @@ The dot of soft dotted characters _should_ disappear in other cases, for example
 
 Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers). 
 
-Your font does *not* cover the following languages that require the soft-dotted feature: Basaa (Latn, 332,940 speakers), Nateni (Latn, 100,000 speakers), Ejagham (Latn, 120,000 speakers), Aghem (Latn, 38,843 speakers), Ebira (Latn, 2,200,000 speakers), Lugbara (Latn, 2,200,000 speakers), Navajo (Latn, 166,319 speakers), Dan (Latn, 1,099,244 speakers), Avokaya (Latn, 100,000 speakers), Kom (Latn, 360,685 speakers), Igbo (Latn, 27,823,640 speakers), Koonzime (Latn, 40,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Ma’di (Latn, 584,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Dutch (Latn, 31,709,104 speakers). [code: soft-dotted]
+Your font does *not* cover the following languages that require the soft-dotted feature: Igbo (Latn, 27,823,640 speakers), Zapotec (Latn, 490,000 speakers), South Central Banda (Latn, 244,000 speakers), Sar (Latn, 500,000 speakers), Kom (Latn, 360,685 speakers), Belarusian (Cyrl, 10,064,517 speakers), Nateni (Latn, 100,000 speakers), Gulay (Latn, 250,478 speakers), Mundani (Latn, 34,000 speakers), Cicipu (Latn, 44,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Southern Kisi (Latn, 360,000 speakers), Basaa (Latn, 332,940 speakers), Dan (Latn, 1,099,244 speakers), Ebira (Latn, 2,200,000 speakers), Bafut (Latn, 158,146 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Bete-Bendi (Latn, 100,000 speakers), Avokaya (Latn, 100,000 speakers), Ejagham (Latn, 120,000 speakers), Nzakara (Latn, 50,000 speakers), Makaa (Latn, 221,000 speakers), Mfumte (Latn, 79,000 speakers), Ngbaka (Latn, 1,020,000 speakers), Lugbara (Latn, 2,200,000 speakers), Aghem (Latn, 38,843 speakers), Ma’di (Latn, 584,000 speakers), Dutch (Latn, 31,709,104 speakers), Mango (Latn, 77,000 speakers), Koonzime (Latn, 40,000 speakers), Dii (Latn, 71,000 speakers), Navajo (Latn, 166,319 speakers), Fur (Latn, 1,230,163 speakers), Ekpeye (Latn, 226,000 speakers), Yala (Latn, 200,000 speakers). [code: soft-dotted]
 </div></details><br></div></details>
 
 ### Summary
 
-| 💔 ERROR | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
-|:-----:|:----:|:----:|:----:|:----:|:----:|:----:|
-| 1 | 3 | 10 | 121 | 7 | 110 | 0 |
-| 0% | 1% | 4% | 48% | 3% | 44% | 0% |
+| 💔 ERROR | ☠ FATAL | 🔥 FAIL | ⚠ WARN | 💤 SKIP | ℹ INFO | 🍞 PASS | 🔎 DEBUG |
+|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|:-----:|
+| 0 | 0 | 4 | 11 | 123 | 7 | 111 | 0 |
+| 0% | 0% | 2% | 4% | 48% | 3% | 43% | 0% |
 
 **Note:** The following loglevels were omitted in this report:
 * **SKIP**
