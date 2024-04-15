@@ -8,3 +8,9 @@
 #
 # Names should be added to this file as:
 # Name <email address>
+
+# Unicode 14 additions
+Mikhail Merkuryev <mercury13@ukr.net>
+
+# Consultancy and checking
+Daniel Werning <daniel.werning@bbaw.de>
