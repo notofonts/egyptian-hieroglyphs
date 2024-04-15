@@ -37,7 +37,7 @@
     <key>openTypeNameManufacturerURL</key>
     <string>http://www.google.com/get/noto/</string>
     <key>openTypeNameVersion</key>
-    <string>Version 2.001</string>
+    <string>Version 2.002</string>
     <key>openTypeOS2CodePageRanges</key>
     <array>
       <integer>0</integer>
@@ -125,7 +125,7 @@
     <key>versionMajor</key>
     <integer>2</integer>
     <key>versionMinor</key>
-    <integer>1</integer>
+    <integer>2</integer>
     <key>xHeight</key>
     <integer>536</integer>
   </dict>
