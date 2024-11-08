@@ -1,18 +1,19 @@
 ## FontBakery report
 
-fontbakery version: 0.12.0
+fontbakery version: 0.12.10
 
 
 
-## Experimental checks
-
-These won't break the CI job for now, but will become effective after some time if nobody raises any concern.
 
 
-<details><summary>[1] NotoSansEgyptianHieroglyphs-Regular.ttf</summary>
+## Check results
+
+
+
+<details><summary>[11] NotoSansEgyptianHieroglyphs-Regular.ttf</summary>
 <div>
 <details>
-    <summary>⚠️ <b>WARN</b> Validate location, size and resolution of article images. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.article.html#"></a></summary>
+    <summary>🔥 <b>FAIL</b> Shapes languages in all GF glyphsets. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.glyphset.html#"></a></summary>
     <div>
 
 
@@ -21,25 +22,55 @@ These won't break the CI job for now, but will become effective after some time 
 
 
 
-* ⚠️ **WARN** <p>Family metadata at fonts/NotoSansEgyptianHieroglyphs/googlefonts/ttf does not have an article.</p>
- [code: lacks-article]
+* 🔥 **FAIL** <p>GF_Latin_Core glyphset:</p>
+<table>
+<thead>
+<tr>
+<th align="left">Language</th>
+<th align="left">FAIL messages</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">nl_Latn (Dutch)</td>
+<td align="left">Shaper didn't attach acutecomb to J</td>
+</tr>
+<tr>
+<td align="left">^</td>
+<td align="left">Shaper didn't attach acutecomb to uni0237</td>
+</tr>
+</tbody>
+</table>
+ [code: failed-language-shaping]
 
 
 
 </div>
 </details>
+
+<details>
+    <summary>🔥 <b>FAIL</b> Check for presence of an ARTICLE.en_us.html file <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.description.html#"></a></summary>
+    <div>
+
+
+
+
+
+
+
+* 🔥 **FAIL** <p>This is a Noto font but it lacks an ARTICLE.en_us.html file.</p>
+ [code: missing-article]
+
+
+
+* 🔥 **FAIL** <p>This is a Noto font but it lacks a DESCRIPTION.en_us.html file.</p>
+ [code: missing-description]
+
+
+
 </div>
 </details>
 
-
-
-
-## All other checks
-
-
-
-<details><summary>[11] NotoSansEgyptianHieroglyphs-Regular.ttf</summary>
-<div>
 <details>
     <summary>⚠️ <b>WARN</b> Check mark characters are in GDEF mark glyph class. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/opentype.gdef.html#"></a></summary>
     <div>
@@ -87,7 +118,7 @@ acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), un
 </details>
 
 <details>
-    <summary>⚠️ <b>WARN</b> Check math signs have the same width. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/universal.html#"></a></summary>
+    <summary>⚠️ <b>WARN</b> Validate size, and resolution of article images, and ensure article page has minimum length and includes visual assets. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.article.html#"></a></summary>
     <div>
 
 
@@ -96,11 +127,1165 @@ acutecomb (U+0301), gravecomb (U+0300), tildecomb (U+0303), uni0302 (U+0302), un
 
 
 
-* ⚠️ **WARN** <p>The most common width is 572 among a set of 6 math glyphs.
-The following math glyphs have a different width, though:</p>
-<p>Width = 322:
-minus</p>
- [code: width-outliers]
+* ⚠️ **WARN** <p>Family metadata at fonts/NotoSansEgyptianHieroglyphs/googlefonts/ttf does not have an article.</p>
+ [code: lacks-article]
+
+
+
+</div>
+</details>
+
+<details>
+    <summary>⚠️ <b>WARN</b> Check for codepoints not covered by METADATA subsets. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.subsets.html#"></a></summary>
+    <div>
+
+
+
+
+
+
+
+* ⚠️ **WARN** <p>The following codepoints supported by the font are not covered by
+any subsets defined in the font's metadata file, and will never
+be served. You can solve this by either manually adding additional
+subset declarations to METADATA.pb, or by editing the glyphset
+definitions.</p>
+<ul>
+<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
+<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
+<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: math, tifinagh, coptic, cherokee</li>
+<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
+<li>U+0307 COMBINING DOT ABOVE: try adding one of: tai-le, malayalam, syriac, todhri, math, old-permic, tifinagh, canadian-aboriginal, hebrew, duployan, coptic</li>
+<li>U+030A COMBINING RING ABOVE: try adding one of: duployan, syriac</li>
+<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: osage, cherokee</li>
+<li>U+030C COMBINING CARON: try adding one of: tai-le, cherokee</li>
+<li>U+0326 COMBINING COMMA BELOW: try adding math</li>
+<li>U+0327 COMBINING CEDILLA: try adding math</li>
+<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
+<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: tagbanwa, tai-le, pahawh-hmong, siddham, javanese, kayah-li, bengali, thai, sundanese, lepcha, chakma, dogra, gujarati, kharoshthi, saurashtra, bhaiksuki, new-tai-lue, khojki, malayalam, sinhala, tamil, psalter-pahlavi, tai-tham, mandaic, thaana, hebrew, syloti-nagri, takri, tibetan, duployan, syriac, buginese, meetei-mayek, mongolian, tagalog, tai-viet, tirhuta, gurmukhi, telugu, khmer, hanifi-rohingya, kannada, manichaean, brahmi, modi, hatran, balinese, limbu, batak, avestan, myanmar, buhid, rejang, devanagari, arabic, mahajani, oriya, lao, kaithi, hanunoo, grantha, khudawadi, newa, sogdian, sharada, yi, zanabazar-square, warang-citi, nko, masaram-gondi, gunjala-gondi, tifinagh, phags-pa, cham</li>
+<li>U+200D ZERO WIDTH JOINER: try adding one of: tagbanwa, tai-le, pahawh-hmong, siddham, javanese, kayah-li, bengali, thai, sundanese, lepcha, chakma, dogra, gujarati, kharoshthi, saurashtra, bhaiksuki, new-tai-lue, khojki, malayalam, sinhala, tamil, psalter-pahlavi, tai-tham, mandaic, thaana, hebrew, syloti-nagri, takri, tibetan, duployan, syriac, buginese, meetei-mayek, mongolian, tagalog, tai-viet, tirhuta, gurmukhi, telugu, khmer, hanifi-rohingya, kannada, manichaean, brahmi, modi, limbu, balinese, myanmar, batak, avestan, rejang, buhid, devanagari, old-hungarian, arabic, mahajani, oriya, lao, kaithi, hanunoo, grantha, khudawadi, newa, sogdian, sharada, yi, zanabazar-square, warang-citi, nko, masaram-gondi, gunjala-gondi, tifinagh, phags-pa, cham</li>
+<li>U+25CC DOTTED CIRCLE: try adding one of: thai, bhaiksuki, bassa-vah, khojki, marchen, sinhala, caucasian-albanian, takri, syriac, tagalog, tai-viet, khmer, old-permic, hanifi-rohingya, kannada, modi, brahmi, rejang, myanmar, devanagari, oriya, canadian-aboriginal, masaram-gondi, gunjala-gondi, elbasan, phags-pa, cham, kayah-li, bengali, sundanese, gujarati, malayalam, tamil, miao, hebrew, syloti-nagri, tibetan, duployan, meetei-mayek, armenian, gurmukhi, manichaean, buhid, tagbanwa, tai-le, pahawh-hmong, symbols, chakma, dogra, saurashtra, new-tai-lue, music, tai-tham, thaana, telugu, sogdian, limbu, balinese, batak, mahajani, lao, kaithi, newa, khudawadi, yi, nko, coptic, siddham, javanese, lepcha, kharoshthi, wancho, adlam, psalter-pahlavi, mandaic, buginese, mongolian, tirhuta, math, osage, ahom, mende-kikakui, hanunoo, grantha, sharada, zanabazar-square, soyombo, warang-citi, tifinagh</li>
+<li>U+13000 EGYPTIAN HIEROGLYPH A001: try adding egyptian-hieroglyphs</li>
+<li>U+13001 EGYPTIAN HIEROGLYPH A002: try adding egyptian-hieroglyphs</li>
+<li>U+13002 EGYPTIAN HIEROGLYPH A003: try adding egyptian-hieroglyphs</li>
+<li>U+13003 EGYPTIAN HIEROGLYPH A004: try adding egyptian-hieroglyphs</li>
+<li>U+13004 EGYPTIAN HIEROGLYPH A005: try adding egyptian-hieroglyphs</li>
+<li>U+13005 EGYPTIAN HIEROGLYPH A005A: try adding egyptian-hieroglyphs</li>
+<li>U+13006 EGYPTIAN HIEROGLYPH A006: try adding egyptian-hieroglyphs</li>
+<li>U+13007 EGYPTIAN HIEROGLYPH A006A: try adding egyptian-hieroglyphs</li>
+<li>U+13008 EGYPTIAN HIEROGLYPH A006B: try adding egyptian-hieroglyphs</li>
+<li>U+13009 EGYPTIAN HIEROGLYPH A007: try adding egyptian-hieroglyphs</li>
+<li>U+1300A EGYPTIAN HIEROGLYPH A008: try adding egyptian-hieroglyphs</li>
+<li>U+1300B EGYPTIAN HIEROGLYPH A009: try adding egyptian-hieroglyphs</li>
+<li>U+1300C EGYPTIAN HIEROGLYPH A010: try adding egyptian-hieroglyphs</li>
+<li>U+1300D EGYPTIAN HIEROGLYPH A011: try adding egyptian-hieroglyphs</li>
+<li>U+1300E EGYPTIAN HIEROGLYPH A012: try adding egyptian-hieroglyphs</li>
+<li>U+1300F EGYPTIAN HIEROGLYPH A013: try adding egyptian-hieroglyphs</li>
+<li>U+13010 EGYPTIAN HIEROGLYPH A014: try adding egyptian-hieroglyphs</li>
+<li>U+13011 EGYPTIAN HIEROGLYPH A014A: try adding egyptian-hieroglyphs</li>
+<li>U+13012 EGYPTIAN HIEROGLYPH A015: try adding egyptian-hieroglyphs</li>
+<li>U+13013 EGYPTIAN HIEROGLYPH A016: try adding egyptian-hieroglyphs</li>
+<li>U+13014 EGYPTIAN HIEROGLYPH A017: try adding egyptian-hieroglyphs</li>
+<li>U+13015 EGYPTIAN HIEROGLYPH A017A: try adding egyptian-hieroglyphs</li>
+<li>U+13016 EGYPTIAN HIEROGLYPH A018: try adding egyptian-hieroglyphs</li>
+<li>U+13017 EGYPTIAN HIEROGLYPH A019: try adding egyptian-hieroglyphs</li>
+<li>U+13018 EGYPTIAN HIEROGLYPH A020: try adding egyptian-hieroglyphs</li>
+<li>U+13019 EGYPTIAN HIEROGLYPH A021: try adding egyptian-hieroglyphs</li>
+<li>U+1301A EGYPTIAN HIEROGLYPH A022: try adding egyptian-hieroglyphs</li>
+<li>U+1301B EGYPTIAN HIEROGLYPH A023: try adding egyptian-hieroglyphs</li>
+<li>U+1301C EGYPTIAN HIEROGLYPH A024: try adding egyptian-hieroglyphs</li>
+<li>U+1301D EGYPTIAN HIEROGLYPH A025: try adding egyptian-hieroglyphs</li>
+<li>U+1301E EGYPTIAN HIEROGLYPH A026: try adding egyptian-hieroglyphs</li>
+<li>U+1301F EGYPTIAN HIEROGLYPH A027: try adding egyptian-hieroglyphs</li>
+<li>U+13020 EGYPTIAN HIEROGLYPH A028: try adding egyptian-hieroglyphs</li>
+<li>U+13021 EGYPTIAN HIEROGLYPH A029: try adding egyptian-hieroglyphs</li>
+<li>U+13022 EGYPTIAN HIEROGLYPH A030: try adding egyptian-hieroglyphs</li>
+<li>U+13023 EGYPTIAN HIEROGLYPH A031: try adding egyptian-hieroglyphs</li>
+<li>U+13024 EGYPTIAN HIEROGLYPH A032: try adding egyptian-hieroglyphs</li>
+<li>U+13025 EGYPTIAN HIEROGLYPH A032A: try adding egyptian-hieroglyphs</li>
+<li>U+13026 EGYPTIAN HIEROGLYPH A033: try adding egyptian-hieroglyphs</li>
+<li>U+13027 EGYPTIAN HIEROGLYPH A034: try adding egyptian-hieroglyphs</li>
+<li>U+13028 EGYPTIAN HIEROGLYPH A035: try adding egyptian-hieroglyphs</li>
+<li>U+13029 EGYPTIAN HIEROGLYPH A036: try adding egyptian-hieroglyphs</li>
+<li>U+1302A EGYPTIAN HIEROGLYPH A037: try adding egyptian-hieroglyphs</li>
+<li>U+1302B EGYPTIAN HIEROGLYPH A038: try adding egyptian-hieroglyphs</li>
+<li>U+1302C EGYPTIAN HIEROGLYPH A039: try adding egyptian-hieroglyphs</li>
+<li>U+1302D EGYPTIAN HIEROGLYPH A040: try adding egyptian-hieroglyphs</li>
+<li>U+1302E EGYPTIAN HIEROGLYPH A040A: try adding egyptian-hieroglyphs</li>
+<li>U+1302F EGYPTIAN HIEROGLYPH A041: try adding egyptian-hieroglyphs</li>
+<li>U+13030 EGYPTIAN HIEROGLYPH A042: try adding egyptian-hieroglyphs</li>
+<li>U+13031 EGYPTIAN HIEROGLYPH A042A: try adding egyptian-hieroglyphs</li>
+<li>U+13032 EGYPTIAN HIEROGLYPH A043: try adding egyptian-hieroglyphs</li>
+<li>U+13033 EGYPTIAN HIEROGLYPH A043A: try adding egyptian-hieroglyphs</li>
+<li>U+13034 EGYPTIAN HIEROGLYPH A044: try adding egyptian-hieroglyphs</li>
+<li>U+13035 EGYPTIAN HIEROGLYPH A045: try adding egyptian-hieroglyphs</li>
+<li>U+13036 EGYPTIAN HIEROGLYPH A045A: try adding egyptian-hieroglyphs</li>
+<li>U+13037 EGYPTIAN HIEROGLYPH A046: try adding egyptian-hieroglyphs</li>
+<li>U+13038 EGYPTIAN HIEROGLYPH A047: try adding egyptian-hieroglyphs</li>
+<li>U+13039 EGYPTIAN HIEROGLYPH A048: try adding egyptian-hieroglyphs</li>
+<li>U+1303A EGYPTIAN HIEROGLYPH A049: try adding egyptian-hieroglyphs</li>
+<li>U+1303B EGYPTIAN HIEROGLYPH A050: try adding egyptian-hieroglyphs</li>
+<li>U+1303C EGYPTIAN HIEROGLYPH A051: try adding egyptian-hieroglyphs</li>
+<li>U+1303D EGYPTIAN HIEROGLYPH A052: try adding egyptian-hieroglyphs</li>
+<li>U+1303E EGYPTIAN HIEROGLYPH A053: try adding egyptian-hieroglyphs</li>
+<li>U+1303F EGYPTIAN HIEROGLYPH A054: try adding egyptian-hieroglyphs</li>
+<li>U+13040 EGYPTIAN HIEROGLYPH A055: try adding egyptian-hieroglyphs</li>
+<li>U+13041 EGYPTIAN HIEROGLYPH A056: try adding egyptian-hieroglyphs</li>
+<li>U+13042 EGYPTIAN HIEROGLYPH A057: try adding egyptian-hieroglyphs</li>
+<li>U+13043 EGYPTIAN HIEROGLYPH A058: try adding egyptian-hieroglyphs</li>
+<li>U+13044 EGYPTIAN HIEROGLYPH A059: try adding egyptian-hieroglyphs</li>
+<li>U+13045 EGYPTIAN HIEROGLYPH A060: try adding egyptian-hieroglyphs</li>
+<li>U+13046 EGYPTIAN HIEROGLYPH A061: try adding egyptian-hieroglyphs</li>
+<li>U+13047 EGYPTIAN HIEROGLYPH A062: try adding egyptian-hieroglyphs</li>
+<li>U+13048 EGYPTIAN HIEROGLYPH A063: try adding egyptian-hieroglyphs</li>
+<li>U+13049 EGYPTIAN HIEROGLYPH A064: try adding egyptian-hieroglyphs</li>
+<li>U+1304A EGYPTIAN HIEROGLYPH A065: try adding egyptian-hieroglyphs</li>
+<li>U+1304B EGYPTIAN HIEROGLYPH A066: try adding egyptian-hieroglyphs</li>
+<li>U+1304C EGYPTIAN HIEROGLYPH A067: try adding egyptian-hieroglyphs</li>
+<li>U+1304D EGYPTIAN HIEROGLYPH A068: try adding egyptian-hieroglyphs</li>
+<li>U+1304E EGYPTIAN HIEROGLYPH A069: try adding egyptian-hieroglyphs</li>
+<li>U+1304F EGYPTIAN HIEROGLYPH A070: try adding egyptian-hieroglyphs</li>
+<li>U+13050 EGYPTIAN HIEROGLYPH B001: try adding egyptian-hieroglyphs</li>
+<li>U+13051 EGYPTIAN HIEROGLYPH B002: try adding egyptian-hieroglyphs</li>
+<li>U+13052 EGYPTIAN HIEROGLYPH B003: try adding egyptian-hieroglyphs</li>
+<li>U+13053 EGYPTIAN HIEROGLYPH B004: try adding egyptian-hieroglyphs</li>
+<li>U+13054 EGYPTIAN HIEROGLYPH B005: try adding egyptian-hieroglyphs</li>
+<li>U+13055 EGYPTIAN HIEROGLYPH B005A: try adding egyptian-hieroglyphs</li>
+<li>U+13056 EGYPTIAN HIEROGLYPH B006: try adding egyptian-hieroglyphs</li>
+<li>U+13057 EGYPTIAN HIEROGLYPH B007: try adding egyptian-hieroglyphs</li>
+<li>U+13058 EGYPTIAN HIEROGLYPH B008: try adding egyptian-hieroglyphs</li>
+<li>U+13059 EGYPTIAN HIEROGLYPH B009: try adding egyptian-hieroglyphs</li>
+<li>U+1305A EGYPTIAN HIEROGLYPH C001: try adding egyptian-hieroglyphs</li>
+<li>U+1305B EGYPTIAN HIEROGLYPH C002: try adding egyptian-hieroglyphs</li>
+<li>U+1305C EGYPTIAN HIEROGLYPH C002A: try adding egyptian-hieroglyphs</li>
+<li>U+1305D EGYPTIAN HIEROGLYPH C002B: try adding egyptian-hieroglyphs</li>
+<li>U+1305E EGYPTIAN HIEROGLYPH C002C: try adding egyptian-hieroglyphs</li>
+<li>U+1305F EGYPTIAN HIEROGLYPH C003: try adding egyptian-hieroglyphs</li>
+<li>U+13060 EGYPTIAN HIEROGLYPH C004: try adding egyptian-hieroglyphs</li>
+<li>U+13061 EGYPTIAN HIEROGLYPH C005: try adding egyptian-hieroglyphs</li>
+<li>U+13062 EGYPTIAN HIEROGLYPH C006: try adding egyptian-hieroglyphs</li>
+<li>U+13063 EGYPTIAN HIEROGLYPH C007: try adding egyptian-hieroglyphs</li>
+<li>U+13064 EGYPTIAN HIEROGLYPH C008: try adding egyptian-hieroglyphs</li>
+<li>U+13065 EGYPTIAN HIEROGLYPH C009: try adding egyptian-hieroglyphs</li>
+<li>U+13066 EGYPTIAN HIEROGLYPH C010: try adding egyptian-hieroglyphs</li>
+<li>U+13067 EGYPTIAN HIEROGLYPH C010A: try adding egyptian-hieroglyphs</li>
+<li>U+13068 EGYPTIAN HIEROGLYPH C011: try adding egyptian-hieroglyphs</li>
+<li>U+13069 EGYPTIAN HIEROGLYPH C012: try adding egyptian-hieroglyphs</li>
+<li>U+1306A EGYPTIAN HIEROGLYPH C013: try adding egyptian-hieroglyphs</li>
+<li>U+1306B EGYPTIAN HIEROGLYPH C014: try adding egyptian-hieroglyphs</li>
+<li>U+1306C EGYPTIAN HIEROGLYPH C015: try adding egyptian-hieroglyphs</li>
+<li>U+1306D EGYPTIAN HIEROGLYPH C016: try adding egyptian-hieroglyphs</li>
+<li>U+1306E EGYPTIAN HIEROGLYPH C017: try adding egyptian-hieroglyphs</li>
+<li>U+1306F EGYPTIAN HIEROGLYPH C018: try adding egyptian-hieroglyphs</li>
+<li>U+13070 EGYPTIAN HIEROGLYPH C019: try adding egyptian-hieroglyphs</li>
+<li>U+13071 EGYPTIAN HIEROGLYPH C020: try adding egyptian-hieroglyphs</li>
+<li>U+13072 EGYPTIAN HIEROGLYPH C021: try adding egyptian-hieroglyphs</li>
+<li>U+13073 EGYPTIAN HIEROGLYPH C022: try adding egyptian-hieroglyphs</li>
+<li>U+13074 EGYPTIAN HIEROGLYPH C023: try adding egyptian-hieroglyphs</li>
+<li>U+13075 EGYPTIAN HIEROGLYPH C024: try adding egyptian-hieroglyphs</li>
+<li>U+13076 EGYPTIAN HIEROGLYPH D001: try adding egyptian-hieroglyphs</li>
+<li>U+13077 EGYPTIAN HIEROGLYPH D002: try adding egyptian-hieroglyphs</li>
+<li>U+13078 EGYPTIAN HIEROGLYPH D003: try adding egyptian-hieroglyphs</li>
+<li>U+13079 EGYPTIAN HIEROGLYPH D004: try adding egyptian-hieroglyphs</li>
+<li>U+1307A EGYPTIAN HIEROGLYPH D005: try adding egyptian-hieroglyphs</li>
+<li>U+1307B EGYPTIAN HIEROGLYPH D006: try adding egyptian-hieroglyphs</li>
+<li>U+1307C EGYPTIAN HIEROGLYPH D007: try adding egyptian-hieroglyphs</li>
+<li>U+1307D EGYPTIAN HIEROGLYPH D008: try adding egyptian-hieroglyphs</li>
+<li>U+1307E EGYPTIAN HIEROGLYPH D008A: try adding egyptian-hieroglyphs</li>
+<li>U+1307F EGYPTIAN HIEROGLYPH D009: try adding egyptian-hieroglyphs</li>
+<li>U+13080 EGYPTIAN HIEROGLYPH D010: try adding egyptian-hieroglyphs</li>
+<li>U+13081 EGYPTIAN HIEROGLYPH D011: try adding egyptian-hieroglyphs</li>
+<li>U+13082 EGYPTIAN HIEROGLYPH D012: try adding egyptian-hieroglyphs</li>
+<li>U+13083 EGYPTIAN HIEROGLYPH D013: try adding egyptian-hieroglyphs</li>
+<li>U+13084 EGYPTIAN HIEROGLYPH D014: try adding egyptian-hieroglyphs</li>
+<li>U+13085 EGYPTIAN HIEROGLYPH D015: try adding egyptian-hieroglyphs</li>
+<li>U+13086 EGYPTIAN HIEROGLYPH D016: try adding egyptian-hieroglyphs</li>
+<li>U+13087 EGYPTIAN HIEROGLYPH D017: try adding egyptian-hieroglyphs</li>
+<li>U+13088 EGYPTIAN HIEROGLYPH D018: try adding egyptian-hieroglyphs</li>
+<li>U+13089 EGYPTIAN HIEROGLYPH D019: try adding egyptian-hieroglyphs</li>
+<li>U+1308A EGYPTIAN HIEROGLYPH D020: try adding egyptian-hieroglyphs</li>
+<li>U+1308B EGYPTIAN HIEROGLYPH D021: try adding egyptian-hieroglyphs</li>
+<li>U+1308C EGYPTIAN HIEROGLYPH D022: try adding egyptian-hieroglyphs</li>
+<li>U+1308D EGYPTIAN HIEROGLYPH D023: try adding egyptian-hieroglyphs</li>
+<li>U+1308E EGYPTIAN HIEROGLYPH D024: try adding egyptian-hieroglyphs</li>
+<li>U+1308F EGYPTIAN HIEROGLYPH D025: try adding egyptian-hieroglyphs</li>
+<li>U+13090 EGYPTIAN HIEROGLYPH D026: try adding egyptian-hieroglyphs</li>
+<li>U+13091 EGYPTIAN HIEROGLYPH D027: try adding egyptian-hieroglyphs</li>
+<li>U+13092 EGYPTIAN HIEROGLYPH D027A: try adding egyptian-hieroglyphs</li>
+<li>U+13093 EGYPTIAN HIEROGLYPH D028: try adding egyptian-hieroglyphs</li>
+<li>U+13094 EGYPTIAN HIEROGLYPH D029: try adding egyptian-hieroglyphs</li>
+<li>U+13095 EGYPTIAN HIEROGLYPH D030: try adding egyptian-hieroglyphs</li>
+<li>U+13096 EGYPTIAN HIEROGLYPH D031: try adding egyptian-hieroglyphs</li>
+<li>U+13097 EGYPTIAN HIEROGLYPH D031A: try adding egyptian-hieroglyphs</li>
+<li>U+13098 EGYPTIAN HIEROGLYPH D032: try adding egyptian-hieroglyphs</li>
+<li>U+13099 EGYPTIAN HIEROGLYPH D033: try adding egyptian-hieroglyphs</li>
+<li>U+1309A EGYPTIAN HIEROGLYPH D034: try adding egyptian-hieroglyphs</li>
+<li>U+1309B EGYPTIAN HIEROGLYPH D034A: try adding egyptian-hieroglyphs</li>
+<li>U+1309C EGYPTIAN HIEROGLYPH D035: try adding egyptian-hieroglyphs</li>
+<li>U+1309D EGYPTIAN HIEROGLYPH D036: try adding egyptian-hieroglyphs</li>
+<li>U+1309E EGYPTIAN HIEROGLYPH D037: try adding egyptian-hieroglyphs</li>
+<li>U+1309F EGYPTIAN HIEROGLYPH D038: try adding egyptian-hieroglyphs</li>
+<li>U+130A0 EGYPTIAN HIEROGLYPH D039: try adding egyptian-hieroglyphs</li>
+<li>U+130A1 EGYPTIAN HIEROGLYPH D040: try adding egyptian-hieroglyphs</li>
+<li>U+130A2 EGYPTIAN HIEROGLYPH D041: try adding egyptian-hieroglyphs</li>
+<li>U+130A3 EGYPTIAN HIEROGLYPH D042: try adding egyptian-hieroglyphs</li>
+<li>U+130A4 EGYPTIAN HIEROGLYPH D043: try adding egyptian-hieroglyphs</li>
+<li>U+130A5 EGYPTIAN HIEROGLYPH D044: try adding egyptian-hieroglyphs</li>
+<li>U+130A6 EGYPTIAN HIEROGLYPH D045: try adding egyptian-hieroglyphs</li>
+<li>U+130A7 EGYPTIAN HIEROGLYPH D046: try adding egyptian-hieroglyphs</li>
+<li>U+130A8 EGYPTIAN HIEROGLYPH D046A: try adding egyptian-hieroglyphs</li>
+<li>U+130A9 EGYPTIAN HIEROGLYPH D047: try adding egyptian-hieroglyphs</li>
+<li>U+130AA EGYPTIAN HIEROGLYPH D048: try adding egyptian-hieroglyphs</li>
+<li>U+130AB EGYPTIAN HIEROGLYPH D048A: try adding egyptian-hieroglyphs</li>
+<li>U+130AC EGYPTIAN HIEROGLYPH D049: try adding egyptian-hieroglyphs</li>
+<li>U+130AD EGYPTIAN HIEROGLYPH D050: try adding egyptian-hieroglyphs</li>
+<li>U+130AE EGYPTIAN HIEROGLYPH D050A: try adding egyptian-hieroglyphs</li>
+<li>U+130AF EGYPTIAN HIEROGLYPH D050B: try adding egyptian-hieroglyphs</li>
+<li>U+130B0 EGYPTIAN HIEROGLYPH D050C: try adding egyptian-hieroglyphs</li>
+<li>U+130B1 EGYPTIAN HIEROGLYPH D050D: try adding egyptian-hieroglyphs</li>
+<li>U+130B2 EGYPTIAN HIEROGLYPH D050E: try adding egyptian-hieroglyphs</li>
+<li>U+130B3 EGYPTIAN HIEROGLYPH D050F: try adding egyptian-hieroglyphs</li>
+<li>U+130B4 EGYPTIAN HIEROGLYPH D050G: try adding egyptian-hieroglyphs</li>
+<li>U+130B5 EGYPTIAN HIEROGLYPH D050H: try adding egyptian-hieroglyphs</li>
+<li>U+130B6 EGYPTIAN HIEROGLYPH D050I: try adding egyptian-hieroglyphs</li>
+<li>U+130B7 EGYPTIAN HIEROGLYPH D051: try adding egyptian-hieroglyphs</li>
+<li>U+130B8 EGYPTIAN HIEROGLYPH D052: try adding egyptian-hieroglyphs</li>
+<li>U+130B9 EGYPTIAN HIEROGLYPH D052A: try adding egyptian-hieroglyphs</li>
+<li>U+130BA EGYPTIAN HIEROGLYPH D053: try adding egyptian-hieroglyphs</li>
+<li>U+130BB EGYPTIAN HIEROGLYPH D054: try adding egyptian-hieroglyphs</li>
+<li>U+130BC EGYPTIAN HIEROGLYPH D054A: try adding egyptian-hieroglyphs</li>
+<li>U+130BD EGYPTIAN HIEROGLYPH D055: try adding egyptian-hieroglyphs</li>
+<li>U+130BE EGYPTIAN HIEROGLYPH D056: try adding egyptian-hieroglyphs</li>
+<li>U+130BF EGYPTIAN HIEROGLYPH D057: try adding egyptian-hieroglyphs</li>
+<li>U+130C0 EGYPTIAN HIEROGLYPH D058: try adding egyptian-hieroglyphs</li>
+<li>U+130C1 EGYPTIAN HIEROGLYPH D059: try adding egyptian-hieroglyphs</li>
+<li>U+130C2 EGYPTIAN HIEROGLYPH D060: try adding egyptian-hieroglyphs</li>
+<li>U+130C3 EGYPTIAN HIEROGLYPH D061: try adding egyptian-hieroglyphs</li>
+<li>U+130C4 EGYPTIAN HIEROGLYPH D062: try adding egyptian-hieroglyphs</li>
+<li>U+130C5 EGYPTIAN HIEROGLYPH D063: try adding egyptian-hieroglyphs</li>
+<li>U+130C6 EGYPTIAN HIEROGLYPH D064: try adding egyptian-hieroglyphs</li>
+<li>U+130C7 EGYPTIAN HIEROGLYPH D065: try adding egyptian-hieroglyphs</li>
+<li>U+130C8 EGYPTIAN HIEROGLYPH D066: try adding egyptian-hieroglyphs</li>
+<li>U+130C9 EGYPTIAN HIEROGLYPH D067: try adding egyptian-hieroglyphs</li>
+<li>U+130CA EGYPTIAN HIEROGLYPH D067A: try adding egyptian-hieroglyphs</li>
+<li>U+130CB EGYPTIAN HIEROGLYPH D067B: try adding egyptian-hieroglyphs</li>
+<li>U+130CC EGYPTIAN HIEROGLYPH D067C: try adding egyptian-hieroglyphs</li>
+<li>U+130CD EGYPTIAN HIEROGLYPH D067D: try adding egyptian-hieroglyphs</li>
+<li>U+130CE EGYPTIAN HIEROGLYPH D067E: try adding egyptian-hieroglyphs</li>
+<li>U+130CF EGYPTIAN HIEROGLYPH D067F: try adding egyptian-hieroglyphs</li>
+<li>U+130D0 EGYPTIAN HIEROGLYPH D067G: try adding egyptian-hieroglyphs</li>
+<li>U+130D1 EGYPTIAN HIEROGLYPH D067H: try adding egyptian-hieroglyphs</li>
+<li>U+130D2 EGYPTIAN HIEROGLYPH E001: try adding egyptian-hieroglyphs</li>
+<li>U+130D3 EGYPTIAN HIEROGLYPH E002: try adding egyptian-hieroglyphs</li>
+<li>U+130D4 EGYPTIAN HIEROGLYPH E003: try adding egyptian-hieroglyphs</li>
+<li>U+130D5 EGYPTIAN HIEROGLYPH E004: try adding egyptian-hieroglyphs</li>
+<li>U+130D6 EGYPTIAN HIEROGLYPH E005: try adding egyptian-hieroglyphs</li>
+<li>U+130D7 EGYPTIAN HIEROGLYPH E006: try adding egyptian-hieroglyphs</li>
+<li>U+130D8 EGYPTIAN HIEROGLYPH E007: try adding egyptian-hieroglyphs</li>
+<li>U+130D9 EGYPTIAN HIEROGLYPH E008: try adding egyptian-hieroglyphs</li>
+<li>U+130DA EGYPTIAN HIEROGLYPH E008A: try adding egyptian-hieroglyphs</li>
+<li>U+130DB EGYPTIAN HIEROGLYPH E009: try adding egyptian-hieroglyphs</li>
+<li>U+130DC EGYPTIAN HIEROGLYPH E009A: try adding egyptian-hieroglyphs</li>
+<li>U+130DD EGYPTIAN HIEROGLYPH E010: try adding egyptian-hieroglyphs</li>
+<li>U+130DE EGYPTIAN HIEROGLYPH E011: try adding egyptian-hieroglyphs</li>
+<li>U+130DF EGYPTIAN HIEROGLYPH E012: try adding egyptian-hieroglyphs</li>
+<li>U+130E0 EGYPTIAN HIEROGLYPH E013: try adding egyptian-hieroglyphs</li>
+<li>U+130E1 EGYPTIAN HIEROGLYPH E014: try adding egyptian-hieroglyphs</li>
+<li>U+130E2 EGYPTIAN HIEROGLYPH E015: try adding egyptian-hieroglyphs</li>
+<li>U+130E3 EGYPTIAN HIEROGLYPH E016: try adding egyptian-hieroglyphs</li>
+<li>U+130E4 EGYPTIAN HIEROGLYPH E016A: try adding egyptian-hieroglyphs</li>
+<li>U+130E5 EGYPTIAN HIEROGLYPH E017: try adding egyptian-hieroglyphs</li>
+<li>U+130E6 EGYPTIAN HIEROGLYPH E017A: try adding egyptian-hieroglyphs</li>
+<li>U+130E7 EGYPTIAN HIEROGLYPH E018: try adding egyptian-hieroglyphs</li>
+<li>U+130E8 EGYPTIAN HIEROGLYPH E019: try adding egyptian-hieroglyphs</li>
+<li>U+130E9 EGYPTIAN HIEROGLYPH E020: try adding egyptian-hieroglyphs</li>
+<li>U+130EA EGYPTIAN HIEROGLYPH E020A: try adding egyptian-hieroglyphs</li>
+<li>U+130EB EGYPTIAN HIEROGLYPH E021: try adding egyptian-hieroglyphs</li>
+<li>U+130EC EGYPTIAN HIEROGLYPH E022: try adding egyptian-hieroglyphs</li>
+<li>U+130ED EGYPTIAN HIEROGLYPH E023: try adding egyptian-hieroglyphs</li>
+<li>U+130EE EGYPTIAN HIEROGLYPH E024: try adding egyptian-hieroglyphs</li>
+<li>U+130EF EGYPTIAN HIEROGLYPH E025: try adding egyptian-hieroglyphs</li>
+<li>U+130F0 EGYPTIAN HIEROGLYPH E026: try adding egyptian-hieroglyphs</li>
+<li>U+130F1 EGYPTIAN HIEROGLYPH E027: try adding egyptian-hieroglyphs</li>
+<li>U+130F2 EGYPTIAN HIEROGLYPH E028: try adding egyptian-hieroglyphs</li>
+<li>U+130F3 EGYPTIAN HIEROGLYPH E028A: try adding egyptian-hieroglyphs</li>
+<li>U+130F4 EGYPTIAN HIEROGLYPH E029: try adding egyptian-hieroglyphs</li>
+<li>U+130F5 EGYPTIAN HIEROGLYPH E030: try adding egyptian-hieroglyphs</li>
+<li>U+130F6 EGYPTIAN HIEROGLYPH E031: try adding egyptian-hieroglyphs</li>
+<li>U+130F7 EGYPTIAN HIEROGLYPH E032: try adding egyptian-hieroglyphs</li>
+<li>U+130F8 EGYPTIAN HIEROGLYPH E033: try adding egyptian-hieroglyphs</li>
+<li>U+130F9 EGYPTIAN HIEROGLYPH E034: try adding egyptian-hieroglyphs</li>
+<li>U+130FA EGYPTIAN HIEROGLYPH E034A: try adding egyptian-hieroglyphs</li>
+<li>U+130FB EGYPTIAN HIEROGLYPH E036: try adding egyptian-hieroglyphs</li>
+<li>U+130FC EGYPTIAN HIEROGLYPH E037: try adding egyptian-hieroglyphs</li>
+<li>U+130FD EGYPTIAN HIEROGLYPH E038: try adding egyptian-hieroglyphs</li>
+<li>U+130FE EGYPTIAN HIEROGLYPH F001: try adding egyptian-hieroglyphs</li>
+<li>U+130FF EGYPTIAN HIEROGLYPH F001A: try adding egyptian-hieroglyphs</li>
+<li>U+13100 EGYPTIAN HIEROGLYPH F002: try adding egyptian-hieroglyphs</li>
+<li>U+13101 EGYPTIAN HIEROGLYPH F003: try adding egyptian-hieroglyphs</li>
+<li>U+13102 EGYPTIAN HIEROGLYPH F004: try adding egyptian-hieroglyphs</li>
+<li>U+13103 EGYPTIAN HIEROGLYPH F005: try adding egyptian-hieroglyphs</li>
+<li>U+13104 EGYPTIAN HIEROGLYPH F006: try adding egyptian-hieroglyphs</li>
+<li>U+13105 EGYPTIAN HIEROGLYPH F007: try adding egyptian-hieroglyphs</li>
+<li>U+13106 EGYPTIAN HIEROGLYPH F008: try adding egyptian-hieroglyphs</li>
+<li>U+13107 EGYPTIAN HIEROGLYPH F009: try adding egyptian-hieroglyphs</li>
+<li>U+13108 EGYPTIAN HIEROGLYPH F010: try adding egyptian-hieroglyphs</li>
+<li>U+13109 EGYPTIAN HIEROGLYPH F011: try adding egyptian-hieroglyphs</li>
+<li>U+1310A EGYPTIAN HIEROGLYPH F012: try adding egyptian-hieroglyphs</li>
+<li>U+1310B EGYPTIAN HIEROGLYPH F013: try adding egyptian-hieroglyphs</li>
+<li>U+1310C EGYPTIAN HIEROGLYPH F013A: try adding egyptian-hieroglyphs</li>
+<li>U+1310D EGYPTIAN HIEROGLYPH F014: try adding egyptian-hieroglyphs</li>
+<li>U+1310E EGYPTIAN HIEROGLYPH F015: try adding egyptian-hieroglyphs</li>
+<li>U+1310F EGYPTIAN HIEROGLYPH F016: try adding egyptian-hieroglyphs</li>
+<li>U+13110 EGYPTIAN HIEROGLYPH F017: try adding egyptian-hieroglyphs</li>
+<li>U+13111 EGYPTIAN HIEROGLYPH F018: try adding egyptian-hieroglyphs</li>
+<li>U+13112 EGYPTIAN HIEROGLYPH F019: try adding egyptian-hieroglyphs</li>
+<li>U+13113 EGYPTIAN HIEROGLYPH F020: try adding egyptian-hieroglyphs</li>
+<li>U+13114 EGYPTIAN HIEROGLYPH F021: try adding egyptian-hieroglyphs</li>
+<li>U+13115 EGYPTIAN HIEROGLYPH F021A: try adding egyptian-hieroglyphs</li>
+<li>U+13116 EGYPTIAN HIEROGLYPH F022: try adding egyptian-hieroglyphs</li>
+<li>U+13117 EGYPTIAN HIEROGLYPH F023: try adding egyptian-hieroglyphs</li>
+<li>U+13118 EGYPTIAN HIEROGLYPH F024: try adding egyptian-hieroglyphs</li>
+<li>U+13119 EGYPTIAN HIEROGLYPH F025: try adding egyptian-hieroglyphs</li>
+<li>U+1311A EGYPTIAN HIEROGLYPH F026: try adding egyptian-hieroglyphs</li>
+<li>U+1311B EGYPTIAN HIEROGLYPH F027: try adding egyptian-hieroglyphs</li>
+<li>U+1311C EGYPTIAN HIEROGLYPH F028: try adding egyptian-hieroglyphs</li>
+<li>U+1311D EGYPTIAN HIEROGLYPH F029: try adding egyptian-hieroglyphs</li>
+<li>U+1311E EGYPTIAN HIEROGLYPH F030: try adding egyptian-hieroglyphs</li>
+<li>U+1311F EGYPTIAN HIEROGLYPH F031: try adding egyptian-hieroglyphs</li>
+<li>U+13120 EGYPTIAN HIEROGLYPH F031A: try adding egyptian-hieroglyphs</li>
+<li>U+13121 EGYPTIAN HIEROGLYPH F032: try adding egyptian-hieroglyphs</li>
+<li>U+13122 EGYPTIAN HIEROGLYPH F033: try adding egyptian-hieroglyphs</li>
+<li>U+13123 EGYPTIAN HIEROGLYPH F034: try adding egyptian-hieroglyphs</li>
+<li>U+13124 EGYPTIAN HIEROGLYPH F035: try adding egyptian-hieroglyphs</li>
+<li>U+13125 EGYPTIAN HIEROGLYPH F036: try adding egyptian-hieroglyphs</li>
+<li>U+13126 EGYPTIAN HIEROGLYPH F037: try adding egyptian-hieroglyphs</li>
+<li>U+13127 EGYPTIAN HIEROGLYPH F037A: try adding egyptian-hieroglyphs</li>
+<li>U+13128 EGYPTIAN HIEROGLYPH F038: try adding egyptian-hieroglyphs</li>
+<li>U+13129 EGYPTIAN HIEROGLYPH F038A: try adding egyptian-hieroglyphs</li>
+<li>U+1312A EGYPTIAN HIEROGLYPH F039: try adding egyptian-hieroglyphs</li>
+<li>U+1312B EGYPTIAN HIEROGLYPH F040: try adding egyptian-hieroglyphs</li>
+<li>U+1312C EGYPTIAN HIEROGLYPH F041: try adding egyptian-hieroglyphs</li>
+<li>U+1312D EGYPTIAN HIEROGLYPH F042: try adding egyptian-hieroglyphs</li>
+<li>U+1312E EGYPTIAN HIEROGLYPH F043: try adding egyptian-hieroglyphs</li>
+<li>U+1312F EGYPTIAN HIEROGLYPH F044: try adding egyptian-hieroglyphs</li>
+<li>U+13130 EGYPTIAN HIEROGLYPH F045: try adding egyptian-hieroglyphs</li>
+<li>U+13131 EGYPTIAN HIEROGLYPH F045A: try adding egyptian-hieroglyphs</li>
+<li>U+13132 EGYPTIAN HIEROGLYPH F046: try adding egyptian-hieroglyphs</li>
+<li>U+13133 EGYPTIAN HIEROGLYPH F046A: try adding egyptian-hieroglyphs</li>
+<li>U+13134 EGYPTIAN HIEROGLYPH F047: try adding egyptian-hieroglyphs</li>
+<li>U+13135 EGYPTIAN HIEROGLYPH F047A: try adding egyptian-hieroglyphs</li>
+<li>U+13136 EGYPTIAN HIEROGLYPH F048: try adding egyptian-hieroglyphs</li>
+<li>U+13137 EGYPTIAN HIEROGLYPH F049: try adding egyptian-hieroglyphs</li>
+<li>U+13138 EGYPTIAN HIEROGLYPH F050: try adding egyptian-hieroglyphs</li>
+<li>U+13139 EGYPTIAN HIEROGLYPH F051: try adding egyptian-hieroglyphs</li>
+<li>U+1313A EGYPTIAN HIEROGLYPH F051A: try adding egyptian-hieroglyphs</li>
+<li>U+1313B EGYPTIAN HIEROGLYPH F051B: try adding egyptian-hieroglyphs</li>
+<li>U+1313C EGYPTIAN HIEROGLYPH F051C: try adding egyptian-hieroglyphs</li>
+<li>U+1313D EGYPTIAN HIEROGLYPH F052: try adding egyptian-hieroglyphs</li>
+<li>U+1313E EGYPTIAN HIEROGLYPH F053: try adding egyptian-hieroglyphs</li>
+<li>U+1313F EGYPTIAN HIEROGLYPH G001: try adding egyptian-hieroglyphs</li>
+<li>U+13140 EGYPTIAN HIEROGLYPH G002: try adding egyptian-hieroglyphs</li>
+<li>U+13141 EGYPTIAN HIEROGLYPH G003: try adding egyptian-hieroglyphs</li>
+<li>U+13142 EGYPTIAN HIEROGLYPH G004: try adding egyptian-hieroglyphs</li>
+<li>U+13143 EGYPTIAN HIEROGLYPH G005: try adding egyptian-hieroglyphs</li>
+<li>U+13144 EGYPTIAN HIEROGLYPH G006: try adding egyptian-hieroglyphs</li>
+<li>U+13145 EGYPTIAN HIEROGLYPH G006A: try adding egyptian-hieroglyphs</li>
+<li>U+13146 EGYPTIAN HIEROGLYPH G007: try adding egyptian-hieroglyphs</li>
+<li>U+13147 EGYPTIAN HIEROGLYPH G007A: try adding egyptian-hieroglyphs</li>
+<li>U+13148 EGYPTIAN HIEROGLYPH G007B: try adding egyptian-hieroglyphs</li>
+<li>U+13149 EGYPTIAN HIEROGLYPH G008: try adding egyptian-hieroglyphs</li>
+<li>U+1314A EGYPTIAN HIEROGLYPH G009: try adding egyptian-hieroglyphs</li>
+<li>U+1314B EGYPTIAN HIEROGLYPH G010: try adding egyptian-hieroglyphs</li>
+<li>U+1314C EGYPTIAN HIEROGLYPH G011: try adding egyptian-hieroglyphs</li>
+<li>U+1314D EGYPTIAN HIEROGLYPH G011A: try adding egyptian-hieroglyphs</li>
+<li>U+1314E EGYPTIAN HIEROGLYPH G012: try adding egyptian-hieroglyphs</li>
+<li>U+1314F EGYPTIAN HIEROGLYPH G013: try adding egyptian-hieroglyphs</li>
+<li>U+13150 EGYPTIAN HIEROGLYPH G014: try adding egyptian-hieroglyphs</li>
+<li>U+13151 EGYPTIAN HIEROGLYPH G015: try adding egyptian-hieroglyphs</li>
+<li>U+13152 EGYPTIAN HIEROGLYPH G016: try adding egyptian-hieroglyphs</li>
+<li>U+13153 EGYPTIAN HIEROGLYPH G017: try adding egyptian-hieroglyphs</li>
+<li>U+13154 EGYPTIAN HIEROGLYPH G018: try adding egyptian-hieroglyphs</li>
+<li>U+13155 EGYPTIAN HIEROGLYPH G019: try adding egyptian-hieroglyphs</li>
+<li>U+13156 EGYPTIAN HIEROGLYPH G020: try adding egyptian-hieroglyphs</li>
+<li>U+13157 EGYPTIAN HIEROGLYPH G020A: try adding egyptian-hieroglyphs</li>
+<li>U+13158 EGYPTIAN HIEROGLYPH G021: try adding egyptian-hieroglyphs</li>
+<li>U+13159 EGYPTIAN HIEROGLYPH G022: try adding egyptian-hieroglyphs</li>
+<li>U+1315A EGYPTIAN HIEROGLYPH G023: try adding egyptian-hieroglyphs</li>
+<li>U+1315B EGYPTIAN HIEROGLYPH G024: try adding egyptian-hieroglyphs</li>
+<li>U+1315C EGYPTIAN HIEROGLYPH G025: try adding egyptian-hieroglyphs</li>
+<li>U+1315D EGYPTIAN HIEROGLYPH G026: try adding egyptian-hieroglyphs</li>
+<li>U+1315E EGYPTIAN HIEROGLYPH G026A: try adding egyptian-hieroglyphs</li>
+<li>U+1315F EGYPTIAN HIEROGLYPH G027: try adding egyptian-hieroglyphs</li>
+<li>U+13160 EGYPTIAN HIEROGLYPH G028: try adding egyptian-hieroglyphs</li>
+<li>U+13161 EGYPTIAN HIEROGLYPH G029: try adding egyptian-hieroglyphs</li>
+<li>U+13162 EGYPTIAN HIEROGLYPH G030: try adding egyptian-hieroglyphs</li>
+<li>U+13163 EGYPTIAN HIEROGLYPH G031: try adding egyptian-hieroglyphs</li>
+<li>U+13164 EGYPTIAN HIEROGLYPH G032: try adding egyptian-hieroglyphs</li>
+<li>U+13165 EGYPTIAN HIEROGLYPH G033: try adding egyptian-hieroglyphs</li>
+<li>U+13166 EGYPTIAN HIEROGLYPH G034: try adding egyptian-hieroglyphs</li>
+<li>U+13167 EGYPTIAN HIEROGLYPH G035: try adding egyptian-hieroglyphs</li>
+<li>U+13168 EGYPTIAN HIEROGLYPH G036: try adding egyptian-hieroglyphs</li>
+<li>U+13169 EGYPTIAN HIEROGLYPH G036A: try adding egyptian-hieroglyphs</li>
+<li>U+1316A EGYPTIAN HIEROGLYPH G037: try adding egyptian-hieroglyphs</li>
+<li>U+1316B EGYPTIAN HIEROGLYPH G037A: try adding egyptian-hieroglyphs</li>
+<li>U+1316C EGYPTIAN HIEROGLYPH G038: try adding egyptian-hieroglyphs</li>
+<li>U+1316D EGYPTIAN HIEROGLYPH G039: try adding egyptian-hieroglyphs</li>
+<li>U+1316E EGYPTIAN HIEROGLYPH G040: try adding egyptian-hieroglyphs</li>
+<li>U+1316F EGYPTIAN HIEROGLYPH G041: try adding egyptian-hieroglyphs</li>
+<li>U+13170 EGYPTIAN HIEROGLYPH G042: try adding egyptian-hieroglyphs</li>
+<li>U+13171 EGYPTIAN HIEROGLYPH G043: try adding egyptian-hieroglyphs</li>
+<li>U+13172 EGYPTIAN HIEROGLYPH G043A: try adding egyptian-hieroglyphs</li>
+<li>U+13173 EGYPTIAN HIEROGLYPH G044: try adding egyptian-hieroglyphs</li>
+<li>U+13174 EGYPTIAN HIEROGLYPH G045: try adding egyptian-hieroglyphs</li>
+<li>U+13175 EGYPTIAN HIEROGLYPH G045A: try adding egyptian-hieroglyphs</li>
+<li>U+13176 EGYPTIAN HIEROGLYPH G046: try adding egyptian-hieroglyphs</li>
+<li>U+13177 EGYPTIAN HIEROGLYPH G047: try adding egyptian-hieroglyphs</li>
+<li>U+13178 EGYPTIAN HIEROGLYPH G048: try adding egyptian-hieroglyphs</li>
+<li>U+13179 EGYPTIAN HIEROGLYPH G049: try adding egyptian-hieroglyphs</li>
+<li>U+1317A EGYPTIAN HIEROGLYPH G050: try adding egyptian-hieroglyphs</li>
+<li>U+1317B EGYPTIAN HIEROGLYPH G051: try adding egyptian-hieroglyphs</li>
+<li>U+1317C EGYPTIAN HIEROGLYPH G052: try adding egyptian-hieroglyphs</li>
+<li>U+1317D EGYPTIAN HIEROGLYPH G053: try adding egyptian-hieroglyphs</li>
+<li>U+1317E EGYPTIAN HIEROGLYPH G054: try adding egyptian-hieroglyphs</li>
+<li>U+1317F EGYPTIAN HIEROGLYPH H001: try adding egyptian-hieroglyphs</li>
+<li>U+13180 EGYPTIAN HIEROGLYPH H002: try adding egyptian-hieroglyphs</li>
+<li>U+13181 EGYPTIAN HIEROGLYPH H003: try adding egyptian-hieroglyphs</li>
+<li>U+13182 EGYPTIAN HIEROGLYPH H004: try adding egyptian-hieroglyphs</li>
+<li>U+13183 EGYPTIAN HIEROGLYPH H005: try adding egyptian-hieroglyphs</li>
+<li>U+13184 EGYPTIAN HIEROGLYPH H006: try adding egyptian-hieroglyphs</li>
+<li>U+13185 EGYPTIAN HIEROGLYPH H006A: try adding egyptian-hieroglyphs</li>
+<li>U+13186 EGYPTIAN HIEROGLYPH H007: try adding egyptian-hieroglyphs</li>
+<li>U+13187 EGYPTIAN HIEROGLYPH H008: try adding egyptian-hieroglyphs</li>
+<li>U+13188 EGYPTIAN HIEROGLYPH I001: try adding egyptian-hieroglyphs</li>
+<li>U+13189 EGYPTIAN HIEROGLYPH I002: try adding egyptian-hieroglyphs</li>
+<li>U+1318A EGYPTIAN HIEROGLYPH I003: try adding egyptian-hieroglyphs</li>
+<li>U+1318B EGYPTIAN HIEROGLYPH I004: try adding egyptian-hieroglyphs</li>
+<li>U+1318C EGYPTIAN HIEROGLYPH I005: try adding egyptian-hieroglyphs</li>
+<li>U+1318D EGYPTIAN HIEROGLYPH I005A: try adding egyptian-hieroglyphs</li>
+<li>U+1318E EGYPTIAN HIEROGLYPH I006: try adding egyptian-hieroglyphs</li>
+<li>U+1318F EGYPTIAN HIEROGLYPH I007: try adding egyptian-hieroglyphs</li>
+<li>U+13190 EGYPTIAN HIEROGLYPH I008: try adding egyptian-hieroglyphs</li>
+<li>U+13191 EGYPTIAN HIEROGLYPH I009: try adding egyptian-hieroglyphs</li>
+<li>U+13192 EGYPTIAN HIEROGLYPH I009A: try adding egyptian-hieroglyphs</li>
+<li>U+13193 EGYPTIAN HIEROGLYPH I010: try adding egyptian-hieroglyphs</li>
+<li>U+13194 EGYPTIAN HIEROGLYPH I010A: try adding egyptian-hieroglyphs</li>
+<li>U+13195 EGYPTIAN HIEROGLYPH I011: try adding egyptian-hieroglyphs</li>
+<li>U+13196 EGYPTIAN HIEROGLYPH I011A: try adding egyptian-hieroglyphs</li>
+<li>U+13197 EGYPTIAN HIEROGLYPH I012: try adding egyptian-hieroglyphs</li>
+<li>U+13198 EGYPTIAN HIEROGLYPH I013: try adding egyptian-hieroglyphs</li>
+<li>U+13199 EGYPTIAN HIEROGLYPH I014: try adding egyptian-hieroglyphs</li>
+<li>U+1319A EGYPTIAN HIEROGLYPH I015: try adding egyptian-hieroglyphs</li>
+<li>U+1319B EGYPTIAN HIEROGLYPH K001: try adding egyptian-hieroglyphs</li>
+<li>U+1319C EGYPTIAN HIEROGLYPH K002: try adding egyptian-hieroglyphs</li>
+<li>U+1319D EGYPTIAN HIEROGLYPH K003: try adding egyptian-hieroglyphs</li>
+<li>U+1319E EGYPTIAN HIEROGLYPH K004: try adding egyptian-hieroglyphs</li>
+<li>U+1319F EGYPTIAN HIEROGLYPH K005: try adding egyptian-hieroglyphs</li>
+<li>U+131A0 EGYPTIAN HIEROGLYPH K006: try adding egyptian-hieroglyphs</li>
+<li>U+131A1 EGYPTIAN HIEROGLYPH K007: try adding egyptian-hieroglyphs</li>
+<li>U+131A2 EGYPTIAN HIEROGLYPH K008: try adding egyptian-hieroglyphs</li>
+<li>U+131A3 EGYPTIAN HIEROGLYPH L001: try adding egyptian-hieroglyphs</li>
+<li>U+131A4 EGYPTIAN HIEROGLYPH L002: try adding egyptian-hieroglyphs</li>
+<li>U+131A5 EGYPTIAN HIEROGLYPH L002A: try adding egyptian-hieroglyphs</li>
+<li>U+131A6 EGYPTIAN HIEROGLYPH L003: try adding egyptian-hieroglyphs</li>
+<li>U+131A7 EGYPTIAN HIEROGLYPH L004: try adding egyptian-hieroglyphs</li>
+<li>U+131A8 EGYPTIAN HIEROGLYPH L005: try adding egyptian-hieroglyphs</li>
+<li>U+131A9 EGYPTIAN HIEROGLYPH L006: try adding egyptian-hieroglyphs</li>
+<li>U+131AA EGYPTIAN HIEROGLYPH L006A: try adding egyptian-hieroglyphs</li>
+<li>U+131AB EGYPTIAN HIEROGLYPH L007: try adding egyptian-hieroglyphs</li>
+<li>U+131AC EGYPTIAN HIEROGLYPH L008: try adding egyptian-hieroglyphs</li>
+<li>U+131AD EGYPTIAN HIEROGLYPH M001: try adding egyptian-hieroglyphs</li>
+<li>U+131AE EGYPTIAN HIEROGLYPH M001A: try adding egyptian-hieroglyphs</li>
+<li>U+131AF EGYPTIAN HIEROGLYPH M001B: try adding egyptian-hieroglyphs</li>
+<li>U+131B0 EGYPTIAN HIEROGLYPH M002: try adding egyptian-hieroglyphs</li>
+<li>U+131B1 EGYPTIAN HIEROGLYPH M003: try adding egyptian-hieroglyphs</li>
+<li>U+131B2 EGYPTIAN HIEROGLYPH M003A: try adding egyptian-hieroglyphs</li>
+<li>U+131B3 EGYPTIAN HIEROGLYPH M004: try adding egyptian-hieroglyphs</li>
+<li>U+131B4 EGYPTIAN HIEROGLYPH M005: try adding egyptian-hieroglyphs</li>
+<li>U+131B5 EGYPTIAN HIEROGLYPH M006: try adding egyptian-hieroglyphs</li>
+<li>U+131B6 EGYPTIAN HIEROGLYPH M007: try adding egyptian-hieroglyphs</li>
+<li>U+131B7 EGYPTIAN HIEROGLYPH M008: try adding egyptian-hieroglyphs</li>
+<li>U+131B8 EGYPTIAN HIEROGLYPH M009: try adding egyptian-hieroglyphs</li>
+<li>U+131B9 EGYPTIAN HIEROGLYPH M010: try adding egyptian-hieroglyphs</li>
+<li>U+131BA EGYPTIAN HIEROGLYPH M010A: try adding egyptian-hieroglyphs</li>
+<li>U+131BB EGYPTIAN HIEROGLYPH M011: try adding egyptian-hieroglyphs</li>
+<li>U+131BC EGYPTIAN HIEROGLYPH M012: try adding egyptian-hieroglyphs</li>
+<li>U+131BD EGYPTIAN HIEROGLYPH M012A: try adding egyptian-hieroglyphs</li>
+<li>U+131BE EGYPTIAN HIEROGLYPH M012B: try adding egyptian-hieroglyphs</li>
+<li>U+131BF EGYPTIAN HIEROGLYPH M012C: try adding egyptian-hieroglyphs</li>
+<li>U+131C0 EGYPTIAN HIEROGLYPH M012D: try adding egyptian-hieroglyphs</li>
+<li>U+131C1 EGYPTIAN HIEROGLYPH M012E: try adding egyptian-hieroglyphs</li>
+<li>U+131C2 EGYPTIAN HIEROGLYPH M012F: try adding egyptian-hieroglyphs</li>
+<li>U+131C3 EGYPTIAN HIEROGLYPH M012G: try adding egyptian-hieroglyphs</li>
+<li>U+131C4 EGYPTIAN HIEROGLYPH M012H: try adding egyptian-hieroglyphs</li>
+<li>U+131C5 EGYPTIAN HIEROGLYPH M013: try adding egyptian-hieroglyphs</li>
+<li>U+131C6 EGYPTIAN HIEROGLYPH M014: try adding egyptian-hieroglyphs</li>
+<li>U+131C7 EGYPTIAN HIEROGLYPH M015: try adding egyptian-hieroglyphs</li>
+<li>U+131C8 EGYPTIAN HIEROGLYPH M015A: try adding egyptian-hieroglyphs</li>
+<li>U+131C9 EGYPTIAN HIEROGLYPH M016: try adding egyptian-hieroglyphs</li>
+<li>U+131CA EGYPTIAN HIEROGLYPH M016A: try adding egyptian-hieroglyphs</li>
+<li>U+131CB EGYPTIAN HIEROGLYPH M017: try adding egyptian-hieroglyphs</li>
+<li>U+131CC EGYPTIAN HIEROGLYPH M017A: try adding egyptian-hieroglyphs</li>
+<li>U+131CD EGYPTIAN HIEROGLYPH M018: try adding egyptian-hieroglyphs</li>
+<li>U+131CE EGYPTIAN HIEROGLYPH M019: try adding egyptian-hieroglyphs</li>
+<li>U+131CF EGYPTIAN HIEROGLYPH M020: try adding egyptian-hieroglyphs</li>
+<li>U+131D0 EGYPTIAN HIEROGLYPH M021: try adding egyptian-hieroglyphs</li>
+<li>U+131D1 EGYPTIAN HIEROGLYPH M022: try adding egyptian-hieroglyphs</li>
+<li>U+131D2 EGYPTIAN HIEROGLYPH M022A: try adding egyptian-hieroglyphs</li>
+<li>U+131D3 EGYPTIAN HIEROGLYPH M023: try adding egyptian-hieroglyphs</li>
+<li>U+131D4 EGYPTIAN HIEROGLYPH M024: try adding egyptian-hieroglyphs</li>
+<li>U+131D5 EGYPTIAN HIEROGLYPH M024A: try adding egyptian-hieroglyphs</li>
+<li>U+131D6 EGYPTIAN HIEROGLYPH M025: try adding egyptian-hieroglyphs</li>
+<li>U+131D7 EGYPTIAN HIEROGLYPH M026: try adding egyptian-hieroglyphs</li>
+<li>U+131D8 EGYPTIAN HIEROGLYPH M027: try adding egyptian-hieroglyphs</li>
+<li>U+131D9 EGYPTIAN HIEROGLYPH M028: try adding egyptian-hieroglyphs</li>
+<li>U+131DA EGYPTIAN HIEROGLYPH M028A: try adding egyptian-hieroglyphs</li>
+<li>U+131DB EGYPTIAN HIEROGLYPH M029: try adding egyptian-hieroglyphs</li>
+<li>U+131DC EGYPTIAN HIEROGLYPH M030: try adding egyptian-hieroglyphs</li>
+<li>U+131DD EGYPTIAN HIEROGLYPH M031: try adding egyptian-hieroglyphs</li>
+<li>U+131DE EGYPTIAN HIEROGLYPH M031A: try adding egyptian-hieroglyphs</li>
+<li>U+131DF EGYPTIAN HIEROGLYPH M032: try adding egyptian-hieroglyphs</li>
+<li>U+131E0 EGYPTIAN HIEROGLYPH M033: try adding egyptian-hieroglyphs</li>
+<li>U+131E1 EGYPTIAN HIEROGLYPH M033A: try adding egyptian-hieroglyphs</li>
+<li>U+131E2 EGYPTIAN HIEROGLYPH M033B: try adding egyptian-hieroglyphs</li>
+<li>U+131E3 EGYPTIAN HIEROGLYPH M034: try adding egyptian-hieroglyphs</li>
+<li>U+131E4 EGYPTIAN HIEROGLYPH M035: try adding egyptian-hieroglyphs</li>
+<li>U+131E5 EGYPTIAN HIEROGLYPH M036: try adding egyptian-hieroglyphs</li>
+<li>U+131E6 EGYPTIAN HIEROGLYPH M037: try adding egyptian-hieroglyphs</li>
+<li>U+131E7 EGYPTIAN HIEROGLYPH M038: try adding egyptian-hieroglyphs</li>
+<li>U+131E8 EGYPTIAN HIEROGLYPH M039: try adding egyptian-hieroglyphs</li>
+<li>U+131E9 EGYPTIAN HIEROGLYPH M040: try adding egyptian-hieroglyphs</li>
+<li>U+131EA EGYPTIAN HIEROGLYPH M040A: try adding egyptian-hieroglyphs</li>
+<li>U+131EB EGYPTIAN HIEROGLYPH M041: try adding egyptian-hieroglyphs</li>
+<li>U+131EC EGYPTIAN HIEROGLYPH M042: try adding egyptian-hieroglyphs</li>
+<li>U+131ED EGYPTIAN HIEROGLYPH M043: try adding egyptian-hieroglyphs</li>
+<li>U+131EE EGYPTIAN HIEROGLYPH M044: try adding egyptian-hieroglyphs</li>
+<li>U+131EF EGYPTIAN HIEROGLYPH N001: try adding egyptian-hieroglyphs</li>
+<li>U+131F0 EGYPTIAN HIEROGLYPH N002: try adding egyptian-hieroglyphs</li>
+<li>U+131F1 EGYPTIAN HIEROGLYPH N003: try adding egyptian-hieroglyphs</li>
+<li>U+131F2 EGYPTIAN HIEROGLYPH N004: try adding egyptian-hieroglyphs</li>
+<li>U+131F3 EGYPTIAN HIEROGLYPH N005: try adding egyptian-hieroglyphs</li>
+<li>U+131F4 EGYPTIAN HIEROGLYPH N006: try adding egyptian-hieroglyphs</li>
+<li>U+131F5 EGYPTIAN HIEROGLYPH N007: try adding egyptian-hieroglyphs</li>
+<li>U+131F6 EGYPTIAN HIEROGLYPH N008: try adding egyptian-hieroglyphs</li>
+<li>U+131F7 EGYPTIAN HIEROGLYPH N009: try adding egyptian-hieroglyphs</li>
+<li>U+131F8 EGYPTIAN HIEROGLYPH N010: try adding egyptian-hieroglyphs</li>
+<li>U+131F9 EGYPTIAN HIEROGLYPH N011: try adding egyptian-hieroglyphs</li>
+<li>U+131FA EGYPTIAN HIEROGLYPH N012: try adding egyptian-hieroglyphs</li>
+<li>U+131FB EGYPTIAN HIEROGLYPH N013: try adding egyptian-hieroglyphs</li>
+<li>U+131FC EGYPTIAN HIEROGLYPH N014: try adding egyptian-hieroglyphs</li>
+<li>U+131FD EGYPTIAN HIEROGLYPH N015: try adding egyptian-hieroglyphs</li>
+<li>U+131FE EGYPTIAN HIEROGLYPH N016: try adding egyptian-hieroglyphs</li>
+<li>U+131FF EGYPTIAN HIEROGLYPH N017: try adding egyptian-hieroglyphs</li>
+<li>U+13200 EGYPTIAN HIEROGLYPH N018: try adding egyptian-hieroglyphs</li>
+<li>U+13201 EGYPTIAN HIEROGLYPH N018A: try adding egyptian-hieroglyphs</li>
+<li>U+13202 EGYPTIAN HIEROGLYPH N018B: try adding egyptian-hieroglyphs</li>
+<li>U+13203 EGYPTIAN HIEROGLYPH N019: try adding egyptian-hieroglyphs</li>
+<li>U+13204 EGYPTIAN HIEROGLYPH N020: try adding egyptian-hieroglyphs</li>
+<li>U+13205 EGYPTIAN HIEROGLYPH N021: try adding egyptian-hieroglyphs</li>
+<li>U+13206 EGYPTIAN HIEROGLYPH N022: try adding egyptian-hieroglyphs</li>
+<li>U+13207 EGYPTIAN HIEROGLYPH N023: try adding egyptian-hieroglyphs</li>
+<li>U+13208 EGYPTIAN HIEROGLYPH N024: try adding egyptian-hieroglyphs</li>
+<li>U+13209 EGYPTIAN HIEROGLYPH N025: try adding egyptian-hieroglyphs</li>
+<li>U+1320A EGYPTIAN HIEROGLYPH N025A: try adding egyptian-hieroglyphs</li>
+<li>U+1320B EGYPTIAN HIEROGLYPH N026: try adding egyptian-hieroglyphs</li>
+<li>U+1320C EGYPTIAN HIEROGLYPH N027: try adding egyptian-hieroglyphs</li>
+<li>U+1320D EGYPTIAN HIEROGLYPH N028: try adding egyptian-hieroglyphs</li>
+<li>U+1320E EGYPTIAN HIEROGLYPH N029: try adding egyptian-hieroglyphs</li>
+<li>U+1320F EGYPTIAN HIEROGLYPH N030: try adding egyptian-hieroglyphs</li>
+<li>U+13210 EGYPTIAN HIEROGLYPH N031: try adding egyptian-hieroglyphs</li>
+<li>U+13211 EGYPTIAN HIEROGLYPH N032: try adding egyptian-hieroglyphs</li>
+<li>U+13212 EGYPTIAN HIEROGLYPH N033: try adding egyptian-hieroglyphs</li>
+<li>U+13213 EGYPTIAN HIEROGLYPH N033A: try adding egyptian-hieroglyphs</li>
+<li>U+13214 EGYPTIAN HIEROGLYPH N034: try adding egyptian-hieroglyphs</li>
+<li>U+13215 EGYPTIAN HIEROGLYPH N034A: try adding egyptian-hieroglyphs</li>
+<li>U+13216 EGYPTIAN HIEROGLYPH N035: try adding egyptian-hieroglyphs</li>
+<li>U+13217 EGYPTIAN HIEROGLYPH N035A: try adding egyptian-hieroglyphs</li>
+<li>U+13218 EGYPTIAN HIEROGLYPH N036: try adding egyptian-hieroglyphs</li>
+<li>U+13219 EGYPTIAN HIEROGLYPH N037: try adding egyptian-hieroglyphs</li>
+<li>U+1321A EGYPTIAN HIEROGLYPH N037A: try adding egyptian-hieroglyphs</li>
+<li>U+1321B EGYPTIAN HIEROGLYPH N038: try adding egyptian-hieroglyphs</li>
+<li>U+1321C EGYPTIAN HIEROGLYPH N039: try adding egyptian-hieroglyphs</li>
+<li>U+1321D EGYPTIAN HIEROGLYPH N040: try adding egyptian-hieroglyphs</li>
+<li>U+1321E EGYPTIAN HIEROGLYPH N041: try adding egyptian-hieroglyphs</li>
+<li>U+1321F EGYPTIAN HIEROGLYPH N042: try adding egyptian-hieroglyphs</li>
+<li>U+13220 EGYPTIAN HIEROGLYPH NL001: try adding egyptian-hieroglyphs</li>
+<li>U+13221 EGYPTIAN HIEROGLYPH NL002: try adding egyptian-hieroglyphs</li>
+<li>U+13222 EGYPTIAN HIEROGLYPH NL003: try adding egyptian-hieroglyphs</li>
+<li>U+13223 EGYPTIAN HIEROGLYPH NL004: try adding egyptian-hieroglyphs</li>
+<li>U+13224 EGYPTIAN HIEROGLYPH NL005: try adding egyptian-hieroglyphs</li>
+<li>U+13225 EGYPTIAN HIEROGLYPH NL005A: try adding egyptian-hieroglyphs</li>
+<li>U+13226 EGYPTIAN HIEROGLYPH NL006: try adding egyptian-hieroglyphs</li>
+<li>U+13227 EGYPTIAN HIEROGLYPH NL007: try adding egyptian-hieroglyphs</li>
+<li>U+13228 EGYPTIAN HIEROGLYPH NL008: try adding egyptian-hieroglyphs</li>
+<li>U+13229 EGYPTIAN HIEROGLYPH NL009: try adding egyptian-hieroglyphs</li>
+<li>U+1322A EGYPTIAN HIEROGLYPH NL010: try adding egyptian-hieroglyphs</li>
+<li>U+1322B EGYPTIAN HIEROGLYPH NL011: try adding egyptian-hieroglyphs</li>
+<li>U+1322C EGYPTIAN HIEROGLYPH NL012: try adding egyptian-hieroglyphs</li>
+<li>U+1322D EGYPTIAN HIEROGLYPH NL013: try adding egyptian-hieroglyphs</li>
+<li>U+1322E EGYPTIAN HIEROGLYPH NL014: try adding egyptian-hieroglyphs</li>
+<li>U+1322F EGYPTIAN HIEROGLYPH NL015: try adding egyptian-hieroglyphs</li>
+<li>U+13230 EGYPTIAN HIEROGLYPH NL016: try adding egyptian-hieroglyphs</li>
+<li>U+13231 EGYPTIAN HIEROGLYPH NL017: try adding egyptian-hieroglyphs</li>
+<li>U+13232 EGYPTIAN HIEROGLYPH NL017A: try adding egyptian-hieroglyphs</li>
+<li>U+13233 EGYPTIAN HIEROGLYPH NL018: try adding egyptian-hieroglyphs</li>
+<li>U+13234 EGYPTIAN HIEROGLYPH NL019: try adding egyptian-hieroglyphs</li>
+<li>U+13235 EGYPTIAN HIEROGLYPH NL020: try adding egyptian-hieroglyphs</li>
+<li>U+13236 EGYPTIAN HIEROGLYPH NU001: try adding egyptian-hieroglyphs</li>
+<li>U+13237 EGYPTIAN HIEROGLYPH NU002: try adding egyptian-hieroglyphs</li>
+<li>U+13238 EGYPTIAN HIEROGLYPH NU003: try adding egyptian-hieroglyphs</li>
+<li>U+13239 EGYPTIAN HIEROGLYPH NU004: try adding egyptian-hieroglyphs</li>
+<li>U+1323A EGYPTIAN HIEROGLYPH NU005: try adding egyptian-hieroglyphs</li>
+<li>U+1323B EGYPTIAN HIEROGLYPH NU006: try adding egyptian-hieroglyphs</li>
+<li>U+1323C EGYPTIAN HIEROGLYPH NU007: try adding egyptian-hieroglyphs</li>
+<li>U+1323D EGYPTIAN HIEROGLYPH NU008: try adding egyptian-hieroglyphs</li>
+<li>U+1323E EGYPTIAN HIEROGLYPH NU009: try adding egyptian-hieroglyphs</li>
+<li>U+1323F EGYPTIAN HIEROGLYPH NU010: try adding egyptian-hieroglyphs</li>
+<li>U+13240 EGYPTIAN HIEROGLYPH NU010A: try adding egyptian-hieroglyphs</li>
+<li>U+13241 EGYPTIAN HIEROGLYPH NU011: try adding egyptian-hieroglyphs</li>
+<li>U+13242 EGYPTIAN HIEROGLYPH NU011A: try adding egyptian-hieroglyphs</li>
+<li>U+13243 EGYPTIAN HIEROGLYPH NU012: try adding egyptian-hieroglyphs</li>
+<li>U+13244 EGYPTIAN HIEROGLYPH NU013: try adding egyptian-hieroglyphs</li>
+<li>U+13245 EGYPTIAN HIEROGLYPH NU014: try adding egyptian-hieroglyphs</li>
+<li>U+13246 EGYPTIAN HIEROGLYPH NU015: try adding egyptian-hieroglyphs</li>
+<li>U+13247 EGYPTIAN HIEROGLYPH NU016: try adding egyptian-hieroglyphs</li>
+<li>U+13248 EGYPTIAN HIEROGLYPH NU017: try adding egyptian-hieroglyphs</li>
+<li>U+13249 EGYPTIAN HIEROGLYPH NU018: try adding egyptian-hieroglyphs</li>
+<li>U+1324A EGYPTIAN HIEROGLYPH NU018A: try adding egyptian-hieroglyphs</li>
+<li>U+1324B EGYPTIAN HIEROGLYPH NU019: try adding egyptian-hieroglyphs</li>
+<li>U+1324C EGYPTIAN HIEROGLYPH NU020: try adding egyptian-hieroglyphs</li>
+<li>U+1324D EGYPTIAN HIEROGLYPH NU021: try adding egyptian-hieroglyphs</li>
+<li>U+1324E EGYPTIAN HIEROGLYPH NU022: try adding egyptian-hieroglyphs</li>
+<li>U+1324F EGYPTIAN HIEROGLYPH NU022A: try adding egyptian-hieroglyphs</li>
+<li>U+13250 EGYPTIAN HIEROGLYPH O001: try adding egyptian-hieroglyphs</li>
+<li>U+13251 EGYPTIAN HIEROGLYPH O001A: try adding egyptian-hieroglyphs</li>
+<li>U+13252 EGYPTIAN HIEROGLYPH O002: try adding egyptian-hieroglyphs</li>
+<li>U+13253 EGYPTIAN HIEROGLYPH O003: try adding egyptian-hieroglyphs</li>
+<li>U+13254 EGYPTIAN HIEROGLYPH O004: try adding egyptian-hieroglyphs</li>
+<li>U+13255 EGYPTIAN HIEROGLYPH O005: try adding egyptian-hieroglyphs</li>
+<li>U+13256 EGYPTIAN HIEROGLYPH O005A: try adding egyptian-hieroglyphs</li>
+<li>U+13257 EGYPTIAN HIEROGLYPH O006: try adding egyptian-hieroglyphs</li>
+<li>U+13258 EGYPTIAN HIEROGLYPH O006A: try adding egyptian-hieroglyphs</li>
+<li>U+13259 EGYPTIAN HIEROGLYPH O006B: try adding egyptian-hieroglyphs</li>
+<li>U+1325A EGYPTIAN HIEROGLYPH O006C: try adding egyptian-hieroglyphs</li>
+<li>U+1325B EGYPTIAN HIEROGLYPH O006D: try adding egyptian-hieroglyphs</li>
+<li>U+1325C EGYPTIAN HIEROGLYPH O006E: try adding egyptian-hieroglyphs</li>
+<li>U+1325D EGYPTIAN HIEROGLYPH O006F: try adding egyptian-hieroglyphs</li>
+<li>U+1325E EGYPTIAN HIEROGLYPH O007: try adding egyptian-hieroglyphs</li>
+<li>U+1325F EGYPTIAN HIEROGLYPH O008: try adding egyptian-hieroglyphs</li>
+<li>U+13260 EGYPTIAN HIEROGLYPH O009: try adding egyptian-hieroglyphs</li>
+<li>U+13261 EGYPTIAN HIEROGLYPH O010: try adding egyptian-hieroglyphs</li>
+<li>U+13262 EGYPTIAN HIEROGLYPH O010A: try adding egyptian-hieroglyphs</li>
+<li>U+13263 EGYPTIAN HIEROGLYPH O010B: try adding egyptian-hieroglyphs</li>
+<li>U+13264 EGYPTIAN HIEROGLYPH O010C: try adding egyptian-hieroglyphs</li>
+<li>U+13265 EGYPTIAN HIEROGLYPH O011: try adding egyptian-hieroglyphs</li>
+<li>U+13266 EGYPTIAN HIEROGLYPH O012: try adding egyptian-hieroglyphs</li>
+<li>U+13267 EGYPTIAN HIEROGLYPH O013: try adding egyptian-hieroglyphs</li>
+<li>U+13268 EGYPTIAN HIEROGLYPH O014: try adding egyptian-hieroglyphs</li>
+<li>U+13269 EGYPTIAN HIEROGLYPH O015: try adding egyptian-hieroglyphs</li>
+<li>U+1326A EGYPTIAN HIEROGLYPH O016: try adding egyptian-hieroglyphs</li>
+<li>U+1326B EGYPTIAN HIEROGLYPH O017: try adding egyptian-hieroglyphs</li>
+<li>U+1326C EGYPTIAN HIEROGLYPH O018: try adding egyptian-hieroglyphs</li>
+<li>U+1326D EGYPTIAN HIEROGLYPH O019: try adding egyptian-hieroglyphs</li>
+<li>U+1326E EGYPTIAN HIEROGLYPH O019A: try adding egyptian-hieroglyphs</li>
+<li>U+1326F EGYPTIAN HIEROGLYPH O020: try adding egyptian-hieroglyphs</li>
+<li>U+13270 EGYPTIAN HIEROGLYPH O020A: try adding egyptian-hieroglyphs</li>
+<li>U+13271 EGYPTIAN HIEROGLYPH O021: try adding egyptian-hieroglyphs</li>
+<li>U+13272 EGYPTIAN HIEROGLYPH O022: try adding egyptian-hieroglyphs</li>
+<li>U+13273 EGYPTIAN HIEROGLYPH O023: try adding egyptian-hieroglyphs</li>
+<li>U+13274 EGYPTIAN HIEROGLYPH O024: try adding egyptian-hieroglyphs</li>
+<li>U+13275 EGYPTIAN HIEROGLYPH O024A: try adding egyptian-hieroglyphs</li>
+<li>U+13276 EGYPTIAN HIEROGLYPH O025: try adding egyptian-hieroglyphs</li>
+<li>U+13277 EGYPTIAN HIEROGLYPH O025A: try adding egyptian-hieroglyphs</li>
+<li>U+13278 EGYPTIAN HIEROGLYPH O026: try adding egyptian-hieroglyphs</li>
+<li>U+13279 EGYPTIAN HIEROGLYPH O027: try adding egyptian-hieroglyphs</li>
+<li>U+1327A EGYPTIAN HIEROGLYPH O028: try adding egyptian-hieroglyphs</li>
+<li>U+1327B EGYPTIAN HIEROGLYPH O029: try adding egyptian-hieroglyphs</li>
+<li>U+1327C EGYPTIAN HIEROGLYPH O029A: try adding egyptian-hieroglyphs</li>
+<li>U+1327D EGYPTIAN HIEROGLYPH O030: try adding egyptian-hieroglyphs</li>
+<li>U+1327E EGYPTIAN HIEROGLYPH O030A: try adding egyptian-hieroglyphs</li>
+<li>U+1327F EGYPTIAN HIEROGLYPH O031: try adding egyptian-hieroglyphs</li>
+<li>U+13280 EGYPTIAN HIEROGLYPH O032: try adding egyptian-hieroglyphs</li>
+<li>U+13281 EGYPTIAN HIEROGLYPH O033: try adding egyptian-hieroglyphs</li>
+<li>U+13282 EGYPTIAN HIEROGLYPH O033A: try adding egyptian-hieroglyphs</li>
+<li>U+13283 EGYPTIAN HIEROGLYPH O034: try adding egyptian-hieroglyphs</li>
+<li>U+13284 EGYPTIAN HIEROGLYPH O035: try adding egyptian-hieroglyphs</li>
+<li>U+13285 EGYPTIAN HIEROGLYPH O036: try adding egyptian-hieroglyphs</li>
+<li>U+13286 EGYPTIAN HIEROGLYPH O036A: try adding egyptian-hieroglyphs</li>
+<li>U+13287 EGYPTIAN HIEROGLYPH O036B: try adding egyptian-hieroglyphs</li>
+<li>U+13288 EGYPTIAN HIEROGLYPH O036C: try adding egyptian-hieroglyphs</li>
+<li>U+13289 EGYPTIAN HIEROGLYPH O036D: try adding egyptian-hieroglyphs</li>
+<li>U+1328A EGYPTIAN HIEROGLYPH O037: try adding egyptian-hieroglyphs</li>
+<li>U+1328B EGYPTIAN HIEROGLYPH O038: try adding egyptian-hieroglyphs</li>
+<li>U+1328C EGYPTIAN HIEROGLYPH O039: try adding egyptian-hieroglyphs</li>
+<li>U+1328D EGYPTIAN HIEROGLYPH O040: try adding egyptian-hieroglyphs</li>
+<li>U+1328E EGYPTIAN HIEROGLYPH O041: try adding egyptian-hieroglyphs</li>
+<li>U+1328F EGYPTIAN HIEROGLYPH O042: try adding egyptian-hieroglyphs</li>
+<li>U+13290 EGYPTIAN HIEROGLYPH O043: try adding egyptian-hieroglyphs</li>
+<li>U+13291 EGYPTIAN HIEROGLYPH O044: try adding egyptian-hieroglyphs</li>
+<li>U+13292 EGYPTIAN HIEROGLYPH O045: try adding egyptian-hieroglyphs</li>
+<li>U+13293 EGYPTIAN HIEROGLYPH O046: try adding egyptian-hieroglyphs</li>
+<li>U+13294 EGYPTIAN HIEROGLYPH O047: try adding egyptian-hieroglyphs</li>
+<li>U+13295 EGYPTIAN HIEROGLYPH O048: try adding egyptian-hieroglyphs</li>
+<li>U+13296 EGYPTIAN HIEROGLYPH O049: try adding egyptian-hieroglyphs</li>
+<li>U+13297 EGYPTIAN HIEROGLYPH O050: try adding egyptian-hieroglyphs</li>
+<li>U+13298 EGYPTIAN HIEROGLYPH O050A: try adding egyptian-hieroglyphs</li>
+<li>U+13299 EGYPTIAN HIEROGLYPH O050B: try adding egyptian-hieroglyphs</li>
+<li>U+1329A EGYPTIAN HIEROGLYPH O051: try adding egyptian-hieroglyphs</li>
+<li>U+1329B EGYPTIAN HIEROGLYPH P001: try adding egyptian-hieroglyphs</li>
+<li>U+1329C EGYPTIAN HIEROGLYPH P001A: try adding egyptian-hieroglyphs</li>
+<li>U+1329D EGYPTIAN HIEROGLYPH P002: try adding egyptian-hieroglyphs</li>
+<li>U+1329E EGYPTIAN HIEROGLYPH P003: try adding egyptian-hieroglyphs</li>
+<li>U+1329F EGYPTIAN HIEROGLYPH P003A: try adding egyptian-hieroglyphs</li>
+<li>U+132A0 EGYPTIAN HIEROGLYPH P004: try adding egyptian-hieroglyphs</li>
+<li>U+132A1 EGYPTIAN HIEROGLYPH P005: try adding egyptian-hieroglyphs</li>
+<li>U+132A2 EGYPTIAN HIEROGLYPH P006: try adding egyptian-hieroglyphs</li>
+<li>U+132A3 EGYPTIAN HIEROGLYPH P007: try adding egyptian-hieroglyphs</li>
+<li>U+132A4 EGYPTIAN HIEROGLYPH P008: try adding egyptian-hieroglyphs</li>
+<li>U+132A5 EGYPTIAN HIEROGLYPH P009: try adding egyptian-hieroglyphs</li>
+<li>U+132A6 EGYPTIAN HIEROGLYPH P010: try adding egyptian-hieroglyphs</li>
+<li>U+132A7 EGYPTIAN HIEROGLYPH P011: try adding egyptian-hieroglyphs</li>
+<li>U+132A8 EGYPTIAN HIEROGLYPH Q001: try adding egyptian-hieroglyphs</li>
+<li>U+132A9 EGYPTIAN HIEROGLYPH Q002: try adding egyptian-hieroglyphs</li>
+<li>U+132AA EGYPTIAN HIEROGLYPH Q003: try adding egyptian-hieroglyphs</li>
+<li>U+132AB EGYPTIAN HIEROGLYPH Q004: try adding egyptian-hieroglyphs</li>
+<li>U+132AC EGYPTIAN HIEROGLYPH Q005: try adding egyptian-hieroglyphs</li>
+<li>U+132AD EGYPTIAN HIEROGLYPH Q006: try adding egyptian-hieroglyphs</li>
+<li>U+132AE EGYPTIAN HIEROGLYPH Q007: try adding egyptian-hieroglyphs</li>
+<li>U+132AF EGYPTIAN HIEROGLYPH R001: try adding egyptian-hieroglyphs</li>
+<li>U+132B0 EGYPTIAN HIEROGLYPH R002: try adding egyptian-hieroglyphs</li>
+<li>U+132B1 EGYPTIAN HIEROGLYPH R002A: try adding egyptian-hieroglyphs</li>
+<li>U+132B2 EGYPTIAN HIEROGLYPH R003: try adding egyptian-hieroglyphs</li>
+<li>U+132B3 EGYPTIAN HIEROGLYPH R003A: try adding egyptian-hieroglyphs</li>
+<li>U+132B4 EGYPTIAN HIEROGLYPH R003B: try adding egyptian-hieroglyphs</li>
+<li>U+132B5 EGYPTIAN HIEROGLYPH R004: try adding egyptian-hieroglyphs</li>
+<li>U+132B6 EGYPTIAN HIEROGLYPH R005: try adding egyptian-hieroglyphs</li>
+<li>U+132B7 EGYPTIAN HIEROGLYPH R006: try adding egyptian-hieroglyphs</li>
+<li>U+132B8 EGYPTIAN HIEROGLYPH R007: try adding egyptian-hieroglyphs</li>
+<li>U+132B9 EGYPTIAN HIEROGLYPH R008: try adding egyptian-hieroglyphs</li>
+<li>U+132BA EGYPTIAN HIEROGLYPH R009: try adding egyptian-hieroglyphs</li>
+<li>U+132BB EGYPTIAN HIEROGLYPH R010: try adding egyptian-hieroglyphs</li>
+<li>U+132BC EGYPTIAN HIEROGLYPH R010A: try adding egyptian-hieroglyphs</li>
+<li>U+132BD EGYPTIAN HIEROGLYPH R011: try adding egyptian-hieroglyphs</li>
+<li>U+132BE EGYPTIAN HIEROGLYPH R012: try adding egyptian-hieroglyphs</li>
+<li>U+132BF EGYPTIAN HIEROGLYPH R013: try adding egyptian-hieroglyphs</li>
+<li>U+132C0 EGYPTIAN HIEROGLYPH R014: try adding egyptian-hieroglyphs</li>
+<li>U+132C1 EGYPTIAN HIEROGLYPH R015: try adding egyptian-hieroglyphs</li>
+<li>U+132C2 EGYPTIAN HIEROGLYPH R016: try adding egyptian-hieroglyphs</li>
+<li>U+132C3 EGYPTIAN HIEROGLYPH R016A: try adding egyptian-hieroglyphs</li>
+<li>U+132C4 EGYPTIAN HIEROGLYPH R017: try adding egyptian-hieroglyphs</li>
+<li>U+132C5 EGYPTIAN HIEROGLYPH R018: try adding egyptian-hieroglyphs</li>
+<li>U+132C6 EGYPTIAN HIEROGLYPH R019: try adding egyptian-hieroglyphs</li>
+<li>U+132C7 EGYPTIAN HIEROGLYPH R020: try adding egyptian-hieroglyphs</li>
+<li>U+132C8 EGYPTIAN HIEROGLYPH R021: try adding egyptian-hieroglyphs</li>
+<li>U+132C9 EGYPTIAN HIEROGLYPH R022: try adding egyptian-hieroglyphs</li>
+<li>U+132CA EGYPTIAN HIEROGLYPH R023: try adding egyptian-hieroglyphs</li>
+<li>U+132CB EGYPTIAN HIEROGLYPH R024: try adding egyptian-hieroglyphs</li>
+<li>U+132CC EGYPTIAN HIEROGLYPH R025: try adding egyptian-hieroglyphs</li>
+<li>U+132CD EGYPTIAN HIEROGLYPH R026: try adding egyptian-hieroglyphs</li>
+<li>U+132CE EGYPTIAN HIEROGLYPH R027: try adding egyptian-hieroglyphs</li>
+<li>U+132CF EGYPTIAN HIEROGLYPH R028: try adding egyptian-hieroglyphs</li>
+<li>U+132D0 EGYPTIAN HIEROGLYPH R029: try adding egyptian-hieroglyphs</li>
+<li>U+132D1 EGYPTIAN HIEROGLYPH S001: try adding egyptian-hieroglyphs</li>
+<li>U+132D2 EGYPTIAN HIEROGLYPH S002: try adding egyptian-hieroglyphs</li>
+<li>U+132D3 EGYPTIAN HIEROGLYPH S002A: try adding egyptian-hieroglyphs</li>
+<li>U+132D4 EGYPTIAN HIEROGLYPH S003: try adding egyptian-hieroglyphs</li>
+<li>U+132D5 EGYPTIAN HIEROGLYPH S004: try adding egyptian-hieroglyphs</li>
+<li>U+132D6 EGYPTIAN HIEROGLYPH S005: try adding egyptian-hieroglyphs</li>
+<li>U+132D7 EGYPTIAN HIEROGLYPH S006: try adding egyptian-hieroglyphs</li>
+<li>U+132D8 EGYPTIAN HIEROGLYPH S006A: try adding egyptian-hieroglyphs</li>
+<li>U+132D9 EGYPTIAN HIEROGLYPH S007: try adding egyptian-hieroglyphs</li>
+<li>U+132DA EGYPTIAN HIEROGLYPH S008: try adding egyptian-hieroglyphs</li>
+<li>U+132DB EGYPTIAN HIEROGLYPH S009: try adding egyptian-hieroglyphs</li>
+<li>U+132DC EGYPTIAN HIEROGLYPH S010: try adding egyptian-hieroglyphs</li>
+<li>U+132DD EGYPTIAN HIEROGLYPH S011: try adding egyptian-hieroglyphs</li>
+<li>U+132DE EGYPTIAN HIEROGLYPH S012: try adding egyptian-hieroglyphs</li>
+<li>U+132DF EGYPTIAN HIEROGLYPH S013: try adding egyptian-hieroglyphs</li>
+<li>U+132E0 EGYPTIAN HIEROGLYPH S014: try adding egyptian-hieroglyphs</li>
+<li>U+132E1 EGYPTIAN HIEROGLYPH S014A: try adding egyptian-hieroglyphs</li>
+<li>U+132E2 EGYPTIAN HIEROGLYPH S014B: try adding egyptian-hieroglyphs</li>
+<li>U+132E3 EGYPTIAN HIEROGLYPH S015: try adding egyptian-hieroglyphs</li>
+<li>U+132E4 EGYPTIAN HIEROGLYPH S016: try adding egyptian-hieroglyphs</li>
+<li>U+132E5 EGYPTIAN HIEROGLYPH S017: try adding egyptian-hieroglyphs</li>
+<li>U+132E6 EGYPTIAN HIEROGLYPH S017A: try adding egyptian-hieroglyphs</li>
+<li>U+132E7 EGYPTIAN HIEROGLYPH S018: try adding egyptian-hieroglyphs</li>
+<li>U+132E8 EGYPTIAN HIEROGLYPH S019: try adding egyptian-hieroglyphs</li>
+<li>U+132E9 EGYPTIAN HIEROGLYPH S020: try adding egyptian-hieroglyphs</li>
+<li>U+132EA EGYPTIAN HIEROGLYPH S021: try adding egyptian-hieroglyphs</li>
+<li>U+132EB EGYPTIAN HIEROGLYPH S022: try adding egyptian-hieroglyphs</li>
+<li>U+132EC EGYPTIAN HIEROGLYPH S023: try adding egyptian-hieroglyphs</li>
+<li>U+132ED EGYPTIAN HIEROGLYPH S024: try adding egyptian-hieroglyphs</li>
+<li>U+132EE EGYPTIAN HIEROGLYPH S025: try adding egyptian-hieroglyphs</li>
+<li>U+132EF EGYPTIAN HIEROGLYPH S026: try adding egyptian-hieroglyphs</li>
+<li>U+132F0 EGYPTIAN HIEROGLYPH S026A: try adding egyptian-hieroglyphs</li>
+<li>U+132F1 EGYPTIAN HIEROGLYPH S026B: try adding egyptian-hieroglyphs</li>
+<li>U+132F2 EGYPTIAN HIEROGLYPH S027: try adding egyptian-hieroglyphs</li>
+<li>U+132F3 EGYPTIAN HIEROGLYPH S028: try adding egyptian-hieroglyphs</li>
+<li>U+132F4 EGYPTIAN HIEROGLYPH S029: try adding egyptian-hieroglyphs</li>
+<li>U+132F5 EGYPTIAN HIEROGLYPH S030: try adding egyptian-hieroglyphs</li>
+<li>U+132F6 EGYPTIAN HIEROGLYPH S031: try adding egyptian-hieroglyphs</li>
+<li>U+132F7 EGYPTIAN HIEROGLYPH S032: try adding egyptian-hieroglyphs</li>
+<li>U+132F8 EGYPTIAN HIEROGLYPH S033: try adding egyptian-hieroglyphs</li>
+<li>U+132F9 EGYPTIAN HIEROGLYPH S034: try adding egyptian-hieroglyphs</li>
+<li>U+132FA EGYPTIAN HIEROGLYPH S035: try adding egyptian-hieroglyphs</li>
+<li>U+132FB EGYPTIAN HIEROGLYPH S035A: try adding egyptian-hieroglyphs</li>
+<li>U+132FC EGYPTIAN HIEROGLYPH S036: try adding egyptian-hieroglyphs</li>
+<li>U+132FD EGYPTIAN HIEROGLYPH S037: try adding egyptian-hieroglyphs</li>
+<li>U+132FE EGYPTIAN HIEROGLYPH S038: try adding egyptian-hieroglyphs</li>
+<li>U+132FF EGYPTIAN HIEROGLYPH S039: try adding egyptian-hieroglyphs</li>
+<li>U+13300 EGYPTIAN HIEROGLYPH S040: try adding egyptian-hieroglyphs</li>
+<li>U+13301 EGYPTIAN HIEROGLYPH S041: try adding egyptian-hieroglyphs</li>
+<li>U+13302 EGYPTIAN HIEROGLYPH S042: try adding egyptian-hieroglyphs</li>
+<li>U+13303 EGYPTIAN HIEROGLYPH S043: try adding egyptian-hieroglyphs</li>
+<li>U+13304 EGYPTIAN HIEROGLYPH S044: try adding egyptian-hieroglyphs</li>
+<li>U+13305 EGYPTIAN HIEROGLYPH S045: try adding egyptian-hieroglyphs</li>
+<li>U+13306 EGYPTIAN HIEROGLYPH S046: try adding egyptian-hieroglyphs</li>
+<li>U+13307 EGYPTIAN HIEROGLYPH T001: try adding egyptian-hieroglyphs</li>
+<li>U+13308 EGYPTIAN HIEROGLYPH T002: try adding egyptian-hieroglyphs</li>
+<li>U+13309 EGYPTIAN HIEROGLYPH T003: try adding egyptian-hieroglyphs</li>
+<li>U+1330A EGYPTIAN HIEROGLYPH T003A: try adding egyptian-hieroglyphs</li>
+<li>U+1330B EGYPTIAN HIEROGLYPH T004: try adding egyptian-hieroglyphs</li>
+<li>U+1330C EGYPTIAN HIEROGLYPH T005: try adding egyptian-hieroglyphs</li>
+<li>U+1330D EGYPTIAN HIEROGLYPH T006: try adding egyptian-hieroglyphs</li>
+<li>U+1330E EGYPTIAN HIEROGLYPH T007: try adding egyptian-hieroglyphs</li>
+<li>U+1330F EGYPTIAN HIEROGLYPH T007A: try adding egyptian-hieroglyphs</li>
+<li>U+13310 EGYPTIAN HIEROGLYPH T008: try adding egyptian-hieroglyphs</li>
+<li>U+13311 EGYPTIAN HIEROGLYPH T008A: try adding egyptian-hieroglyphs</li>
+<li>U+13312 EGYPTIAN HIEROGLYPH T009: try adding egyptian-hieroglyphs</li>
+<li>U+13313 EGYPTIAN HIEROGLYPH T009A: try adding egyptian-hieroglyphs</li>
+<li>U+13314 EGYPTIAN HIEROGLYPH T010: try adding egyptian-hieroglyphs</li>
+<li>U+13315 EGYPTIAN HIEROGLYPH T011: try adding egyptian-hieroglyphs</li>
+<li>U+13316 EGYPTIAN HIEROGLYPH T011A: try adding egyptian-hieroglyphs</li>
+<li>U+13317 EGYPTIAN HIEROGLYPH T012: try adding egyptian-hieroglyphs</li>
+<li>U+13318 EGYPTIAN HIEROGLYPH T013: try adding egyptian-hieroglyphs</li>
+<li>U+13319 EGYPTIAN HIEROGLYPH T014: try adding egyptian-hieroglyphs</li>
+<li>U+1331A EGYPTIAN HIEROGLYPH T015: try adding egyptian-hieroglyphs</li>
+<li>U+1331B EGYPTIAN HIEROGLYPH T016: try adding egyptian-hieroglyphs</li>
+<li>U+1331C EGYPTIAN HIEROGLYPH T016A: try adding egyptian-hieroglyphs</li>
+<li>U+1331D EGYPTIAN HIEROGLYPH T017: try adding egyptian-hieroglyphs</li>
+<li>U+1331E EGYPTIAN HIEROGLYPH T018: try adding egyptian-hieroglyphs</li>
+<li>U+1331F EGYPTIAN HIEROGLYPH T019: try adding egyptian-hieroglyphs</li>
+<li>U+13320 EGYPTIAN HIEROGLYPH T020: try adding egyptian-hieroglyphs</li>
+<li>U+13321 EGYPTIAN HIEROGLYPH T021: try adding egyptian-hieroglyphs</li>
+<li>U+13322 EGYPTIAN HIEROGLYPH T022: try adding egyptian-hieroglyphs</li>
+<li>U+13323 EGYPTIAN HIEROGLYPH T023: try adding egyptian-hieroglyphs</li>
+<li>U+13324 EGYPTIAN HIEROGLYPH T024: try adding egyptian-hieroglyphs</li>
+<li>U+13325 EGYPTIAN HIEROGLYPH T025: try adding egyptian-hieroglyphs</li>
+<li>U+13326 EGYPTIAN HIEROGLYPH T026: try adding egyptian-hieroglyphs</li>
+<li>U+13327 EGYPTIAN HIEROGLYPH T027: try adding egyptian-hieroglyphs</li>
+<li>U+13328 EGYPTIAN HIEROGLYPH T028: try adding egyptian-hieroglyphs</li>
+<li>U+13329 EGYPTIAN HIEROGLYPH T029: try adding egyptian-hieroglyphs</li>
+<li>U+1332A EGYPTIAN HIEROGLYPH T030: try adding egyptian-hieroglyphs</li>
+<li>U+1332B EGYPTIAN HIEROGLYPH T031: try adding egyptian-hieroglyphs</li>
+<li>U+1332C EGYPTIAN HIEROGLYPH T032: try adding egyptian-hieroglyphs</li>
+<li>U+1332D EGYPTIAN HIEROGLYPH T032A: try adding egyptian-hieroglyphs</li>
+<li>U+1332E EGYPTIAN HIEROGLYPH T033: try adding egyptian-hieroglyphs</li>
+<li>U+1332F EGYPTIAN HIEROGLYPH T033A: try adding egyptian-hieroglyphs</li>
+<li>U+13330 EGYPTIAN HIEROGLYPH T034: try adding egyptian-hieroglyphs</li>
+<li>U+13331 EGYPTIAN HIEROGLYPH T035: try adding egyptian-hieroglyphs</li>
+<li>U+13332 EGYPTIAN HIEROGLYPH T036: try adding egyptian-hieroglyphs</li>
+<li>U+13333 EGYPTIAN HIEROGLYPH U001: try adding egyptian-hieroglyphs</li>
+<li>U+13334 EGYPTIAN HIEROGLYPH U002: try adding egyptian-hieroglyphs</li>
+<li>U+13335 EGYPTIAN HIEROGLYPH U003: try adding egyptian-hieroglyphs</li>
+<li>U+13336 EGYPTIAN HIEROGLYPH U004: try adding egyptian-hieroglyphs</li>
+<li>U+13337 EGYPTIAN HIEROGLYPH U005: try adding egyptian-hieroglyphs</li>
+<li>U+13338 EGYPTIAN HIEROGLYPH U006: try adding egyptian-hieroglyphs</li>
+<li>U+13339 EGYPTIAN HIEROGLYPH U006A: try adding egyptian-hieroglyphs</li>
+<li>U+1333A EGYPTIAN HIEROGLYPH U006B: try adding egyptian-hieroglyphs</li>
+<li>U+1333B EGYPTIAN HIEROGLYPH U007: try adding egyptian-hieroglyphs</li>
+<li>U+1333C EGYPTIAN HIEROGLYPH U008: try adding egyptian-hieroglyphs</li>
+<li>U+1333D EGYPTIAN HIEROGLYPH U009: try adding egyptian-hieroglyphs</li>
+<li>U+1333E EGYPTIAN HIEROGLYPH U010: try adding egyptian-hieroglyphs</li>
+<li>U+1333F EGYPTIAN HIEROGLYPH U011: try adding egyptian-hieroglyphs</li>
+<li>U+13340 EGYPTIAN HIEROGLYPH U012: try adding egyptian-hieroglyphs</li>
+<li>U+13341 EGYPTIAN HIEROGLYPH U013: try adding egyptian-hieroglyphs</li>
+<li>U+13342 EGYPTIAN HIEROGLYPH U014: try adding egyptian-hieroglyphs</li>
+<li>U+13343 EGYPTIAN HIEROGLYPH U015: try adding egyptian-hieroglyphs</li>
+<li>U+13344 EGYPTIAN HIEROGLYPH U016: try adding egyptian-hieroglyphs</li>
+<li>U+13345 EGYPTIAN HIEROGLYPH U017: try adding egyptian-hieroglyphs</li>
+<li>U+13346 EGYPTIAN HIEROGLYPH U018: try adding egyptian-hieroglyphs</li>
+<li>U+13347 EGYPTIAN HIEROGLYPH U019: try adding egyptian-hieroglyphs</li>
+<li>U+13348 EGYPTIAN HIEROGLYPH U020: try adding egyptian-hieroglyphs</li>
+<li>U+13349 EGYPTIAN HIEROGLYPH U021: try adding egyptian-hieroglyphs</li>
+<li>U+1334A EGYPTIAN HIEROGLYPH U022: try adding egyptian-hieroglyphs</li>
+<li>U+1334B EGYPTIAN HIEROGLYPH U023: try adding egyptian-hieroglyphs</li>
+<li>U+1334C EGYPTIAN HIEROGLYPH U023A: try adding egyptian-hieroglyphs</li>
+<li>U+1334D EGYPTIAN HIEROGLYPH U024: try adding egyptian-hieroglyphs</li>
+<li>U+1334E EGYPTIAN HIEROGLYPH U025: try adding egyptian-hieroglyphs</li>
+<li>U+1334F EGYPTIAN HIEROGLYPH U026: try adding egyptian-hieroglyphs</li>
+<li>U+13350 EGYPTIAN HIEROGLYPH U027: try adding egyptian-hieroglyphs</li>
+<li>U+13351 EGYPTIAN HIEROGLYPH U028: try adding egyptian-hieroglyphs</li>
+<li>U+13352 EGYPTIAN HIEROGLYPH U029: try adding egyptian-hieroglyphs</li>
+<li>U+13353 EGYPTIAN HIEROGLYPH U029A: try adding egyptian-hieroglyphs</li>
+<li>U+13354 EGYPTIAN HIEROGLYPH U030: try adding egyptian-hieroglyphs</li>
+<li>U+13355 EGYPTIAN HIEROGLYPH U031: try adding egyptian-hieroglyphs</li>
+<li>U+13356 EGYPTIAN HIEROGLYPH U032: try adding egyptian-hieroglyphs</li>
+<li>U+13357 EGYPTIAN HIEROGLYPH U032A: try adding egyptian-hieroglyphs</li>
+<li>U+13358 EGYPTIAN HIEROGLYPH U033: try adding egyptian-hieroglyphs</li>
+<li>U+13359 EGYPTIAN HIEROGLYPH U034: try adding egyptian-hieroglyphs</li>
+<li>U+1335A EGYPTIAN HIEROGLYPH U035: try adding egyptian-hieroglyphs</li>
+<li>U+1335B EGYPTIAN HIEROGLYPH U036: try adding egyptian-hieroglyphs</li>
+<li>U+1335C EGYPTIAN HIEROGLYPH U037: try adding egyptian-hieroglyphs</li>
+<li>U+1335D EGYPTIAN HIEROGLYPH U038: try adding egyptian-hieroglyphs</li>
+<li>U+1335E EGYPTIAN HIEROGLYPH U039: try adding egyptian-hieroglyphs</li>
+<li>U+1335F EGYPTIAN HIEROGLYPH U040: try adding egyptian-hieroglyphs</li>
+<li>U+13360 EGYPTIAN HIEROGLYPH U041: try adding egyptian-hieroglyphs</li>
+<li>U+13361 EGYPTIAN HIEROGLYPH U042: try adding egyptian-hieroglyphs</li>
+<li>U+13362 EGYPTIAN HIEROGLYPH V001: try adding egyptian-hieroglyphs</li>
+<li>U+13363 EGYPTIAN HIEROGLYPH V001A: try adding egyptian-hieroglyphs</li>
+<li>U+13364 EGYPTIAN HIEROGLYPH V001B: try adding egyptian-hieroglyphs</li>
+<li>U+13365 EGYPTIAN HIEROGLYPH V001C: try adding egyptian-hieroglyphs</li>
+<li>U+13366 EGYPTIAN HIEROGLYPH V001D: try adding egyptian-hieroglyphs</li>
+<li>U+13367 EGYPTIAN HIEROGLYPH V001E: try adding egyptian-hieroglyphs</li>
+<li>U+13368 EGYPTIAN HIEROGLYPH V001F: try adding egyptian-hieroglyphs</li>
+<li>U+13369 EGYPTIAN HIEROGLYPH V001G: try adding egyptian-hieroglyphs</li>
+<li>U+1336A EGYPTIAN HIEROGLYPH V001H: try adding egyptian-hieroglyphs</li>
+<li>U+1336B EGYPTIAN HIEROGLYPH V001I: try adding egyptian-hieroglyphs</li>
+<li>U+1336C EGYPTIAN HIEROGLYPH V002: try adding egyptian-hieroglyphs</li>
+<li>U+1336D EGYPTIAN HIEROGLYPH V002A: try adding egyptian-hieroglyphs</li>
+<li>U+1336E EGYPTIAN HIEROGLYPH V003: try adding egyptian-hieroglyphs</li>
+<li>U+1336F EGYPTIAN HIEROGLYPH V004: try adding egyptian-hieroglyphs</li>
+<li>U+13370 EGYPTIAN HIEROGLYPH V005: try adding egyptian-hieroglyphs</li>
+<li>U+13371 EGYPTIAN HIEROGLYPH V006: try adding egyptian-hieroglyphs</li>
+<li>U+13372 EGYPTIAN HIEROGLYPH V007: try adding egyptian-hieroglyphs</li>
+<li>U+13373 EGYPTIAN HIEROGLYPH V007A: try adding egyptian-hieroglyphs</li>
+<li>U+13374 EGYPTIAN HIEROGLYPH V007B: try adding egyptian-hieroglyphs</li>
+<li>U+13375 EGYPTIAN HIEROGLYPH V008: try adding egyptian-hieroglyphs</li>
+<li>U+13376 EGYPTIAN HIEROGLYPH V009: try adding egyptian-hieroglyphs</li>
+<li>U+13377 EGYPTIAN HIEROGLYPH V010: try adding egyptian-hieroglyphs</li>
+<li>U+13378 EGYPTIAN HIEROGLYPH V011: try adding egyptian-hieroglyphs</li>
+<li>U+13379 EGYPTIAN HIEROGLYPH V011A: try adding egyptian-hieroglyphs</li>
+<li>U+1337A EGYPTIAN HIEROGLYPH V011B: try adding egyptian-hieroglyphs</li>
+<li>U+1337B EGYPTIAN HIEROGLYPH V011C: try adding egyptian-hieroglyphs</li>
+<li>U+1337C EGYPTIAN HIEROGLYPH V012: try adding egyptian-hieroglyphs</li>
+<li>U+1337D EGYPTIAN HIEROGLYPH V012A: try adding egyptian-hieroglyphs</li>
+<li>U+1337E EGYPTIAN HIEROGLYPH V012B: try adding egyptian-hieroglyphs</li>
+<li>U+1337F EGYPTIAN HIEROGLYPH V013: try adding egyptian-hieroglyphs</li>
+<li>U+13380 EGYPTIAN HIEROGLYPH V014: try adding egyptian-hieroglyphs</li>
+<li>U+13381 EGYPTIAN HIEROGLYPH V015: try adding egyptian-hieroglyphs</li>
+<li>U+13382 EGYPTIAN HIEROGLYPH V016: try adding egyptian-hieroglyphs</li>
+<li>U+13383 EGYPTIAN HIEROGLYPH V017: try adding egyptian-hieroglyphs</li>
+<li>U+13384 EGYPTIAN HIEROGLYPH V018: try adding egyptian-hieroglyphs</li>
+<li>U+13385 EGYPTIAN HIEROGLYPH V019: try adding egyptian-hieroglyphs</li>
+<li>U+13386 EGYPTIAN HIEROGLYPH V020: try adding egyptian-hieroglyphs</li>
+<li>U+13387 EGYPTIAN HIEROGLYPH V020A: try adding egyptian-hieroglyphs</li>
+<li>U+13388 EGYPTIAN HIEROGLYPH V020B: try adding egyptian-hieroglyphs</li>
+<li>U+13389 EGYPTIAN HIEROGLYPH V020C: try adding egyptian-hieroglyphs</li>
+<li>U+1338A EGYPTIAN HIEROGLYPH V020D: try adding egyptian-hieroglyphs</li>
+<li>U+1338B EGYPTIAN HIEROGLYPH V020E: try adding egyptian-hieroglyphs</li>
+<li>U+1338C EGYPTIAN HIEROGLYPH V020F: try adding egyptian-hieroglyphs</li>
+<li>U+1338D EGYPTIAN HIEROGLYPH V020G: try adding egyptian-hieroglyphs</li>
+<li>U+1338E EGYPTIAN HIEROGLYPH V020H: try adding egyptian-hieroglyphs</li>
+<li>U+1338F EGYPTIAN HIEROGLYPH V020I: try adding egyptian-hieroglyphs</li>
+<li>U+13390 EGYPTIAN HIEROGLYPH V020J: try adding egyptian-hieroglyphs</li>
+<li>U+13391 EGYPTIAN HIEROGLYPH V020K: try adding egyptian-hieroglyphs</li>
+<li>U+13392 EGYPTIAN HIEROGLYPH V020L: try adding egyptian-hieroglyphs</li>
+<li>U+13393 EGYPTIAN HIEROGLYPH V021: try adding egyptian-hieroglyphs</li>
+<li>U+13394 EGYPTIAN HIEROGLYPH V022: try adding egyptian-hieroglyphs</li>
+<li>U+13395 EGYPTIAN HIEROGLYPH V023: try adding egyptian-hieroglyphs</li>
+<li>U+13396 EGYPTIAN HIEROGLYPH V023A: try adding egyptian-hieroglyphs</li>
+<li>U+13397 EGYPTIAN HIEROGLYPH V024: try adding egyptian-hieroglyphs</li>
+<li>U+13398 EGYPTIAN HIEROGLYPH V025: try adding egyptian-hieroglyphs</li>
+<li>U+13399 EGYPTIAN HIEROGLYPH V026: try adding egyptian-hieroglyphs</li>
+<li>U+1339A EGYPTIAN HIEROGLYPH V027: try adding egyptian-hieroglyphs</li>
+<li>U+1339B EGYPTIAN HIEROGLYPH V028: try adding egyptian-hieroglyphs</li>
+<li>U+1339C EGYPTIAN HIEROGLYPH V028A: try adding egyptian-hieroglyphs</li>
+<li>U+1339D EGYPTIAN HIEROGLYPH V029: try adding egyptian-hieroglyphs</li>
+<li>U+1339E EGYPTIAN HIEROGLYPH V029A: try adding egyptian-hieroglyphs</li>
+<li>U+1339F EGYPTIAN HIEROGLYPH V030: try adding egyptian-hieroglyphs</li>
+<li>U+133A0 EGYPTIAN HIEROGLYPH V030A: try adding egyptian-hieroglyphs</li>
+<li>U+133A1 EGYPTIAN HIEROGLYPH V031: try adding egyptian-hieroglyphs</li>
+<li>U+133A2 EGYPTIAN HIEROGLYPH V031A: try adding egyptian-hieroglyphs</li>
+<li>U+133A3 EGYPTIAN HIEROGLYPH V032: try adding egyptian-hieroglyphs</li>
+<li>U+133A4 EGYPTIAN HIEROGLYPH V033: try adding egyptian-hieroglyphs</li>
+<li>U+133A5 EGYPTIAN HIEROGLYPH V033A: try adding egyptian-hieroglyphs</li>
+<li>U+133A6 EGYPTIAN HIEROGLYPH V034: try adding egyptian-hieroglyphs</li>
+<li>U+133A7 EGYPTIAN HIEROGLYPH V035: try adding egyptian-hieroglyphs</li>
+<li>U+133A8 EGYPTIAN HIEROGLYPH V036: try adding egyptian-hieroglyphs</li>
+<li>U+133A9 EGYPTIAN HIEROGLYPH V037: try adding egyptian-hieroglyphs</li>
+<li>U+133AA EGYPTIAN HIEROGLYPH V037A: try adding egyptian-hieroglyphs</li>
+<li>U+133AB EGYPTIAN HIEROGLYPH V038: try adding egyptian-hieroglyphs</li>
+<li>U+133AC EGYPTIAN HIEROGLYPH V039: try adding egyptian-hieroglyphs</li>
+<li>U+133AD EGYPTIAN HIEROGLYPH V040: try adding egyptian-hieroglyphs</li>
+<li>U+133AE EGYPTIAN HIEROGLYPH V040A: try adding egyptian-hieroglyphs</li>
+<li>U+133AF EGYPTIAN HIEROGLYPH W001: try adding egyptian-hieroglyphs</li>
+<li>U+133B0 EGYPTIAN HIEROGLYPH W002: try adding egyptian-hieroglyphs</li>
+<li>U+133B1 EGYPTIAN HIEROGLYPH W003: try adding egyptian-hieroglyphs</li>
+<li>U+133B2 EGYPTIAN HIEROGLYPH W003A: try adding egyptian-hieroglyphs</li>
+<li>U+133B3 EGYPTIAN HIEROGLYPH W004: try adding egyptian-hieroglyphs</li>
+<li>U+133B4 EGYPTIAN HIEROGLYPH W005: try adding egyptian-hieroglyphs</li>
+<li>U+133B5 EGYPTIAN HIEROGLYPH W006: try adding egyptian-hieroglyphs</li>
+<li>U+133B6 EGYPTIAN HIEROGLYPH W007: try adding egyptian-hieroglyphs</li>
+<li>U+133B7 EGYPTIAN HIEROGLYPH W008: try adding egyptian-hieroglyphs</li>
+<li>U+133B8 EGYPTIAN HIEROGLYPH W009: try adding egyptian-hieroglyphs</li>
+<li>U+133B9 EGYPTIAN HIEROGLYPH W009A: try adding egyptian-hieroglyphs</li>
+<li>U+133BA EGYPTIAN HIEROGLYPH W010: try adding egyptian-hieroglyphs</li>
+<li>U+133BB EGYPTIAN HIEROGLYPH W010A: try adding egyptian-hieroglyphs</li>
+<li>U+133BC EGYPTIAN HIEROGLYPH W011: try adding egyptian-hieroglyphs</li>
+<li>U+133BD EGYPTIAN HIEROGLYPH W012: try adding egyptian-hieroglyphs</li>
+<li>U+133BE EGYPTIAN HIEROGLYPH W013: try adding egyptian-hieroglyphs</li>
+<li>U+133BF EGYPTIAN HIEROGLYPH W014: try adding egyptian-hieroglyphs</li>
+<li>U+133C0 EGYPTIAN HIEROGLYPH W014A: try adding egyptian-hieroglyphs</li>
+<li>U+133C1 EGYPTIAN HIEROGLYPH W015: try adding egyptian-hieroglyphs</li>
+<li>U+133C2 EGYPTIAN HIEROGLYPH W016: try adding egyptian-hieroglyphs</li>
+<li>U+133C3 EGYPTIAN HIEROGLYPH W017: try adding egyptian-hieroglyphs</li>
+<li>U+133C4 EGYPTIAN HIEROGLYPH W017A: try adding egyptian-hieroglyphs</li>
+<li>U+133C5 EGYPTIAN HIEROGLYPH W018: try adding egyptian-hieroglyphs</li>
+<li>U+133C6 EGYPTIAN HIEROGLYPH W018A: try adding egyptian-hieroglyphs</li>
+<li>U+133C7 EGYPTIAN HIEROGLYPH W019: try adding egyptian-hieroglyphs</li>
+<li>U+133C8 EGYPTIAN HIEROGLYPH W020: try adding egyptian-hieroglyphs</li>
+<li>U+133C9 EGYPTIAN HIEROGLYPH W021: try adding egyptian-hieroglyphs</li>
+<li>U+133CA EGYPTIAN HIEROGLYPH W022: try adding egyptian-hieroglyphs</li>
+<li>U+133CB EGYPTIAN HIEROGLYPH W023: try adding egyptian-hieroglyphs</li>
+<li>U+133CC EGYPTIAN HIEROGLYPH W024: try adding egyptian-hieroglyphs</li>
+<li>U+133CD EGYPTIAN HIEROGLYPH W024A: try adding egyptian-hieroglyphs</li>
+<li>U+133CE EGYPTIAN HIEROGLYPH W025: try adding egyptian-hieroglyphs</li>
+<li>U+133CF EGYPTIAN HIEROGLYPH X001: try adding egyptian-hieroglyphs</li>
+<li>U+133D0 EGYPTIAN HIEROGLYPH X002: try adding egyptian-hieroglyphs</li>
+<li>U+133D1 EGYPTIAN HIEROGLYPH X003: try adding egyptian-hieroglyphs</li>
+<li>U+133D2 EGYPTIAN HIEROGLYPH X004: try adding egyptian-hieroglyphs</li>
+<li>U+133D3 EGYPTIAN HIEROGLYPH X004A: try adding egyptian-hieroglyphs</li>
+<li>U+133D4 EGYPTIAN HIEROGLYPH X004B: try adding egyptian-hieroglyphs</li>
+<li>U+133D5 EGYPTIAN HIEROGLYPH X005: try adding egyptian-hieroglyphs</li>
+<li>U+133D6 EGYPTIAN HIEROGLYPH X006: try adding egyptian-hieroglyphs</li>
+<li>U+133D7 EGYPTIAN HIEROGLYPH X006A: try adding egyptian-hieroglyphs</li>
+<li>U+133D8 EGYPTIAN HIEROGLYPH X007: try adding egyptian-hieroglyphs</li>
+<li>U+133D9 EGYPTIAN HIEROGLYPH X008: try adding egyptian-hieroglyphs</li>
+<li>U+133DA EGYPTIAN HIEROGLYPH X008A: try adding egyptian-hieroglyphs</li>
+<li>U+133DB EGYPTIAN HIEROGLYPH Y001: try adding egyptian-hieroglyphs</li>
+<li>U+133DC EGYPTIAN HIEROGLYPH Y001A: try adding egyptian-hieroglyphs</li>
+<li>U+133DD EGYPTIAN HIEROGLYPH Y002: try adding egyptian-hieroglyphs</li>
+<li>U+133DE EGYPTIAN HIEROGLYPH Y003: try adding egyptian-hieroglyphs</li>
+<li>U+133DF EGYPTIAN HIEROGLYPH Y004: try adding egyptian-hieroglyphs</li>
+<li>U+133E0 EGYPTIAN HIEROGLYPH Y005: try adding egyptian-hieroglyphs</li>
+<li>U+133E1 EGYPTIAN HIEROGLYPH Y006: try adding egyptian-hieroglyphs</li>
+<li>U+133E2 EGYPTIAN HIEROGLYPH Y007: try adding egyptian-hieroglyphs</li>
+<li>U+133E3 EGYPTIAN HIEROGLYPH Y008: try adding egyptian-hieroglyphs</li>
+<li>U+133E4 EGYPTIAN HIEROGLYPH Z001: try adding egyptian-hieroglyphs</li>
+<li>U+133E5 EGYPTIAN HIEROGLYPH Z002: try adding egyptian-hieroglyphs</li>
+<li>U+133E6 EGYPTIAN HIEROGLYPH Z002A: try adding egyptian-hieroglyphs</li>
+<li>U+133E7 EGYPTIAN HIEROGLYPH Z002B: try adding egyptian-hieroglyphs</li>
+<li>U+133E8 EGYPTIAN HIEROGLYPH Z002C: try adding egyptian-hieroglyphs</li>
+<li>U+133E9 EGYPTIAN HIEROGLYPH Z002D: try adding egyptian-hieroglyphs</li>
+<li>U+133EA EGYPTIAN HIEROGLYPH Z003: try adding egyptian-hieroglyphs</li>
+<li>U+133EB EGYPTIAN HIEROGLYPH Z003A: try adding egyptian-hieroglyphs</li>
+<li>U+133EC EGYPTIAN HIEROGLYPH Z003B: try adding egyptian-hieroglyphs</li>
+<li>U+133ED EGYPTIAN HIEROGLYPH Z004: try adding egyptian-hieroglyphs</li>
+<li>U+133EE EGYPTIAN HIEROGLYPH Z004A: try adding egyptian-hieroglyphs</li>
+<li>U+133EF EGYPTIAN HIEROGLYPH Z005: try adding egyptian-hieroglyphs</li>
+<li>U+133F0 EGYPTIAN HIEROGLYPH Z005A: try adding egyptian-hieroglyphs</li>
+<li>U+133F1 EGYPTIAN HIEROGLYPH Z006: try adding egyptian-hieroglyphs</li>
+<li>U+133F2 EGYPTIAN HIEROGLYPH Z007: try adding egyptian-hieroglyphs</li>
+<li>U+133F3 EGYPTIAN HIEROGLYPH Z008: try adding egyptian-hieroglyphs</li>
+<li>U+133F4 EGYPTIAN HIEROGLYPH Z009: try adding egyptian-hieroglyphs</li>
+<li>U+133F5 EGYPTIAN HIEROGLYPH Z010: try adding egyptian-hieroglyphs</li>
+<li>U+133F6 EGYPTIAN HIEROGLYPH Z011: try adding egyptian-hieroglyphs</li>
+<li>U+133F7 EGYPTIAN HIEROGLYPH Z012: try adding egyptian-hieroglyphs</li>
+<li>U+133F8 EGYPTIAN HIEROGLYPH Z013: try adding egyptian-hieroglyphs</li>
+<li>U+133F9 EGYPTIAN HIEROGLYPH Z014: try adding egyptian-hieroglyphs</li>
+<li>U+133FA EGYPTIAN HIEROGLYPH Z015: try adding egyptian-hieroglyphs</li>
+<li>U+133FB EGYPTIAN HIEROGLYPH Z015A: try adding egyptian-hieroglyphs</li>
+<li>U+133FC EGYPTIAN HIEROGLYPH Z015B: try adding egyptian-hieroglyphs</li>
+<li>U+133FD EGYPTIAN HIEROGLYPH Z015C: try adding egyptian-hieroglyphs</li>
+<li>U+133FE EGYPTIAN HIEROGLYPH Z015D: try adding egyptian-hieroglyphs</li>
+<li>U+133FF EGYPTIAN HIEROGLYPH Z015E: try adding egyptian-hieroglyphs</li>
+<li>U+13400 EGYPTIAN HIEROGLYPH Z015F: try adding egyptian-hieroglyphs</li>
+<li>U+13401 EGYPTIAN HIEROGLYPH Z015G: try adding egyptian-hieroglyphs</li>
+<li>U+13402 EGYPTIAN HIEROGLYPH Z015H: try adding egyptian-hieroglyphs</li>
+<li>U+13403 EGYPTIAN HIEROGLYPH Z015I: try adding egyptian-hieroglyphs</li>
+<li>U+13404 EGYPTIAN HIEROGLYPH Z016: try adding egyptian-hieroglyphs</li>
+<li>U+13405 EGYPTIAN HIEROGLYPH Z016A: try adding egyptian-hieroglyphs</li>
+<li>U+13406 EGYPTIAN HIEROGLYPH Z016B: try adding egyptian-hieroglyphs</li>
+<li>U+13407 EGYPTIAN HIEROGLYPH Z016C: try adding egyptian-hieroglyphs</li>
+<li>U+13408 EGYPTIAN HIEROGLYPH Z016D: try adding egyptian-hieroglyphs</li>
+<li>U+13409 EGYPTIAN HIEROGLYPH Z016E: try adding egyptian-hieroglyphs</li>
+<li>U+1340A EGYPTIAN HIEROGLYPH Z016F: try adding egyptian-hieroglyphs</li>
+<li>U+1340B EGYPTIAN HIEROGLYPH Z016G: try adding egyptian-hieroglyphs</li>
+<li>U+1340C EGYPTIAN HIEROGLYPH Z016H: try adding egyptian-hieroglyphs</li>
+<li>U+1340D EGYPTIAN HIEROGLYPH AA001: try adding egyptian-hieroglyphs</li>
+<li>U+1340E EGYPTIAN HIEROGLYPH AA002: try adding egyptian-hieroglyphs</li>
+<li>U+1340F EGYPTIAN HIEROGLYPH AA003: try adding egyptian-hieroglyphs</li>
+<li>U+13410 EGYPTIAN HIEROGLYPH AA004: try adding egyptian-hieroglyphs</li>
+<li>U+13411 EGYPTIAN HIEROGLYPH AA005: try adding egyptian-hieroglyphs</li>
+<li>U+13412 EGYPTIAN HIEROGLYPH AA006: try adding egyptian-hieroglyphs</li>
+<li>U+13413 EGYPTIAN HIEROGLYPH AA007: try adding egyptian-hieroglyphs</li>
+<li>U+13414 EGYPTIAN HIEROGLYPH AA007A: try adding egyptian-hieroglyphs</li>
+<li>U+13415 EGYPTIAN HIEROGLYPH AA007B: try adding egyptian-hieroglyphs</li>
+<li>U+13416 EGYPTIAN HIEROGLYPH AA008: try adding egyptian-hieroglyphs</li>
+<li>U+13417 EGYPTIAN HIEROGLYPH AA009: try adding egyptian-hieroglyphs</li>
+<li>U+13418 EGYPTIAN HIEROGLYPH AA010: try adding egyptian-hieroglyphs</li>
+<li>U+13419 EGYPTIAN HIEROGLYPH AA011: try adding egyptian-hieroglyphs</li>
+<li>U+1341A EGYPTIAN HIEROGLYPH AA012: try adding egyptian-hieroglyphs</li>
+<li>U+1341B EGYPTIAN HIEROGLYPH AA013: try adding egyptian-hieroglyphs</li>
+<li>U+1341C EGYPTIAN HIEROGLYPH AA014: try adding egyptian-hieroglyphs</li>
+<li>U+1341D EGYPTIAN HIEROGLYPH AA015: try adding egyptian-hieroglyphs</li>
+<li>U+1341E EGYPTIAN HIEROGLYPH AA016: try adding egyptian-hieroglyphs</li>
+<li>U+1341F EGYPTIAN HIEROGLYPH AA017: try adding egyptian-hieroglyphs</li>
+<li>U+13420 EGYPTIAN HIEROGLYPH AA018: try adding egyptian-hieroglyphs</li>
+<li>U+13421 EGYPTIAN HIEROGLYPH AA019: try adding egyptian-hieroglyphs</li>
+<li>U+13422 EGYPTIAN HIEROGLYPH AA020: try adding egyptian-hieroglyphs</li>
+<li>U+13423 EGYPTIAN HIEROGLYPH AA021: try adding egyptian-hieroglyphs</li>
+<li>U+13424 EGYPTIAN HIEROGLYPH AA022: try adding egyptian-hieroglyphs</li>
+<li>U+13425 EGYPTIAN HIEROGLYPH AA023: try adding egyptian-hieroglyphs</li>
+<li>U+13426 EGYPTIAN HIEROGLYPH AA024: try adding egyptian-hieroglyphs</li>
+<li>U+13427 EGYPTIAN HIEROGLYPH AA025: try adding egyptian-hieroglyphs</li>
+<li>U+13428 EGYPTIAN HIEROGLYPH AA026: try adding egyptian-hieroglyphs</li>
+<li>U+13429 EGYPTIAN HIEROGLYPH AA027: try adding egyptian-hieroglyphs</li>
+<li>U+1342A EGYPTIAN HIEROGLYPH AA028: try adding egyptian-hieroglyphs</li>
+<li>U+1342B EGYPTIAN HIEROGLYPH AA029: try adding egyptian-hieroglyphs</li>
+<li>U+1342C EGYPTIAN HIEROGLYPH AA030: try adding egyptian-hieroglyphs</li>
+<li>U+1342D EGYPTIAN HIEROGLYPH AA031: try adding egyptian-hieroglyphs</li>
+<li>U+1342E EGYPTIAN HIEROGLYPH AA032: try adding egyptian-hieroglyphs</li>
+<li>U+1342F EGYPTIAN HIEROGLYPH V011D: try adding egyptian-hieroglyphs</li>
+<li>U+13441 EGYPTIAN HIEROGLYPH FULL BLANK: try adding egyptian-hieroglyphs</li>
+<li>U+13442 EGYPTIAN HIEROGLYPH HALF BLANK: try adding egyptian-hieroglyphs</li>
+<li>U+13443 EGYPTIAN HIEROGLYPH LOST SIGN: try adding egyptian-hieroglyphs</li>
+<li>U+13444 EGYPTIAN HIEROGLYPH HALF LOST SIGN: try adding egyptian-hieroglyphs</li>
+<li>U+13445 EGYPTIAN HIEROGLYPH TALL LOST SIGN: try adding egyptian-hieroglyphs</li>
+<li>U+13446 EGYPTIAN HIEROGLYPH WIDE LOST SIGN: try adding egyptian-hieroglyphs</li>
+</ul>
+<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>latin</code>, <code>latin-ext</code></p>
+ [code: unreachable-subsetting]
+
+
+
+</div>
+</details>
+
+<details>
+    <summary>⚠️ <b>WARN</b> Combined length of family and style must not exceed 32 characters. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.name.html#"></a></summary>
+    <div>
+
+
+
+
+
+
+
+* ⚠️ **WARN** <p>Name ID 6 'NotoSansEgyptianHieroglyphs-Regular' exceeds 27 characters. This has been found to cause problems with PostScript printers, especially on Mac platforms.</p>
+ [code: nameid6-too-long]
+
+
+
+</div>
+</details>
+
+<details>
+    <summary>⚠️ <b>WARN</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/shaping.html#"></a></summary>
+    <div>
+
+
+
+
+
+
+
+* ⚠️ **WARN** <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
+<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĩ̦ ĭ̦ i̦̇ i̦̊ i̦̋ ǐ̦ ĩ̧ ĭ̧ i̧̇ i̧̊ i̧̋ ǐ̧ j̦̀ j̦́ ĵ̦ j̦̃ j̦̄ j̦̆ j̦̇ j̦̈</p>
+<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers).</p>
+<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Dutch (Latn, 31,709,104 speakers), Southern Kisi (Latn, 360,000 speakers), Han (Latn, 6 speakers), Koonzime (Latn, 40,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Navajo (Latn, 166,319 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Heiltsuk (Latn, 300 speakers), Avokaya (Latn, 100,000 speakers), South Central Banda (Latn, 244,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Gulay (Latn, 250,478 speakers), Sar (Latn, 500,000 speakers), Ebira (Latn, 2,200,000 speakers), Nzakara (Latn, 50,000 speakers), Mfumte (Latn, 79,000 speakers), Mundani (Latn, 34,000 speakers), Lugbara (Latn, 2,200,000 speakers), Vute (Latn, 21,000 speakers), Basaa (Latn, 332,940 speakers), Teke-Ebo (Latn, 260,000 speakers), Aghem (Latn, 38,843 speakers), Ngbaka (Latn, 1,020,000 speakers), Mango (Latn, 77,000 speakers), Zapotec (Latn, 490,000 speakers), Fur (Latn, 1,230,163 speakers), Makaa (Latn, 221,000 speakers), Ma’di (Latn, 584,000 speakers), Dan (Latn, 1,099,244 speakers), Bafut (Latn, 158,146 speakers), Cicipu (Latn, 44,000 speakers), Ekpeye (Latn, 226,000 speakers), Igbo (Latn, 27,823,640 speakers), Kom (Latn, 360,685 speakers), Ejagham (Latn, 120,000 speakers), Yala (Latn, 200,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Bete-Bendi (Latn, 100,000 speakers), Kaska (Latn, 125 speakers), Nateni (Latn, 100,000 speakers), Dii (Latn, 71,000 speakers).</p>
+ [code: soft-dotted]
 
 
 
@@ -752,88 +1937,6 @@ minus</p>
 </details>
 
 <details>
-    <summary>⚠️ <b>WARN</b> Ensure soft_dotted characters lose their dot when combined with marks that replace the dot. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/shaping.html#"></a></summary>
-    <div>
-
-
-
-
-
-
-
-* ⚠️ **WARN** <p>The dot of soft dotted characters used in orthographies <em>must</em> disappear in the following strings: į̀ į́ į̂ į̃ į̄ į̌</p>
-<p>The dot of soft dotted characters <em>should</em> disappear in other cases, for example: ĩ̦ ĭ̦ i̦̇ i̦̊ i̦̋ ǐ̦ ĩ̧ ĭ̧ i̧̇ i̧̊ i̧̋ ǐ̧ j̦̀ j̦́ ĵ̦ j̦̃ j̦̄ j̦̆ j̦̇ j̦̈</p>
-<p>Your font fully covers the following languages that require the soft-dotted feature: Lithuanian (Latn, 2,357,094 speakers).</p>
-<p>Your font does <em>not</em> cover the following languages that require the soft-dotted feature: Yala (Latn, 200,000 speakers), Dii (Latn, 71,000 speakers), Ekpeye (Latn, 226,000 speakers), Igbo (Latn, 27,823,640 speakers), Aghem (Latn, 38,843 speakers), Navajo (Latn, 166,319 speakers), Bafut (Latn, 158,146 speakers), Nateni (Latn, 100,000 speakers), Kpelle, Guinea (Latn, 622,000 speakers), Dan (Latn, 1,099,244 speakers), Ukrainian (Cyrl, 29,273,587 speakers), Ngbaka (Latn, 1,020,000 speakers), Dutch (Latn, 31,709,104 speakers), Southern Kisi (Latn, 360,000 speakers), Ebira (Latn, 2,200,000 speakers), Basaa (Latn, 332,940 speakers), Sar (Latn, 500,000 speakers), Belarusian (Cyrl, 10,064,517 speakers), Bete-Bendi (Latn, 100,000 speakers), Nzakara (Latn, 50,000 speakers), Fur (Latn, 1,230,163 speakers), Ma’di (Latn, 584,000 speakers), Makaa (Latn, 221,000 speakers), Mundani (Latn, 34,000 speakers), Mango (Latn, 77,000 speakers), Ejagham (Latn, 120,000 speakers), Kom (Latn, 360,685 speakers), Zapotec (Latn, 490,000 speakers), Avokaya (Latn, 100,000 speakers), Koonzime (Latn, 40,000 speakers), Cicipu (Latn, 44,000 speakers), Ijo, Southeast (Latn, 2,471,000 speakers), Gulay (Latn, 250,478 speakers), Lugbara (Latn, 2,200,000 speakers), South Central Banda (Latn, 244,000 speakers), Mfumte (Latn, 79,000 speakers).</p>
- [code: soft-dotted]
-
-
-
-</div>
-</details>
-
-<details>
-    <summary>⚠️ <b>WARN</b> Check for codepoints not covered by METADATA subsets. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.subsets.html#"></a></summary>
-    <div>
-
-
-
-
-
-
-
-* ⚠️ **WARN** <p>The following codepoints supported by the font are not covered by
-any subsets defined in the font's metadata file, and will never
-be served. You can solve this by either manually adding additional
-subset declarations to METADATA.pb, or by editing the glyphset
-definitions.</p>
-<ul>
-<li>U+02C7 CARON: try adding one of: yi, canadian-aboriginal, tifinagh</li>
-<li>U+02C9 MODIFIER LETTER MACRON: not included in any glyphset definition</li>
-<li>U+02D8 BREVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02D9 DOT ABOVE: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DB OGONEK: try adding one of: yi, canadian-aboriginal</li>
-<li>U+02DD DOUBLE ACUTE ACCENT: not included in any glyphset definition</li>
-<li>U+0302 COMBINING CIRCUMFLEX ACCENT: try adding one of: cherokee, coptic, tifinagh, math</li>
-<li>U+0306 COMBINING BREVE: try adding one of: tifinagh, old-permic</li>
-<li>U+0307 COMBINING DOT ABOVE: try adding one of: canadian-aboriginal, math, malayalam, syriac, coptic, tai-le, tifinagh, old-permic</li>
-<li>U+030A COMBINING RING ABOVE: try adding syriac</li>
-<li>U+030B COMBINING DOUBLE ACUTE ACCENT: try adding one of: cherokee, osage</li>
-<li>U+030C COMBINING CARON: try adding one of: cherokee, tai-le</li>
-<li>U+0326 COMBINING COMMA BELOW: not included in any glyphset definition</li>
-<li>U+0327 COMBINING CEDILLA: not included in any glyphset definition</li>
-<li>U+0328 COMBINING OGONEK: not included in any glyphset definition</li>
-<li>U+200C ZERO WIDTH NON-JOINER: try adding one of: sogdian, mahajani, tagbanwa, modi, rejang, brahmi, kannada, new-tai-lue, tagalog, tifinagh, grantha, kaithi, bhaiksuki, khojki, warang-citi, gurmukhi, tibetan, hanifi-rohingya, hebrew, limbu, manichaean, mongolian, takri, hanunoo, khudawadi, mandaic, dogra, pahawh-hmong, sundanese, telugu, bengali, psalter-pahlavi, thai, meetei-mayek, duployan, sinhala, thaana, tirhuta, balinese, masaram-gondi, siddham, tamil, buhid, tai-viet, javanese, kharoshthi, newa, khmer, malayalam, yi, saurashtra, chakma, avestan, batak, phags-pa, gujarati, arabic, oriya, kayah-li, tai-tham, lepcha, zanabazar-square, hatran, cham, gunjala-gondi, buginese, devanagari, myanmar, sharada, syriac, tai-le, nko, lao, syloti-nagri</li>
-<li>U+200D ZERO WIDTH JOINER: try adding one of: sogdian, mahajani, tagbanwa, modi, rejang, brahmi, kannada, new-tai-lue, tagalog, tifinagh, grantha, kaithi, bhaiksuki, khojki, warang-citi, gurmukhi, tibetan, hanifi-rohingya, hebrew, limbu, manichaean, mongolian, takri, hanunoo, khudawadi, mandaic, dogra, pahawh-hmong, sundanese, telugu, bengali, psalter-pahlavi, thai, meetei-mayek, duployan, sinhala, thaana, tirhuta, balinese, masaram-gondi, siddham, tamil, buhid, tai-viet, javanese, kharoshthi, newa, khmer, malayalam, yi, saurashtra, chakma, avestan, batak, phags-pa, gujarati, arabic, oriya, kayah-li, old-hungarian, tai-tham, lepcha, zanabazar-square, cham, gunjala-gondi, buginese, devanagari, myanmar, sharada, syriac, tai-le, nko, lao, syloti-nagri</li>
-<li>U+25CC DOTTED CIRCLE: try adding one of: sogdian, rejang, music, kaithi, warang-citi, tibetan, hanifi-rohingya, manichaean, mandaic, bengali, duployan, masaram-gondi, symbols, kharoshthi, yi, ahom, kayah-li, marchen, cham, caucasian-albanian, devanagari, tai-le, lao, tagbanwa, mahajani, armenian, modi, new-tai-lue, tagalog, tifinagh, canadian-aboriginal, limbu, takri, telugu, thai, thaana, balinese, tamil, newa, khmer, malayalam, bassa-vah, saurashtra, oriya, math, zanabazar-square, syriac, brahmi, kannada, grantha, gurmukhi, hebrew, hanunoo, khudawadi, pahawh-hmong, psalter-pahlavi, siddham, buhid, javanese, coptic, phags-pa, gujarati, tai-tham, nko, wancho, bhaiksuki, khojki, osage, soyombo, sundanese, dogra, miao, meetei-mayek, sinhala, tirhuta, adlam, tai-viet, chakma, mende-kikakui, batak, old-permic, lepcha, gunjala-gondi, myanmar, buginese, elbasan, sharada, mongolian, syloti-nagri</li>
-</ul>
-<p>Or you can add the above codepoints to one of the subsets supported by the font: <code>cyrillic-ext</code>, <code>egyptian-hieroglyphs</code>, <code>greek-ext</code>, <code>latin</code>, <code>latin-ext</code></p>
- [code: unreachable-subsetting]
-
-
-
-</div>
-</details>
-
-<details>
-    <summary>⚠️ <b>WARN</b> Combined length of family and style must not exceed 32 characters. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.name.html#"></a></summary>
-    <div>
-
-
-
-
-
-
-
-* ⚠️ **WARN** <p>Name ID 6 'NotoSansEgyptianHieroglyphs-Regular' exceeds 27 characters. This has been found to cause problems with PostScript printers, especially on Mac platforms.</p>
- [code: nameid6-too-long]
-
-
-
-</div>
-</details>
-
-<details>
     <summary>⚠️ <b>WARN</b> Ensure fonts have ScriptLangTags declared on the 'meta' table. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.meta.html#"></a></summary>
     <div>
 
@@ -850,65 +1953,6 @@ definitions.</p>
 
 </div>
 </details>
-
-<details>
-    <summary>🔥 <b>FAIL</b> Shapes languages in all GF glyphsets. <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.glyphset.html#"></a></summary>
-    <div>
-
-
-
-
-
-
-
-* 🔥 **FAIL** <p>GF_Latin_Core glyphset:</p>
-<table>
-<thead>
-<tr>
-<th align="left">Language</th>
-<th align="left">FAIL messages</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td align="left">nl_Latn (Dutch)</td>
-<td align="left">Shaper didn't attach acutecomb to uni0237</td>
-</tr>
-<tr>
-<td align="left">^</td>
-<td align="left">Shaper didn't attach acutecomb to J</td>
-</tr>
-</tbody>
-</table>
- [code: failed-language-shaping]
-
-
-
-</div>
-</details>
-
-<details>
-    <summary>🔥 <b>FAIL</b> Check for presence of an ARTICLE.en_us.html file <a href="https://fontbakery.readthedocs.io/en/stable/fontbakery/checks/googlefonts.description.html#"></a></summary>
-    <div>
-
-
-
-
-
-
-
-* 🔥 **FAIL** <p>This is a Noto font but it lacks an ARTICLE.en_us.html file</p>
- [code: missing-article]
-
-
-
-* 🔥 **FAIL** <p>This is a Noto font but it lacks a DESCRIPTION.en_us.html file</p>
- [code: empty-description]
-
-
-
-</div>
-</details>
 </div>
 </details>
 
@@ -919,8 +1963,8 @@ definitions.</p>
 
 | 💥 ERROR | ☠ FATAL | 🔥 FAIL | ⚠️ WARN | ⏩ SKIP | ℹ️ INFO | ✅ PASS | 🔎 DEBUG | 
 | ---|---|---|---|---|---|---|---|
-| 0 | 0 | 2 | 10 | 118 | 6 | 113 | 0 | 
-| 0% | 0% | 1% | 4% | 47% | 2% | 45% | 0% | 
+| 0 | 0 | 2 | 9 | 118 | 6 | 116 | 0 | 
+| 0% | 0% | 1% | 4% | 47% | 2% | 46% | 0% | 
 
 
 
